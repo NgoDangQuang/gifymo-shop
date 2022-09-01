@@ -3,8 +3,8 @@ import React from 'react';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    height: '200px',
-    background: 'gray',
+    height: '500px',
+    background: 'pink',
     display:'flex',
     alignItems:'center',
     justifyContent:'center'

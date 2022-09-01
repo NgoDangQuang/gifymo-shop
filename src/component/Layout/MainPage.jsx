@@ -1,9 +1,10 @@
 import { Box } from '@mui/material';
-import { ContactLogo, Content, Footer, Header, Navigation } from 'component/Common';
+import { ContactLogo, Content, Footer, Header, Navigation, ScrollToTop } from 'component/Common';
 
 export function MainPage(props) {
   return (
     <Box>
+      <ScrollToTop />
       <Box>
         <Header />
       </Box>
