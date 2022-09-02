@@ -1,8 +1,8 @@
 import { makeStyles } from '@material-ui/core';
-import GTranslateOutlinedIcon from '@mui/icons-material/GTranslateOutlined';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { CONTAINER, GRAY, MAINCOLOR } from 'constants/styles';
 import { Link } from 'react-router-dom';
+import flag from './../asset/img/flag.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: '18px',
     fontSize: '13px',
     fontWeight: '500',
-    color: 'gray'
+    color: 'gray',
   },
   flex: {
     display: 'flex',
@@ -44,6 +44,9 @@ const useStyles = makeStyles((theme) => ({
   mr: {
     marginRight: '24px',
   },
+  flag: {
+    width: '24px',
+  },
 }));
 
 export function Header(props) {
@@ -59,7 +62,7 @@ export function Header(props) {
             </div>
 
             <div className={`${classes.mr} ${classes.flex}`}>
-              <GTranslateOutlinedIcon fontSize="inherit" color="primary" />
+              <img src={flag} alt="flag" className={classes.flag} />
               <p>&nbsp;Vietnamese</p>
             </div>
           </div>
@@ -72,7 +75,7 @@ export function Header(props) {
               <Link to="/about-us">About Us</Link>
             </li>
             <li className={classes.ml}>
-              <Link to="/track-order">Track Orders</Link>
+              <Link to="/track-orders">Track Orders</Link>
             </li>
             <li className={classes.ml}>
               <Link to="/faq">FAQ</Link>

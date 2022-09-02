@@ -73,7 +73,7 @@ export function ContactLogo(props) {
           <div className={`${classes.layoutItem} ${classes.flex}`}>
             <div className={`${classes.item} ${classes.flex}`}>
               <div className={classes.image}>
-                <img src={require('./../../asset/icons/car2.gif')} alt="box" />
+                <img src={require('./../asset/icons/car2.gif')} alt="box" />
               </div>
               <div className={`${classes.content}`}>
                 <p>Free standard shipping</p>
@@ -85,7 +85,7 @@ export function ContactLogo(props) {
           <div className={`${classes.layoutItem} ${classes.flex}`}>
             <div className={`${classes.item} ${classes.flex}`}>
               <div className={classes.image}>
-                <img src={require('./../../asset/icons/user.gif')} alt="supporter" />
+                <img src={require('./../asset/icons/user.gif')} alt="supporter" />
               </div>
               <div className={`${classes.content}`}>
                 <p>support@example.com</p>
@@ -97,7 +97,7 @@ export function ContactLogo(props) {
           <div className={`${classes.layoutItem} ${classes.flex}`}>
             <div className={`${classes.item} ${classes.flex}`}>
               <div className={classes.image}>
-                <img src={require('./../../asset/icons/card.gif')} alt="card" />
+                <img src={require('./../asset/icons/card.gif')} alt="card" />
               </div>
               <div className={classes.content}>
                 <p>Cart: 0 items</p>
