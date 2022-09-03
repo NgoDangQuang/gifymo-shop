@@ -1,6 +1,7 @@
 import { makeStyles } from '@material-ui/core';
 import { CONTAINER, GRAY } from 'constants/styles';
 import React from 'react';
+import logo from './../asset/img/logo.svg'
 import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
@@ -62,7 +63,7 @@ export function ContactLogo(props) {
               <div className={classes.logo}>
                 <Link to="/">
                   <img
-                    src="http://demo2.themelexus.com/gifymo/wp-content/uploads/2021/05/logo.svg"
+                    src={logo}
                     alt="logo"
                   />
                 </Link>

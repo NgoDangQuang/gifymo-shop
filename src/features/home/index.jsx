@@ -1,12 +1,14 @@
 import { makeStyles } from '@material-ui/core';
 import { TypeProduct } from 'api';
 import { CONTAINER } from 'constants/styles';
+import bgBody from './../../asset/img/bg-body.jpg'
+
 import { Sidebar } from './sidebar';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: '#f8f8f8',
-    backgroundImage: 'url(http://demo2.themelexus.com/gifymo/wp-content/uploads/2021/05/bg-body.jpg)',
+    backgroundImage: `url(${bgBody})`,
     backgroundPosition: 'top center',
     backgroundRepeat: 'no-repeat',
     display: 'flex',

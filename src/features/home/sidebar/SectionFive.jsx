@@ -1,6 +1,7 @@
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 import { Box } from '@mui/material';
 import { MAINCOLOR } from 'constants/styles';
+import avatar from './../../../asset/img/avatar.jpg'
 import './styles.css';
 
 function SectionFive(props) {
@@ -10,7 +11,7 @@ function SectionFive(props) {
             <div className='sectionFive__item'>
                 <div className='avt flex j-center'>
                     <div className='user'>
-                        <img src="http://demo2.themelexus.com/gifymo/wp-content/uploads/2021/05/avatar.jpg" alt="avt" />
+                        <img src={avatar} alt="avt" />
                         <div className='qoute'>
                             <FormatQuoteIcon fontSize='large' sx={{ color: MAINCOLOR }} />
                         </div>

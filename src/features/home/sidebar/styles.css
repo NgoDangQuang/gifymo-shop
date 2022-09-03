@@ -285,7 +285,7 @@
     box-shadow: var(--shadow);
     text-align: center;
     background-color: var(--BG_WHITE);
-    background-image: url(http://demo2.themelexus.com/gifymo/wp-content/uploads/2021/05/bg-avatar.jpg);
+    background-image: url('./../../../asset/img/bg-avatar.jpg');
     background-position: top center;
     background-repeat: repeat-x;
 }
