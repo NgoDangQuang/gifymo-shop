@@ -1,0 +1,9 @@
+:root{
+    --CONTAINER: 1400px;
+    --MAIN_COLOR:#BE7374;
+    --MAIN_COLOR_HOVER:#da4649;
+    --BG_COLOR: #FED2CC;
+    --GRAY:#d0d3d8;
+    --BG_WHITE:#fff;
+    --shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}

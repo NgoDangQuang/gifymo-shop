@@ -1,7 +1,7 @@
 import { makeStyles } from '@material-ui/core';
 import { SearchOutlined } from '@mui/icons-material';
 import { Box, TextField } from '@mui/material';
-import { BG_COLOR, CONTAINER, FONT_COLOR_NAV } from 'constants/styles';
+import { BG_COLOR, CONTAINER, MAINCOLOR } from 'constants/styles';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     '&:hover > div': {
       display: 'block',
       background: BG_COLOR,
-      color: FONT_COLOR_NAV,
+      color: MAINCOLOR,
     },
   },
   item: {
@@ -68,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
     borderBottom: '20px solid transparent',
   },
   active: {
-    color: FONT_COLOR_NAV,
+    color: MAINCOLOR,
     '& > div': {
       display: 'block',
       background: BG_COLOR,

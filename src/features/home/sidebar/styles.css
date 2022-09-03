@@ -1,0 +1,323 @@
+@import './../../../constants/styles.css';
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Sacramento&display=swap');
+
+/*  ======= GENERAL ========*/
+
+.style__general {
+    padding: 18px 0px;
+    background-image: radial-gradient(circle at 1.5px, rgba(0, 0, 0, .2) .75px, rgba(255, 255, 255, 0) 1.5px);
+    background-size: 8px 2px;
+    background-repeat: repeat-x;
+    background-position: bottom center;
+}
+
+.style__general:first-child {
+    padding-top: 0px;
+}
+
+.style__general:last-child {
+    padding-bottom: 0px;
+    background-image: none;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.j-around {
+    justify-content: space-around;
+}
+
+.j-between {
+    justify-content: space-between;
+}
+
+.j-center {
+    justify-content: center;
+}
+
+/*  ======= SECTION ONE ========*/
+
+.sectionOne__Layout {
+    padding: 40px;
+    background: var(--BG_COLOR);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.sectionOne__Item>a {
+    text-decoration: none;
+    color: var(--MAIN_COLOR);
+    font-size: 17px;
+    line-height: 24px;
+    transition: all 0.3s ease-in-out;
+}
+
+.sectionOne__Item>a:hover {
+    color: var(--MAIN_COLOR_HOVER);
+}
+
+
+/*  ======= SECTION TWO ========*/
+
+.sectionTwo__Layout {
+    padding: 40px;
+    background: var(--BG_WHITE);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.sectionTwo__Item {
+    background-image: radial-gradient(circle at 2px, rgba(228, 66, 133, 0.61) .75px, rgba(219, 217, 219, 0.082) 1.5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 0px;
+}
+
+.sectionTwo__Item>a {
+    text-decoration: none;
+    color: black;
+}
+
+.sectionTwo__Item__Content {
+    text-align: center;
+}
+
+.sectionTwo__Item__Content>img {
+    width: 80px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: var(--BG_COLOR);
+    border-radius: 100%;
+}
+
+.sectionTwo__Item__Content>h3 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 16px;
+    transition: color 0.2s linear;
+}
+
+.sectionTwo__Item__Content>h3:hover {
+    color: var(--MAIN_COLOR)
+}
+
+.sectionTwo__Item__Content>p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    color: gray
+}
+
+
+/*  ======= SECTION THREE ========*/
+
+.sectionThree__layout {
+    background-color: var(--BG_WHITE);
+    padding: 40px 0px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.sectionThree__item>h4 {
+    font-size: 28px;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.sectionThree__item>h5 {
+    font-size: 12px;
+    margin: 0;
+    font-weight: 500;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.sectionThree__image {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.sectionThree__image>img {
+    width: 100%;
+    transition: transform .4s;
+}
+
+.sectionThree__image:hover>img {
+    transform: scale(1.08);
+}
+
+.sectionThree__item>a {
+    text-decoration: none;
+    color: black;
+}
+
+.sectionThree__shopnow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.sectionThree__btn {
+    text-align: center;
+    font-family: cursive;
+    font-size: 16px;
+    border: 6px solid black;
+    width: 50%;
+    padding: 10px;
+    border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3ClinearGradient id='g' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23cffffe' /%3E%3Cstop offset='25%25' stop-color='%23f9f7d9' /%3E%3Cstop offset='50%25' stop-color='%23fce2ce' /%3E%3Cstop offset='100%25' stop-color='%23ffc1f3' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3'/%3E %3C/svg%3E") 1;
+    transition: background 0.3s linear;
+}
+
+.sectionThree__btn:hover {
+    background: var(--BG_COLOR);
+}
+
+
+
+/* ===== SECTION FOUR ======= */
+
+
+.sectionFour__layout {
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    background-color: var(--BG_WHITE);
+}
+
+.sectionFour__item {
+    padding: 30px 0px;
+    background-image: radial-gradient(circle at 1.5px, rgba(0, 0, 0, .2) .75px, rgba(255, 255, 255, 0) 1.5px);
+    background-size: 8px 2px;
+    background-repeat: repeat-x;
+    background-position: bottom center;
+    display: inline-block;
+    justify-content: center;
+}
+
+.sectionFour__item a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.2s linear;
+}
+
+.sectionFour__item a:hover {
+    color: var(--MAIN_COLOR);
+}
+
+.sectionFour__item:first-child {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    width: 60%;
+}
+
+.sectionFour__item:last-child {
+    padding-bottom: 0px;
+    background: none;
+}
+
+.title>h4 {
+    font-family: "Sacramento", Sans-serif;
+    font-size: 60px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.blog h3 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.info>h2 {
+    font-size: 14px;
+    margin: 0;
+    font-weight: 500;
+}
+
+.info>h3 {
+    color: rgba(165, 164, 164, 0.767);
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0;
+}
+
+.sectionFour__viewmore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.sectionFour__btn {
+    text-align: center;
+    font-family: cursive;
+    font-size: 16px;
+    border: 6px solid black;
+    color: var(--MAIN_COLOR);
+    padding: 10px;
+    border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3ClinearGradient id='g' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23cffffe' /%3E%3Cstop offset='25%25' stop-color='%23f9f7d9' /%3E%3Cstop offset='50%25' stop-color='%23fce2ce' /%3E%3Cstop offset='100%25' stop-color='%23ffc1f3' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3'/%3E %3C/svg%3E") 1;
+    transition: background 0.3s linear;
+}
+
+.sectionFour__btn:hover {
+    background: var(--BG_COLOR);
+}
+
+/* ===== SECTION FIVE ====== */
+
+
+.sectionFive__layout {
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    background-color: var(--BG_WHITE);
+    background-image: url(http://demo2.themelexus.com/gifymo/wp-content/uploads/2021/05/bg-avatar.jpg);
+    background-position: top center;
+    background-repeat: repeat-x;
+}
+
+.avt {}
+
+.user>img {
+    border-radius: 100%;
+}
+
+.user {
+    position: relative;
+    width: fit-content;
+}
+
+.qoute {
+    position: absolute;
+    top: 10px;
+    right: -10px;
+}
+
+.sectionFive__item>h2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: italic;
+    line-height: 30px;
+}
+
+.sectionFive__item>p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: italic;
+    text-align: right;
+    color: var(--MAIN_COLOR);
+}
