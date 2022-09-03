@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/gifymo-shop/static/css/main.549cf352.css",
+    "main.js": "/gifymo-shop/static/js/main.2ad40726.js",
+    "static/js/787.0837cd12.chunk.js": "/gifymo-shop/static/js/787.0837cd12.chunk.js",
+    "static/media/stars2.gif": "/gifymo-shop/static/media/stars2.c69b04f40f0f45652478.gif",
+    "static/media/car2.gif": "/gifymo-shop/static/media/car2.d4157c7b7f728c0fe6ca.gif",
+    "static/media/confetti2.gif": "/gifymo-shop/static/media/confetti2.980c265fd5ec02fb5b9a.gif",
+    "static/media/user.gif": "/gifymo-shop/static/media/user.a73885345f60b5a4d886.gif",
+    "static/media/gift2.gif": "/gifymo-shop/static/media/gift2.a006dabb33cde6b77739.gif",
+    "static/media/card.gif": "/gifymo-shop/static/media/card.6a6b1f3842f8989e390b.gif",
+    "static/media/flag.png": "/gifymo-shop/static/media/flag.e78840258767faaa77ac.png",
+    "index.html": "/gifymo-shop/index.html",
+    "main.549cf352.css.map": "/gifymo-shop/static/css/main.549cf352.css.map",
+    "main.2ad40726.js.map": "/gifymo-shop/static/js/main.2ad40726.js.map",
+    "787.0837cd12.chunk.js.map": "/gifymo-shop/static/js/787.0837cd12.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.549cf352.css",
+    "static/js/main.2ad40726.js"
+  ]
+}
