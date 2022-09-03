@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/gifymo-shop/static/css/main.549cf352.css",
-    "main.js": "/gifymo-shop/static/js/main.2ad40726.js",
+    "main.css": "/gifymo-shop/static/css/main.2adf7a96.css",
+    "main.js": "/gifymo-shop/static/js/main.209df947.js",
     "static/js/787.0837cd12.chunk.js": "/gifymo-shop/static/js/787.0837cd12.chunk.js",
     "static/media/stars2.gif": "/gifymo-shop/static/media/stars2.c69b04f40f0f45652478.gif",
     "static/media/car2.gif": "/gifymo-shop/static/media/car2.d4157c7b7f728c0fe6ca.gif",
@@ -9,14 +9,17 @@
     "static/media/user.gif": "/gifymo-shop/static/media/user.a73885345f60b5a4d886.gif",
     "static/media/gift2.gif": "/gifymo-shop/static/media/gift2.a006dabb33cde6b77739.gif",
     "static/media/card.gif": "/gifymo-shop/static/media/card.6a6b1f3842f8989e390b.gif",
+    "static/media/bg-body.jpg": "/gifymo-shop/static/media/bg-body.26dbf707b10852b42a0a.jpg",
     "static/media/flag.png": "/gifymo-shop/static/media/flag.e78840258767faaa77ac.png",
+    "static/media/h1-banner5.jpg": "/gifymo-shop/static/media/h1-banner5.e02429ee2cdb965741d0.jpg",
+    "static/media/logo.svg": "/gifymo-shop/static/media/logo.6d4706ea41563a8763a086c9cfb5278b.svg",
     "index.html": "/gifymo-shop/index.html",
-    "main.549cf352.css.map": "/gifymo-shop/static/css/main.549cf352.css.map",
-    "main.2ad40726.js.map": "/gifymo-shop/static/js/main.2ad40726.js.map",
+    "main.2adf7a96.css.map": "/gifymo-shop/static/css/main.2adf7a96.css.map",
+    "main.209df947.js.map": "/gifymo-shop/static/js/main.209df947.js.map",
     "787.0837cd12.chunk.js.map": "/gifymo-shop/static/js/787.0837cd12.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.549cf352.css",
-    "static/js/main.2ad40726.js"
+    "static/css/main.2adf7a96.css",
+    "static/js/main.209df947.js"
   ]
 }
