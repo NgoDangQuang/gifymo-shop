@@ -1,13 +1,24 @@
 import { Box } from '@mui/material';
+import { GAP } from 'constants/styles';
 import React from 'react';
-import SlickSlider from './SlickSlider';
+import Section2 from './section2_4/Section2';
+import Section4 from './section2_4/Section4';
+import SlickSlider from './slider/SlickSlider';
 
 function ContentHomePage(props) {
-    return (
-        <Box sx={{width:'100%'}}>
-            <SlickSlider />
-        </Box>
-    );
+  return (
+    <Box>
+      <Box mb={GAP}>
+        <SlickSlider />
+      </Box>
+      <Box mb={GAP}>
+        <Section2 />
+      </Box>
+      <Box mb={GAP}>
+        <Section4 />
+      </Box>
+    </Box>
+  );
 }
 
 export default ContentHomePage;

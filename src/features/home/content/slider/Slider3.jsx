@@ -2,7 +2,7 @@ import slider3_img from './../../../../asset/img/slider3.png';
 import './styles.css';
 import CloseIcon from '@mui/icons-material/Close';
 
-export function Slider3(props) {
+export default function Slider3(props) {
   return (
     <div className="slider3 flex j-center animation-show-slider">
       <div className="slider3__image">

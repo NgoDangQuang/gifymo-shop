@@ -1,29 +1,29 @@
 import { Box } from '@mui/material';
+import { GAP } from 'constants/styles';
 import SectionFive from './SectionFive';
 import SectionFour from './SectionFour';
 import SectionOne from './SectionOne';
 import SectionThree from './SectionThree';
 import SectionTwo from './SectionTwo';
 
-const marginBottom = 5
 
 export function Sidebar(props) {
     const { typeOfProduct } = props
     return (
         <Box>
-            <Box mb={marginBottom}>
+            <Box mb={GAP}>
                 <SectionOne typeOfProduct={typeOfProduct} />
             </Box>
-            <Box mb={marginBottom}>
+            <Box mb={GAP}>
                 <SectionTwo />
             </Box>
-            <Box mb={marginBottom}>
+            <Box mb={GAP}>
                 <SectionThree />
             </Box>
-            <Box mb={marginBottom}>
+            <Box mb={GAP}>
                 <SectionFour />
             </Box>
-            <Box mb={marginBottom}>
+            <Box mb={GAP}>
                 <SectionFive />
             </Box>
         </Box>

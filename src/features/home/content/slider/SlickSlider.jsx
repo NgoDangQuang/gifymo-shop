@@ -1,9 +1,11 @@
 import { Box } from '@mui/material';
 import { useState } from 'react';
-import { Slider1, Slider2, Slider3 } from './slider';
+import Slider1 from './Slider1';
+import Slider2 from './Slider2';
+import Slider3 from './Slider3';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import './styles.css';
+import './slickSlider.css';
 
 const SlickSlider = () => {
   const [showSlider, setShowSlider] = useState(1);

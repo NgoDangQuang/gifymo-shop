@@ -2,7 +2,7 @@ import slider2_img from './../../../../asset/img/slider2.jpg';
 import './styles.css';
 import CloseIcon from '@mui/icons-material/Close';
 
-export function Slider2(props) {
+export default function Slider2(props) {
   return (
     <div className="slider2 animation-show-slider">
       <div>

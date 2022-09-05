@@ -3,7 +3,7 @@ import './styles.css';
 import CloseIcon from '@mui/icons-material/Close';
 import { Link } from 'react-router-dom';
 
-export function Slider1(props) {
+export default function Slider1(props) {
   return (
     <div className="slider1 flex animation-show-slider">
       <div className="slider1__image">
