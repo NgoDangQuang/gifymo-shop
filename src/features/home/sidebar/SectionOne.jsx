@@ -7,8 +7,8 @@ function SectionOne(props) {
 
     return (
         <Box className='sectionOne__Layout'>
-            {typeOfProduct.map((item)=>(
-                <div className='sectionOne__Item style__general' >
+            {typeOfProduct.map((item, idx)=>(
+                <div className='sectionOne__Item style__general' key={idx}>
                     <Link to='/shop'>{item}</Link>
                 </div>
             ))}

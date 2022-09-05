@@ -1,7 +1,8 @@
 import { makeStyles } from '@material-ui/core';
 import { TypeProduct } from 'api';
 import { CONTAINER } from 'constants/styles';
-import bgBody from './../../asset/img/bg-body.jpg'
+import bgBody from './../../asset/img/bg-body.jpg';
+import ContentHomePage from './content';
 
 import { Sidebar } from './sidebar';
 
@@ -15,26 +16,23 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
   },
   container: {
-    width: CONTAINER
+    width: CONTAINER,
   },
   layout: {
     padding: '30px 0px',
-    display: 'grid',
-    gridTemplateRows: 'auto 1fr',
-    gridTemplateColumns: '350px 1fr',
-    gridTemplateAreas: `"sidebar content"`,
+    display: 'flex',
+    width: '100%',
   },
   sidebar: {
-    gridArea: 'sidebar',
+    width: '25%',
   },
   content: {
     marginLeft: '20px',
-    gridArea: 'content',
-    background: 'wheat',
-  }
+    width: '75%',
+  },
 }));
 
-const ListTypeProduct = TypeProduct
+const ListTypeProduct = TypeProduct;
 
 export function Home(props) {
   const classes = useStyles();
@@ -46,7 +44,7 @@ export function Home(props) {
             <Sidebar typeOfProduct={ListTypeProduct} />
           </div>
           <div className={classes.content}>
-            <h2>Content</h2>
+            <ContentHomePage />
           </div>
         </div>
       </div>

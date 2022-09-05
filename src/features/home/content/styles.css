@@ -1,0 +1,36 @@
+.layout-content-slider {
+    position: relative;
+    transition: all 0.5s linear;
+    transition-delay: 1s;
+}
+.layout-content-slider:hover .slick-icon{
+    visibility: inherit;
+    opacity: 1;
+}
+
+.slick-icon {
+    position: absolute;
+    padding: 10px;
+    background-color: var(--BG_COLOR);
+    z-index: 1000;
+    border-radius: 50%;
+    color: var(--MAIN_COLOR);
+    top: 50%;
+    transform: translateY(-50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-out;
+}
+
+.slick-icon:hover {
+    color: var(--BG_COLOR);
+    background-color: var(--MAIN_COLOR);
+}
+
+.left {
+    left: 20px;
+}
+
+.right {
+    right: 20px;
+}

@@ -19,6 +19,7 @@ function App() {
         </Box>
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/gifymo-shop' element={<Home />} />
           <Route path='/shop' element={<Shop />} />
           <Route path='/our-team' element={<OurTeam />} />
           <Route path='/our-story' element={<OurStory />} />
