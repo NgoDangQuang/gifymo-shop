@@ -69,16 +69,16 @@ export function Header(props) {
 
           <ul className={`${classes.flex} ${classes.reset}`}>
             <li className={classes.ml}>
-              <Link to="/">Sign In / Register</Link>
+              <Link to="/gifymo-shop">Sign In / Register</Link>
             </li>
             <li className={classes.ml}>
-              <Link to="/about-us">About Us</Link>
+              <Link to="/gifymo-shop/about-us">About Us</Link>
             </li>
             <li className={classes.ml}>
-              <Link to="/track-orders">Track Orders</Link>
+              <Link to="/gifymo-shop/track-orders">Track Orders</Link>
             </li>
             <li className={classes.ml}>
-              <Link to="/faq">FAQ</Link>
+              <Link to="/gifymo-shop/faq">FAQ</Link>
             </li>
           </ul>
         </div>

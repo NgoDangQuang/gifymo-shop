@@ -83,7 +83,7 @@ export function Navigation(props) {
     <div className={classes.root}>
       <div className={classes.container}>
         <div className={classes.layout}>
-          <Link to="/">
+          <Link to="/gifymo-shop">
             <div
               className={`${classes.layoutItems} ${actived === 1 && classes.active}`}
               onClick={() => setActived(1)}
@@ -96,7 +96,7 @@ export function Navigation(props) {
             </div>
           </Link>
 
-          <Link to="/shop">
+          <Link to="/gifymo-shop/shop">
             <div
               className={`${classes.layoutItems} ${actived === 2 && classes.active}`}
               onClick={() => setActived(2)}
@@ -109,7 +109,7 @@ export function Navigation(props) {
             </div>
           </Link>
 
-          <Link to="/our-team">
+          <Link to="/gifymo-shop/our-team">
             <div
               className={`${classes.layoutItems} ${actived === 3 && classes.active}`}
               onClick={() => setActived(3)}
@@ -122,7 +122,7 @@ export function Navigation(props) {
             </div>
           </Link>
 
-          <Link to="/our-story">
+          <Link to="/gifymo-shop/our-story">
             <div
               className={`${classes.layoutItems} ${actived === 4 && classes.active}`}
               onClick={() => setActived(4)}
@@ -135,7 +135,7 @@ export function Navigation(props) {
             </div>
           </Link>
 
-          <Link to="/blogs">
+          <Link to="/gifymo-shop/blogs">
             <div
               className={`${classes.layoutItems} ${actived === 5 && classes.active}`}
               onClick={() => setActived(5)}
@@ -148,7 +148,7 @@ export function Navigation(props) {
             </div>
           </Link>
 
-          <Link to="/contact">
+          <Link to="/gifymo-shop/contact">
             <div
               className={`${classes.layoutItems} ${actived === 6 && classes.active}`}
               onClick={() => setActived(6)}

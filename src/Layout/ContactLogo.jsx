@@ -61,7 +61,7 @@ export function ContactLogo(props) {
           <div className={classes.layoutItem}>
             <div className={`${classes.item}`}>
               <div className={classes.logo}>
-                <Link to="/">
+                <Link to="/gifymo-shop">
                   <img
                     src={logo}
                     alt="logo"

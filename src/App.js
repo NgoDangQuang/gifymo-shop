@@ -18,16 +18,15 @@ function App() {
           <Navigation />
         </Box>
         <Routes>
-          <Route path='/' element={<Home />} />
           <Route path='/gifymo-shop' element={<Home />} />
-          <Route path='/shop' element={<Shop />} />
-          <Route path='/our-team' element={<OurTeam />} />
-          <Route path='/our-story' element={<OurStory />} />
-          <Route path='/blogs' element={<Blogs />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/about-us' element={<AboutUs />} />
-          <Route path='/track-orders' element={<TrackOrders />} />
-          <Route path='/faq' element={<Faq />} />
+          <Route path='/gifymo-shop/shop' element={<Shop />} />
+          <Route path='/gifymo-shop/our-team' element={<OurTeam />} />
+          <Route path='/gifymo-shop/our-story' element={<OurStory />} />
+          <Route path='/gifymo-shop/blogs' element={<Blogs />} />
+          <Route path='/gifymo-shop/contact' element={<Contact />} />
+          <Route path='/gifymo-shop/about-us' element={<AboutUs />} />
+          <Route path='/gifymo-shop/track-orders' element={<TrackOrders />} />
+          <Route path='/gifymo-shop/faq' element={<Faq />} />
         </Routes>
         <Box>
           <Footer />

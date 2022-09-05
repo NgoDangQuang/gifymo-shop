@@ -9,7 +9,7 @@ function SectionOne(props) {
         <Box className='sectionOne__Layout'>
             {typeOfProduct.map((item, idx)=>(
                 <div className='sectionOne__Item style__general' key={idx}>
-                    <Link to='/shop'>{item}</Link>
+                    <Link to='/gifymo-shop/shop'>{item}</Link>
                 </div>
             ))}
         </Box>

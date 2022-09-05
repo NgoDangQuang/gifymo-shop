@@ -13,7 +13,7 @@ function SectionThree(props) {
                 <div className='sectionThree__image'>
                     <img src={h1Banner} alt="thumnails" />
                 </div>
-                <Link to='/shop' className='sectionThree__shopnow'>
+                <Link to='/gifymo-shop/shop' className='sectionThree__shopnow'>
                     <div className='sectionThree__btn'>SHOP NOW</div>
                 </Link>
             </div>

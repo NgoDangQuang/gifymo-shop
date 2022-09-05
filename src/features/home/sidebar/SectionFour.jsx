@@ -15,7 +15,7 @@ function SectionFour(props) {
             </Box>
             <Box className='sectionFour__item'>
                 <div className='blog'>
-                    <Link to='/blogs'>
+                    <Link to='/gifymo-shop/blogs'>
                         <h3>Promotional Advertising Specialty You Ve Waited Long Enough</h3>
                     </Link>
                     <div className='flex j-center'>
@@ -33,7 +33,7 @@ function SectionFour(props) {
 
             <Box className='sectionFour__item'>
                 <div className='blog'>
-                    <Link to='/blogs'>
+                    <Link to='/gifymo-shop/blogs'>
                         <h3>What Is The Big R For Marketing Your Business</h3>
                     </Link>
                     <div className='flex j-center'>
@@ -50,7 +50,7 @@ function SectionFour(props) {
             </Box>
 
             <Box className='sectionFour__item'>
-                <Link to='/shop' className='sectionFour__viewmore'>
+                <Link to='/gifymo-shop/shop' className='sectionFour__viewmore'>
                     <div className='sectionFour__btn'>VIEW MORE ARTICLES</div>
                 </Link>
             </Box>

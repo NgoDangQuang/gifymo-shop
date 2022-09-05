@@ -76,18 +76,18 @@ export function Footer(props) {
 
             <div className={`${classes.colItems} ${classes.reset}`}>
               <h3>INFORMATION</h3>
-              <Link to="/">My Account</Link>
-              <Link to="/">Track Orders</Link>
-              <Link to="/">Reminder Service</Link>
-              <Link to="/">Shipping & Returns</Link>
+              <Link to="/gifymo-shop">My Account</Link>
+              <Link to="/gifymo-shop">Track Orders</Link>
+              <Link to="/gifymo-shop">Reminder Service</Link>
+              <Link to="/gifymo-shop">Shipping & Returns</Link>
             </div>
 
             <div className={classes.colItems}>
               <h3>SERVICES</h3>
-              <Link to="/">Size Charts</Link>
-              <Link to="/">Contact Us</Link>
-              <Link to="/">How To Order</Link>
-              <Link to="/">FAQ</Link>
+              <Link to="/gifymo-shop">Size Charts</Link>
+              <Link to="/gifymo-shop">Contact Us</Link>
+              <Link to="/gifymo-shop">How To Order</Link>
+              <Link to="/gifymo-shop">FAQ</Link>
             </div>
 
             <div className={classes.colItems}>

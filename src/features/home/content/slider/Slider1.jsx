@@ -20,7 +20,7 @@ export function Slider1(props) {
           <h3 className="font-h3">FROM</h3>
           <h3 className="font-h3 color-pink">$29.90</h3>
         </div>
-        <Link to="/shop">
+        <Link to="/gifymo-shop/shop">
           <div className="slider1__btn">SEND GIFT</div>
         </Link>
       </div>

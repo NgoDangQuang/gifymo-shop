@@ -10,7 +10,7 @@ function SectionTwo(props) {
     return (
         <Box className='sectionTwo__Layout'>
             <Box className='style__general sectionTwo__Item'>
-                <Link to='/shop'>
+                <Link to='/gifymo-shop/shop'>
                     <div className='sectionTwo__Item__Content'>
                         <img src={gift} alt="gift" />
                         <h3>Delivering quality gifts</h3>
@@ -20,7 +20,7 @@ function SectionTwo(props) {
             </Box>
 
             <Box className='style__general sectionTwo__Item'>
-                <Link to='/shop'>
+                <Link to='/gifymo-shop/shop'>
                     <div className='sectionTwo__Item__Content'>
                         <img src={stars} alt="stars" />
                         <h3>Gifts for all occasions</h3>
@@ -30,7 +30,7 @@ function SectionTwo(props) {
             </Box>
 
             <Box className='style__general sectionTwo__Item'>
-                <Link to='/shop'>
+                <Link to='/gifymo-shop/shop'>
                     <div className='sectionTwo__Item__Content'>
                         <img src={confetti} alt="confetti" />
                         <h3>Great customer service</h3>
