@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/gifymo-shop/static/css/main.46faf8b8.css",
-    "main.js": "/gifymo-shop/static/js/main.3faa3b04.js",
+    "main.css": "/gifymo-shop/static/css/main.53ba30fe.css",
+    "main.js": "/gifymo-shop/static/js/main.2a0a4c06.js",
     "static/js/787.0837cd12.chunk.js": "/gifymo-shop/static/js/787.0837cd12.chunk.js",
     "static/media/stars2.gif": "/gifymo-shop/static/media/stars2.c69b04f40f0f45652478.gif",
     "static/media/car2.gif": "/gifymo-shop/static/media/car2.d4157c7b7f728c0fe6ca.gif",
@@ -14,15 +14,19 @@
     "static/media/bg-body.jpg": "/gifymo-shop/static/media/bg-body.26dbf707b10852b42a0a.jpg",
     "static/media/slider2.jpg": "/gifymo-shop/static/media/slider2.73a10c4f1fb895d60ea8.jpg",
     "static/media/flag.png": "/gifymo-shop/static/media/flag.e78840258767faaa77ac.png",
+    "static/media/h1-banner4.jpg": "/gifymo-shop/static/media/h1-banner4.cb04d2a75c5cda10a45b.jpg",
+    "static/media/h1-banner2.jpg": "/gifymo-shop/static/media/h1-banner2.e9f77cf29803afc25c31.jpg",
+    "static/media/h1-banner1.jpg": "/gifymo-shop/static/media/h1-banner1.f2b824f19827e3dc8fef.jpg",
     "static/media/h1-banner5.jpg": "/gifymo-shop/static/media/h1-banner5.e02429ee2cdb965741d0.jpg",
+    "static/media/h1-banner3.jpg": "/gifymo-shop/static/media/h1-banner3.f94ba2c6b38a2dfe4b01.jpg",
     "static/media/logo.svg": "/gifymo-shop/static/media/logo.6d4706ea41563a8763a086c9cfb5278b.svg",
     "index.html": "/gifymo-shop/index.html",
-    "main.46faf8b8.css.map": "/gifymo-shop/static/css/main.46faf8b8.css.map",
-    "main.3faa3b04.js.map": "/gifymo-shop/static/js/main.3faa3b04.js.map",
+    "main.53ba30fe.css.map": "/gifymo-shop/static/css/main.53ba30fe.css.map",
+    "main.2a0a4c06.js.map": "/gifymo-shop/static/js/main.2a0a4c06.js.map",
     "787.0837cd12.chunk.js.map": "/gifymo-shop/static/js/787.0837cd12.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.46faf8b8.css",
-    "static/js/main.3faa3b04.js"
+    "static/css/main.53ba30fe.css",
+    "static/js/main.2a0a4c06.js"
   ]
 }
