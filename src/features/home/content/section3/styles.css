@@ -1,0 +1,112 @@
+.layout-feature-items {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    font-family: 'Jost', sans-serif;
+    background-color: var(--BG_WHITE);
+}
+
+.layout-feature-items__title>h4 {
+    font-family: "Sacramento", Sans-serif;
+    font-size: 60px;
+    font-weight: 400;
+    margin: 0;
+    border-bottom: 2px dashed var(--MAIN_COLOR);
+    display: inline-block;
+}
+
+.layout-items-main img {
+    transition: all 0.3s ease-in-out;
+}
+
+.layout-items-main a {
+    text-decoration: none;
+    color: black;
+}
+
+.layout-items-main:hover img {
+    transform: scale(1.1);
+}
+
+.layout-items-main:hover .group-actions {
+    visibility: visible;
+    opacity: 1;
+    animation-name: show-group-actions;
+    animation-duration: 0.75s;
+}
+
+.layout-items-main:hover h4 {
+    color: var(--MAIN_COLOR)
+}
+
+.feature-items__item {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.image-group-actions {
+    position: relative;
+}
+
+.image-group-actions>img {
+    width: 100%;
+}
+
+.feature-items__item h5,
+h4 {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.info-item {
+    padding: 0px 20px;
+}
+
+.item__price {
+    color: gray;
+    text-decoration: line-through;
+}
+
+.star-icons {
+    margin-top: 10px;
+    color: #FFCE4B;
+}
+
+.group-actions {
+    background-color: white;
+    border-radius: 20px;
+    width: fit-content;
+    padding: 0px 10px;
+    border: 2px solid var(--BG_YELLOW);
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s linear;
+}
+
+.action__icon {
+    color: gray;
+    padding: 5px 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.action__icon:hover {
+    color: var(--MAIN_COLOR)
+}
+
+@keyframes show-group-actions {
+    from {
+        bottom: 20%
+    }
+
+    to {
+        bottom: 5%
+    }
+}
