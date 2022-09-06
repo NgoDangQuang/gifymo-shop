@@ -3,8 +3,10 @@ import { listFeatureItems } from 'api';
 import { ReviewProducts } from 'api/ReviewProducts';
 import { CONTAINER } from 'constants/styles';
 import { useState } from 'react';
+import { FilterProductByType } from 'utils/FilterProductbyType';
 import { MinMaxPrice } from 'utils/HandlePrice';
 import bgBody from './../../asset/img/bg-body.jpg';
+import ShowListProductByType from './content/ShowListProductByType';
 import { SidebarShop } from './sidebar';
 import BasicBreadcrumbs from './sidebar/Breadcrumbs';
 
@@ -39,7 +41,14 @@ export function Shop(props) {
   const [minPrice, maxPrice] = MinMaxPrice(listFeatureItems);
   const [filterMinPrice, setFilterMinPrice] = useState(minPrice);
   const [filterMaxPrice, setFilterMaxPrice] = useState(maxPrice);
-  const dataRecentReviews=ReviewProducts;
+  const ListFeatureByType = FilterProductByType(
+    listFeatureItems,
+    typeProduct,
+    filterMinPrice,
+    filterMaxPrice
+  );
+  const dataRecentReviews = ReviewProducts;
+
   return (
     <div className={classes.root}>
       <div className={classes.container}>
@@ -59,7 +68,9 @@ export function Shop(props) {
               dataRecentReviews={dataRecentReviews}
             />
           </div>
-          <div className={classes.content}>Content {typeProduct}</div>
+          <div className={classes.content}>
+            <ShowListProductByType data={ListFeatureByType} />
+          </div>
         </div>
       </div>
     </div>

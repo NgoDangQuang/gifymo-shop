@@ -48,6 +48,7 @@
 
 .image-group-actions {
     position: relative;
+    overflow: hidden;
 }
 
 .image-group-actions>img {

@@ -1,0 +1,6 @@
+.layout-list-feature-items{
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    background-color: var(--BG_WHITE);
+}
