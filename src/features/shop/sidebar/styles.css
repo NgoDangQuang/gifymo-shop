@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;400;596&family=Quicksand:wght@300&family=Sacramento&display=swap');
+
+
+/* ====== BREADCRUMS ========= */
+.breadcrums a {
+    color: gray;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.breadcrums a:hover {
+    color: var(--MAIN_COLOR);
+}
+
+/* ====== Filter Price ======== */
+
+.filterPrice{
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    background-color: var(--BG_WHITE);
+}
+.filterPrice h2{
+    font-family: 'Jost', sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.filterPrice h5{
+    font-family: 'Jost', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--MAIN_COLOR);
+    margin-bottom: 0;
+    margin-top: 10px;
+}

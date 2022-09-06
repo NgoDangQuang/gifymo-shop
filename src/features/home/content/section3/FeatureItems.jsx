@@ -13,11 +13,14 @@ function FeatureItems(props) {
       </Box>
       <Box className="layout-feature-items__box-items">
         <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-          {listFeatureItems.map((item, index) => (
-            <Grid item xs={6} sm={4} md={3} key={index}>
-              <Item data={item} />
-            </Grid>
-          ))}
+          {listFeatureItems.map(
+            (item, index) =>
+              index + 1 <= 8 && (
+                <Grid item xs={6} sm={4} md={3} key={index}>
+                  <Item data={item} />
+                </Grid>
+              )
+          )}
         </Grid>
       </Box>
     </Box>

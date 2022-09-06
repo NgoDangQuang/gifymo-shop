@@ -6,9 +6,6 @@ import item5 from './../asset/img/item5.jpg'
 import item6 from './../asset/img/item6.jpg'
 import item7 from './../asset/img/item7.jpg'
 import item8 from './../asset/img/item8.jpg'
-import StarHalfIcon from '@mui/icons-material/StarHalf';
-import StarOutlineIcon from '@mui/icons-material/StarOutline';
-import StarIcon from '@mui/icons-material/Star';
 export const listFeatureItems = [
     {
         id: 1,
@@ -16,7 +13,8 @@ export const listFeatureItems = [
         discounts: 91,
         nameItem: 'Hallmark Stuffed Snoopy',
         image: item1,
-        star: [<StarIcon />, <StarIcon />, <StarIcon />, <StarHalfIcon />, <StarOutlineIcon />]
+        type: 'Garment Care',
+        star: 4
     },
     {
         id: 2,
@@ -24,7 +22,8 @@ export const listFeatureItems = [
         discounts: 112,
         nameItem: 'Throated Hummingbird Statue Figurine',
         image: item2,
-        star: [<StarIcon />, <StarIcon />, <StarIcon />, <StarIcon />, <StarHalfIcon />]
+        type: 'Home & Living',
+        star: 3.5
     },
     {
         id: 3,
@@ -32,15 +31,17 @@ export const listFeatureItems = [
         discounts: 92,
         nameItem: 'The Golden Girls Perpetual Calendar',
         image: item3,
-        star: [<StarIcon />, <StarIcon />, <StarIcon />, <StarIcon />, <StarHalfIcon />]
+        type: 'Jewelry & Accessories',
+        star: 4.5
     },
     {
         id: 4,
         price: 187,
-        discounts: 148,
+        discounts: 149,
         nameItem: 'The Bum Box',
         image: item4,
-        star: [<StarIcon />, <StarIcon />, <StarIcon />, <StarIcon />, <StarHalfIcon />]
+        type: 'Occasion Gifts',
+        star: 4
     },
     {
         id: 5,
@@ -48,7 +49,8 @@ export const listFeatureItems = [
         discounts: 63,
         nameItem: 'Soleil Stretchy Ball Bead Mask Necklace',
         image: item5,
-        star: [<StarIcon />, <StarIcon />, <StarIcon />, <StarIcon />, <StarHalfIcon />]
+        type: 'Office & Stationery',
+        star: 5
     },
     {
         id: 6,
@@ -56,7 +58,8 @@ export const listFeatureItems = [
         discounts: 70,
         nameItem: 'Snoopy with Hearts Garland',
         image: item6,
-        star: [<StarIcon />, <StarIcon />, <StarIcon />, <StarIcon />, <StarHalfIcon />]
+        type: 'Personalised Gifts',
+        star: 3
     },
     {
         id: 7,
@@ -64,7 +67,8 @@ export const listFeatureItems = [
         discounts: 112,
         nameItem: 'Rectangular aluminium tray',
         image: item7,
-        star: [<StarIcon />, <StarIcon />, <StarIcon />, <StarIcon />, <StarHalfIcon />]
+        type: 'Uncategorized',
+        star: 3.5
     },
     {
         id: 8,
@@ -72,6 +76,115 @@ export const listFeatureItems = [
         discounts: 87,
         nameItem: 'NICI Toucan Bag Pendant Faux',
         image: item8,
-        star: [<StarIcon />, <StarIcon />, <StarIcon />, <StarIcon />, <StarHalfIcon />]
+        type: 'Garment Care',
+        star: 4
+    },
+    {
+        id: 9,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item8,
+        type: 'Garment Care',
+        star: 4.5
+    },
+    {
+        id: 10,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item7,
+        type: 'Home & Living',
+        star: 5
+    },
+    {
+        id: 11,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item7,
+        type: 'Home & Living',
+        star: 4
+    },
+    {
+        id: 12,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item6,
+        type: 'Jewelry & Accessories',
+        star: 5
+    },
+    {
+        id: 13,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item6,
+        type: 'Jewelry & Accessories',
+        star: 4.5
+    },
+    {
+        id: 14,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item5,
+        type: 'Occasion Gifts',
+        star: 3.5
+    },
+    {
+        id: 15,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item5,
+        type: 'Occasion Gifts',
+        star: 4
+    },
+    {
+        id: 16,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item4,
+        type: 'Office & Stationery',
+        star: 4.5
+    },
+    {
+        id: 17,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item4,
+        type: 'Office & Stationery',
+        star: 4
+    },
+    {
+        id: 18,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item3,
+        type: 'Personalised Gifts',
+        star: 5
+    },
+    {
+        id: 19,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item3,
+        type: 'Personalised Gifts',
+        star: 5
+    },
+    {
+        id: 20,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item2,
+        type: 'Uncategorized',
+        star: 3.5
     },
 ]

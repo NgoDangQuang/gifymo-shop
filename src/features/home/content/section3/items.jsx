@@ -2,7 +2,7 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShareRoundedIcon from '@mui/icons-material/ShareRounded';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import ZoomInIcon from '@mui/icons-material/ZoomIn';
-import { Box } from '@mui/material';
+import { Box, Rating } from '@mui/material';
 import { Link } from 'react-router-dom';
 function Item(props) {
   const { data } = props;
@@ -26,7 +26,7 @@ function Item(props) {
               <h5>${discounts}&nbsp;</h5>
               <h5 className="item__price">${price}</h5>
             </div>
-            <div className="star-icons">{star}</div>
+            <Rating name="half-rating-read" defaultValue={star} precision={0.5} readOnly />
             <h4>{nameItem}</h4>
           </div>
         </div>
