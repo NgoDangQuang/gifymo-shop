@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/gifymo-shop/static/css/main.53ba30fe.css",
-    "main.js": "/gifymo-shop/static/js/main.2a0a4c06.js",
+    "main.css": "/gifymo-shop/static/css/main.c44e0330.css",
+    "main.js": "/gifymo-shop/static/js/main.e713f01b.js",
     "static/js/787.0837cd12.chunk.js": "/gifymo-shop/static/js/787.0837cd12.chunk.js",
     "static/media/stars2.gif": "/gifymo-shop/static/media/stars2.c69b04f40f0f45652478.gif",
     "static/media/car2.gif": "/gifymo-shop/static/media/car2.d4157c7b7f728c0fe6ca.gif",
@@ -18,15 +18,22 @@
     "static/media/h1-banner2.jpg": "/gifymo-shop/static/media/h1-banner2.e9f77cf29803afc25c31.jpg",
     "static/media/h1-banner1.jpg": "/gifymo-shop/static/media/h1-banner1.f2b824f19827e3dc8fef.jpg",
     "static/media/h1-banner5.jpg": "/gifymo-shop/static/media/h1-banner5.e02429ee2cdb965741d0.jpg",
+    "static/media/item6.jpg": "/gifymo-shop/static/media/item6.ebac25038c276a2e798e.jpg",
+    "static/media/item3.jpg": "/gifymo-shop/static/media/item3.a18ccbcbdd4828c1254f.jpg",
+    "static/media/item2.jpg": "/gifymo-shop/static/media/item2.a7bab6775ebd0297e9f9.jpg",
+    "static/media/item4.jpg": "/gifymo-shop/static/media/item4.4cea3f5a866d52e86f3d.jpg",
     "static/media/h1-banner3.jpg": "/gifymo-shop/static/media/h1-banner3.f94ba2c6b38a2dfe4b01.jpg",
+    "static/media/item1.jpg": "/gifymo-shop/static/media/item1.d54abae6b4c5a685b6ac.jpg",
+    "static/media/item8.jpg": "/gifymo-shop/static/media/item8.d983e85a874741eabbd6.jpg",
+    "static/media/item7.jpg": "/gifymo-shop/static/media/item7.a53975d9ba005e6c48d2.jpg",
     "static/media/logo.svg": "/gifymo-shop/static/media/logo.6d4706ea41563a8763a086c9cfb5278b.svg",
     "index.html": "/gifymo-shop/index.html",
-    "main.53ba30fe.css.map": "/gifymo-shop/static/css/main.53ba30fe.css.map",
-    "main.2a0a4c06.js.map": "/gifymo-shop/static/js/main.2a0a4c06.js.map",
+    "main.c44e0330.css.map": "/gifymo-shop/static/css/main.c44e0330.css.map",
+    "main.e713f01b.js.map": "/gifymo-shop/static/js/main.e713f01b.js.map",
     "787.0837cd12.chunk.js.map": "/gifymo-shop/static/js/787.0837cd12.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.53ba30fe.css",
-    "static/js/main.2a0a4c06.js"
+    "static/css/main.c44e0330.css",
+    "static/js/main.e713f01b.js"
   ]
 }
