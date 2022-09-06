@@ -1,5 +1,6 @@
 import { makeStyles } from '@material-ui/core';
 import { listFeatureItems } from 'api';
+import { ReviewProducts } from 'api/ReviewProducts';
 import { CONTAINER } from 'constants/styles';
 import { useState } from 'react';
 import { MinMaxPrice } from 'utils/HandlePrice';
@@ -38,9 +39,7 @@ export function Shop(props) {
   const [minPrice, maxPrice] = MinMaxPrice(listFeatureItems);
   const [filterMinPrice, setFilterMinPrice] = useState(minPrice);
   const [filterMaxPrice, setFilterMaxPrice] = useState(maxPrice);
-
-  console.log("min", filterMinPrice)
-  console.log("max", filterMaxPrice)
+  const dataRecentReviews=ReviewProducts;
   return (
     <div className={classes.root}>
       <div className={classes.container}>
@@ -57,6 +56,7 @@ export function Shop(props) {
               setFilterMinPrice={setFilterMinPrice}
               filterMaxPrice={filterMaxPrice}
               setFilterMaxPrice={setFilterMaxPrice}
+              dataRecentReviews={dataRecentReviews}
             />
           </div>
           <div className={classes.content}>Content {typeProduct}</div>

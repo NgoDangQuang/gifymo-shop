@@ -3,6 +3,7 @@ import { TypeProduct } from 'api';
 import { GAP } from 'constants/styles';
 import FilterByPrice from './FilterByPrice';
 import ProductCategories from './ProductCategories';
+import RecentReviews from './RecentReviews';
 
 export function SidebarShop(props) {
   const {
@@ -13,6 +14,7 @@ export function SidebarShop(props) {
     filterMaxPrice,
     setFilterMinPrice,
     setFilterMaxPrice,
+    dataRecentReviews,
   } = props;
 
   const data = TypeProduct;
@@ -30,6 +32,9 @@ export function SidebarShop(props) {
           setFilterMinPrice={setFilterMinPrice}
           setFilterMaxPrice={setFilterMaxPrice}
         />
+      </Box>
+      <Box>
+        <RecentReviews dataRecentReviews={dataRecentReviews} />
       </Box>
     </Box>
   );

@@ -14,24 +14,88 @@
 
 /* ====== Filter Price ======== */
 
-.filterPrice{
+.filterPrice {
     padding: 40px;
     border-radius: 10px;
     box-shadow: var(--shadow);
     background-color: var(--BG_WHITE);
 }
-.filterPrice h2{
+
+.filterPrice h2 {
     font-family: 'Jost', sans-serif;
     font-size: 30px;
     font-weight: normal;
     margin-top: 0;
     margin-bottom: 20px;
 }
-.filterPrice h5{
+
+.filterPrice h5 {
     font-family: 'Jost', sans-serif;
     font-size: 18px;
     font-weight: 500;
     color: var(--MAIN_COLOR);
     margin-bottom: 0;
     margin-top: 10px;
+}
+
+/* ====== Recent Reviews ======== */
+
+.layout-recent-reviews {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    background-color: var(--BG_WHITE);
+}
+
+.layout-recent-reviews>h2 {
+    padding: 0px 20px;
+    font-family: 'Jost', sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+
+.layout-recent-reviews__item {
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.image-review-product {
+    width: 30%;
+}
+
+.image-review-product img {
+    width: 100%;
+}
+
+.content-review-product {
+    width: 70%;
+    margin-left: 10px;
+}
+
+.content-review-product>a {
+    color: black;
+    text-decoration: none;
+}
+
+.content-review-product h3 {
+    font-size: 16px;
+    font-weight: normal;
+    font-family: 'Jost', sans-serif;
+    margin: 0;
+    margin-bottom: 5px;
+    transition: color 0.2s linear;
+}
+
+.content-review-product h3:hover {
+    color: var(--MAIN_COLOR)
+}
+
+.content-review-product>h4 {
+    font-size: 14px;
+    font-weight: normal;
+    font-family: 'Jost', sans-serif;
+    margin: 0;
+    color: gray;
 }
