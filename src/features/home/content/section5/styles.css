@@ -1,5 +1,6 @@
 .item-sub-content {
     text-align: center;
+    transition: all 0.2s ease-in-out;
 }
 
 .item-sub-content a {
@@ -9,7 +10,6 @@
 
 .item-sub-content img {
     width: 100%;
-    transition: all 0.3s ease-in-out;
 }
 
 .item-sub-content>h4 {
