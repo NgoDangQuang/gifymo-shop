@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/gifymo-shop/static/css/main.33fc4b56.css",
+    "main.css": "/gifymo-shop/static/css/main.768001d4.css",
     "main.js": "/gifymo-shop/static/js/main.0b14e4c9.js",
     "static/js/787.0837cd12.chunk.js": "/gifymo-shop/static/js/787.0837cd12.chunk.js",
     "static/media/stars2.gif": "/gifymo-shop/static/media/stars2.c69b04f40f0f45652478.gif",
@@ -31,12 +31,12 @@
     "static/media/item7.jpg": "/gifymo-shop/static/media/item7.a53975d9ba005e6c48d2.jpg",
     "static/media/logo.svg": "/gifymo-shop/static/media/logo.6d4706ea41563a8763a086c9cfb5278b.svg",
     "index.html": "/gifymo-shop/index.html",
-    "main.33fc4b56.css.map": "/gifymo-shop/static/css/main.33fc4b56.css.map",
+    "main.768001d4.css.map": "/gifymo-shop/static/css/main.768001d4.css.map",
     "main.0b14e4c9.js.map": "/gifymo-shop/static/js/main.0b14e4c9.js.map",
     "787.0837cd12.chunk.js.map": "/gifymo-shop/static/js/787.0837cd12.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.33fc4b56.css",
+    "static/css/main.768001d4.css",
     "static/js/main.0b14e4c9.js"
   ]
 }
