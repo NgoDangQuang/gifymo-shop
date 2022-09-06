@@ -1,0 +1,33 @@
+.item-sub-content {
+    text-align: center;
+}
+
+.item-sub-content a {
+    text-decoration: none;
+    color: black;
+}
+
+.item-sub-content img {
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.item-sub-content>h4 {
+    margin-top: 10px;
+}
+
+.item-sub-content:hover {
+    transform: scale(1.05);
+}
+
+.item-sub-content:hover h4 {
+    color: var(--MAIN_COLOR);
+}
+
+.item-sub-content__h5 {
+    color: gray;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
