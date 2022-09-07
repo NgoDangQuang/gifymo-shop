@@ -1,7 +1,7 @@
 import { Box, Grid, Pagination } from '@mui/material';
 import NoData from 'component/NoData';
 import Item from 'features/home/content/section3/items';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import SortSelect from './SortSelect';
 import './styles.css';
 
@@ -27,6 +27,10 @@ function LayoutContent1(props) {
     setCurrentPage(value);
   };
 
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [filterMinPrice, filterMaxPrice, typeProduct]);
+  
   if (data.length === 0) return <NoData />;
   return (
     <Box className="layout-feature-items">
