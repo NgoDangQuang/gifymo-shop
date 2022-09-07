@@ -1,16 +1,13 @@
 import { makeStyles } from '@material-ui/core';
 import WorkOffOutlinedIcon from '@mui/icons-material/WorkOffOutlined';
 import { Box } from '@mui/material';
-import { MAINCOLOR, SHADOW } from 'constants/styles';
+import { MAINCOLOR } from 'constants/styles';
 const useStyles = makeStyles((theme) => ({
   layoutNoData: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: '50px',
-    backgroundColor: 'white',
-    borderRadius: '10px',
-    boxShadow: SHADOW,
+    paddingTop: '20px',
     textAlign: 'center',
   },
 

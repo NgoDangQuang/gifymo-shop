@@ -20,7 +20,8 @@
     border-radius: 10px;
     box-shadow: var(--shadow);
 }
-.layout-product-categories >h2{
+
+.layout-product-categories>h2 {
     margin: 0;
     font-family: 'Jost', sans-serif;
     font-weight: normal;
@@ -29,7 +30,7 @@
 
 .product-categories__Item>a {
     text-decoration: none;
-    color:gray;
+    color: gray;
     font-size: 17px;
     line-height: 24px;
     transition: all 0.2s ease-in-out;
@@ -38,6 +39,7 @@
 .product-categories__Item>a:hover {
     color: var(--MAIN_COLOR);
 }
+
 /* ====== Filter Price ======== */
 
 .filterPrice {

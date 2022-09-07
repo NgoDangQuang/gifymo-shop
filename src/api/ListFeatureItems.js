@@ -30,6 +30,7 @@ export const listFeatureItems = [
         nameItem: 'Hallmark Stuffed Snoopy',
         image: item1,
         type: 'Garment Care',
+        description: 'An dico accommodare ius, porro mnesarchum pro in. Cetero fierent urbanitas eam id, sed movet voluptua ut. Eu agam malorum nec. Eu has vide putent, dico option nominati no eam. Ea erant impetus consequuntur eos, velit congue vidisse eos ne.',
         star: 4
     },
     {
@@ -39,6 +40,7 @@ export const listFeatureItems = [
         nameItem: 'Throated Hummingbird Statue Figurine',
         image: item2,
         type: 'Home & Living',
+        description: 'An dico accommodare ius, porro mnesarchum pro in. Cetero fierent urbanitas eam id, sed movet voluptua ut. Eu agam malorum nec. Eu has vide putent, dico option nominati no eam. Ea erant impetus consequuntur eos, velit congue vidisse eos ne.',
         star: 3.5
     },
     {
@@ -48,6 +50,7 @@ export const listFeatureItems = [
         nameItem: 'The Golden Girls Perpetual Calendar',
         image: item3,
         type: 'Jewelry & Accessories',
+        description: 'An dico accommodare ius, porro mnesarchum pro in. Cetero fierent urbanitas eam id, sed movet voluptua ut. Eu agam malorum nec. Eu has vide putent, dico option nominati no eam. Ea erant impetus consequuntur eos, velit congue vidisse eos ne.',
         star: 4.5
     },
     {
@@ -57,6 +60,7 @@ export const listFeatureItems = [
         nameItem: 'The Bum Box',
         image: item4,
         type: 'Occasion Gifts',
+        description: 'An dico accommodare ius, porro mnesarchum pro in. Cetero fierent urbanitas eam id, sed movet voluptua ut. Eu agam malorum nec. Eu has vide putent, dico option nominati no eam. Ea erant impetus consequuntur eos, velit congue vidisse eos ne.',
         star: 4
     },
     {
@@ -66,6 +70,7 @@ export const listFeatureItems = [
         nameItem: 'Soleil Stretchy Ball Bead Mask Necklace',
         image: item5,
         type: 'Office & Stationery',
+        description: 'An dico accommodare ius, porro mnesarchum pro in. Cetero fierent urbanitas eam id, sed movet voluptua ut. Eu agam malorum nec. Eu has vide putent, dico option nominati no eam. Ea erant impetus consequuntur eos, velit congue vidisse eos ne.',
         star: 5
     },
     {
@@ -75,6 +80,7 @@ export const listFeatureItems = [
         nameItem: 'Snoopy with Hearts Garland',
         image: item6,
         type: 'Personalised Gifts',
+        description: 'An dico accommodare ius, porro mnesarchum pro in. Cetero fierent urbanitas eam id, sed movet voluptua ut. Eu agam malorum nec. Eu has vide putent, dico option nominati no eam. Ea erant impetus consequuntur eos, velit congue vidisse eos ne.',
         star: 3
     },
     {
@@ -84,6 +90,7 @@ export const listFeatureItems = [
         nameItem: 'Rectangular aluminium tray',
         image: item7,
         type: 'Uncategorized',
+        description: 'An dico accommodare ius, porro mnesarchum pro in. Cetero fierent urbanitas eam id, sed movet voluptua ut. Eu agam malorum nec. Eu has vide putent, dico option nominati no eam. Ea erant impetus consequuntur eos, velit congue vidisse eos ne.',
         star: 3.5
     },
     {
@@ -93,6 +100,7 @@ export const listFeatureItems = [
         nameItem: 'NICI Toucan Bag Pendant Faux',
         image: item8,
         type: 'Garment Care',
+        description: 'An dico accommodare ius, porro mnesarchum pro in. Cetero fierent urbanitas eam id, sed movet voluptua ut. Eu agam malorum nec. Eu has vide putent, dico option nominati no eam. Ea erant impetus consequuntur eos, velit congue vidisse eos ne.',
         star: 4
     },
     {
@@ -102,6 +110,7 @@ export const listFeatureItems = [
         nameItem: 'Always my Sister Art Heart',
         image: item9,
         type: 'Home & Living',
+        description: 'An dico accommodare ius, porro mnesarchum pro in. Cetero fierent urbanitas eam id, sed movet voluptua ut. Eu agam malorum nec. Eu has vide putent, dico option nominati no eam. Ea erant impetus consequuntur eos, velit congue vidisse eos ne.',
         star: 4
     },
     {
@@ -111,6 +120,7 @@ export const listFeatureItems = [
         nameItem: 'Anniversary Gifts by Year',
         image: item10,
         type: 'Home & Living',
+        description: 'An dico accommodare ius, porro mnesarchum pro in. Cetero fierent urbanitas eam id, sed movet voluptua ut. Eu agam malorum nec. Eu has vide putent, dico option nominati no eam. Ea erant impetus consequuntur eos, velit congue vidisse eos ne.',
         star: 4.5
     },
     {
@@ -120,6 +130,7 @@ export const listFeatureItems = [
         nameItem: 'Beaded Prayer Bracelet',
         image: item11,
         type: 'Office & Stationery',
+        description: 'An dico accommodare ius, porro mnesarchum pro in. Cetero fierent urbanitas eam id, sed movet voluptua ut. Eu agam malorum nec. Eu has vide putent, dico option nominati no eam. Ea erant impetus consequuntur eos, velit congue vidisse eos ne.',
         star: 4
     },
     {
@@ -129,6 +140,7 @@ export const listFeatureItems = [
         nameItem: 'Better Together Pizza',
         image: item12,
         type: 'Office & Stationery',
+        description: 'An dico accommodare ius, porro mnesarchum pro in. Cetero fierent urbanitas eam id, sed movet voluptua ut. Eu agam malorum nec. Eu has vide putent, dico option nominati no eam. Ea erant impetus consequuntur eos, velit congue vidisse eos ne.',
         star: 4
     },
     {
@@ -138,6 +150,7 @@ export const listFeatureItems = [
         nameItem: 'Chair Perpetual Calendar',
         image: item13,
         type: 'Occasion Gifts',
+        description: 'An dico accommodare ius, porro mnesarchum pro in. Cetero fierent urbanitas eam id, sed movet voluptua ut. Eu agam malorum nec. Eu has vide putent, dico option nominati no eam. Ea erant impetus consequuntur eos, velit congue vidisse eos ne.',
         star: 4
     },
     {
@@ -147,6 +160,7 @@ export const listFeatureItems = [
         nameItem: 'Disney Birthday Parade',
         image: item14,
         type: 'Uncategorized',
+        description: 'An dico accommodare ius, porro mnesarchum pro in. Cetero fierent urbanitas eam id, sed movet voluptua ut. Eu agam malorum nec. Eu has vide putent, dico option nominati no eam. Ea erant impetus consequuntur eos, velit congue vidisse eos ne.',
         star: 4
     },
     {
@@ -156,6 +170,7 @@ export const listFeatureItems = [
         nameItem: 'Encouragement Home Decor',
         image: item15,
         type: 'Occasion Gifts',
+        description: 'An dico accommodare ius, porro mnesarchum pro in. Cetero fierent urbanitas eam id, sed movet voluptua ut. Eu agam malorum nec. Eu has vide putent, dico option nominati no eam. Ea erant impetus consequuntur eos, velit congue vidisse eos ne.',
         star: 4
     },
     {
@@ -165,6 +180,7 @@ export const listFeatureItems = [
         nameItem: 'Enesco Lolita Stemless',
         image: item16,
         type: 'Uncategorized',
+        description: 'An dico accommodare ius, porro mnesarchum pro in. Cetero fierent urbanitas eam id, sed movet voluptua ut. Eu agam malorum nec. Eu has vide putent, dico option nominati no eam. Ea erant impetus consequuntur eos, velit congue vidisse eos ne.',
         star: 4
     },
     {
@@ -174,7 +190,8 @@ export const listFeatureItems = [
         nameItem: 'Ethan Allen Mustard Paper Art',
         image: item17,
         type: 'Garment Care',
-        star: 5
+        description: 'An dico accommodare ius, porro mnesarchum pro in. Cetero fierent urbanitas eam id, sed movet voluptua ut. Eu agam malorum nec. Eu has vide putent, dico option nominati no eam. Ea erant impetus consequuntur eos, velit congue vidisse eos ne.',
+        star: 5,
     },
     {
         id: 18,
@@ -183,6 +200,7 @@ export const listFeatureItems = [
         nameItem: 'Giving Collection by Demdaco',
         image: item18,
         type: 'Jewelry & Accessories',
+        description: 'An dico accommodare ius, porro mnesarchum pro in. Cetero fierent urbanitas eam id, sed movet voluptua ut. Eu agam malorum nec. Eu has vide putent, dico option nominati no eam. Ea erant impetus consequuntur eos, velit congue vidisse eos ne.',
         star: 4
     },
     {
@@ -192,6 +210,7 @@ export const listFeatureItems = [
         nameItem: 'Green Glazed Ceramic Mug',
         image: item19,
         type: 'Occasion Gifts',
+        description: 'An dico accommodare ius, porro mnesarchum pro in. Cetero fierent urbanitas eam id, sed movet voluptua ut. Eu agam malorum nec. Eu has vide putent, dico option nominati no eam. Ea erant impetus consequuntur eos, velit congue vidisse eos ne.',
         star: 3.5
     },
     {
@@ -201,6 +220,7 @@ export const listFeatureItems = [
         nameItem: 'Hallmark Disney Mickey Minnie',
         image: item20,
         type: 'Office & Stationery',
+        description: 'An dico accommodare ius, porro mnesarchum pro in. Cetero fierent urbanitas eam id, sed movet voluptua ut. Eu agam malorum nec. Eu has vide putent, dico option nominati no eam. Ea erant impetus consequuntur eos, velit congue vidisse eos ne.',
         star: 3
     },
     {
@@ -210,6 +230,7 @@ export const listFeatureItems = [
         nameItem: 'Hallmark Itty Bittys',
         image: item21,
         type: 'Jewelry & Accessories',
+        description: 'An dico accommodare ius, porro mnesarchum pro in. Cetero fierent urbanitas eam id, sed movet voluptua ut. Eu agam malorum nec. Eu has vide putent, dico option nominati no eam. Ea erant impetus consequuntur eos, velit congue vidisse eos ne.',
         star: 4.5
     },
     {
@@ -219,6 +240,7 @@ export const listFeatureItems = [
         nameItem: 'Hallmark Stuffed Snoopy',
         image: item22,
         type: 'Office & Stationery',
+        description: 'An dico accommodare ius, porro mnesarchum pro in. Cetero fierent urbanitas eam id, sed movet voluptua ut. Eu agam malorum nec. Eu has vide putent, dico option nominati no eam. Ea erant impetus consequuntur eos, velit congue vidisse eos ne.',
         star: 5
     },
     {
@@ -228,6 +250,7 @@ export const listFeatureItems = [
         nameItem: 'Happy Wishes Birthday Card Keeper',
         image: item23,
         type: 'Home & Living',
+        description: 'An dico accommodare ius, porro mnesarchum pro in. Cetero fierent urbanitas eam id, sed movet voluptua ut. Eu agam malorum nec. Eu has vide putent, dico option nominati no eam. Ea erant impetus consequuntur eos, velit congue vidisse eos ne.',
         star: 5
     },
 ]
