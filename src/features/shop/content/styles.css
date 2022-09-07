@@ -1,6 +1,26 @@
+
+/* ===== Sort Filter ======== */
+
+.layout-groups-sort{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.icon-delete:hover{
+    color: var(--MAIN_COLOR);
+}
+/* ======= List Feature Item ======== */
 .layout-list-feature-items{
     padding: 20px;
     border-radius: 10px;
     box-shadow: var(--shadow);
     background-color: var(--BG_WHITE);
+}
+.layout-feature-items__sort{
+    /* padding: 18px 0px; */
+    background-image: radial-gradient(circle at 1.5px, rgba(0, 0, 0, .2) .75px, rgba(255, 255, 255, 0) 1.5px);
+    background-size: 8px 2px;
+    background-repeat: repeat-x;
+    background-position: bottom center;
 }

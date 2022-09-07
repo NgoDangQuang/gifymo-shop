@@ -187,4 +187,220 @@ export const listFeatureItems = [
         type: 'Uncategorized',
         star: 3.5
     },
+    {
+        id: 20,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item2,
+        type: 'Uncategorized',
+        star: 3.5
+    },
+    {
+        id: 20,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item2,
+        type: 'Uncategorized',
+        star: 3.5
+    },
+    {
+        id: 20,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item2,
+        type: 'Uncategorized',
+        star: 3.5
+    },
+    {
+        id: 20,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item2,
+        type: 'Uncategorized',
+        star: 3.5
+    },
+    {
+        id: 20,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item2,
+        type: 'Uncategorized',
+        star: 3.5
+    },
+    {
+        id: 20,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item2,
+        type: 'Uncategorized',
+        star: 3.5
+    },
+    {
+        id: 20,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item2,
+        type: 'Uncategorized',
+        star: 3.5
+    },
+    {
+        id: 20,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item2,
+        type: 'Uncategorized',
+        star: 3.5
+    },
+    {
+        id: 20,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item2,
+        type: 'Uncategorized',
+        star: 3.5
+    },
+    {
+        id: 20,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item2,
+        type: 'Uncategorized',
+        star: 3.5
+    },
+    {
+        id: 20,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item2,
+        type: 'Uncategorized',
+        star: 3.5
+    },
+    {
+        id: 20,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item2,
+        type: 'Uncategorized',
+        star: 3.5
+    },
+    {
+        id: 20,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item2,
+        type: 'Uncategorized',
+        star: 3.5
+    },
+    {
+        id: 20,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item2,
+        type: 'Uncategorized',
+        star: 3.5
+    },
+    {
+        id: 20,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item2,
+        type: 'Uncategorized',
+        star: 3.5
+    },
+    {
+        id: 20,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item2,
+        type: 'Uncategorized',
+        star: 3.5
+    },
+    {
+        id: 20,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item2,
+        type: 'Uncategorized',
+        star: 3.5
+    },
+    {
+        id: 20,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item2,
+        type: 'Uncategorized',
+        star: 3.5
+    },
+    {
+        id: 20,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item2,
+        type: 'Uncategorized',
+        star: 3.5
+    },
+    {
+        id: 20,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item2,
+        type: 'Uncategorized',
+        star: 3.5
+    },
+    {
+        id: 20,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item2,
+        type: 'Uncategorized',
+        star: 3.5
+    },
+    {
+        id: 20,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item2,
+        type: 'Uncategorized',
+        star: 3.5
+    },
+    {
+        id: 20,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item2,
+        type: 'Uncategorized',
+        star: 3.5
+    },
+    {
+        id: 20,
+        price: 145,
+        discounts: 87,
+        nameItem: 'NICI Toucan Bag Pendant Faux',
+        image: item2,
+        type: 'Uncategorized',
+        star: 3.5
+    },
 ]

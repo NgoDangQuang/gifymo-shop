@@ -18,6 +18,7 @@ export function SidebarShop(props) {
   } = props;
 
   const data = TypeProduct;
+  
   return (
     <Box>
       <Box mb={GAP}>

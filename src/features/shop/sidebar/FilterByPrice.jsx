@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import { MAINCOLOR } from 'constants/styles';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './styles.css';
 
 export default function FilterByPrice(props) {
@@ -20,6 +20,10 @@ export default function FilterByPrice(props) {
     setFilterMinPrice(newValue[0]);
     setFilterMaxPrice(newValue[1]);
   };
+
+  useEffect(() => {
+    setValue([filterMinPrice, filterMaxPrice]);
+  }, [filterMinPrice, filterMaxPrice]);
 
   return (
     <Box className="filterPrice">

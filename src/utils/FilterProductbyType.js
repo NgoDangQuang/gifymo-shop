@@ -1,4 +1,4 @@
-function SortByPrice(data, minPrice, maxPrice) {
+function FilterByPrice(data, minPrice, maxPrice) {
     let dataFilter = [];
     // eslint-disable-next-line array-callback-return
     data.map((item) => {
@@ -22,6 +22,6 @@ export function FilterProductByType(listFeatureItems, typeProduct, minPrice, max
             listFeature.push(item)
         }
     })
-    const dataFilter = SortByPrice(listFeature, minPrice, maxPrice)
+    const dataFilter = FilterByPrice(listFeature, minPrice, maxPrice)
     return dataFilter
 }

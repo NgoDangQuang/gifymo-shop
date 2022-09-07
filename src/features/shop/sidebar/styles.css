@@ -12,6 +12,32 @@
     color: var(--MAIN_COLOR);
 }
 
+/* ====== Product Categories ======= */
+
+.layout-product-categories {
+    padding: 20px 40px 40px;
+    background: var(--BG_WHITE);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+.layout-product-categories >h2{
+    margin: 0;
+    font-family: 'Jost', sans-serif;
+    font-weight: normal;
+    font-size: 28px;
+}
+
+.product-categories__Item>a {
+    text-decoration: none;
+    color:gray;
+    font-size: 17px;
+    line-height: 24px;
+    transition: all 0.2s ease-in-out;
+}
+
+.product-categories__Item>a:hover {
+    color: var(--MAIN_COLOR);
+}
 /* ====== Filter Price ======== */
 
 .filterPrice {
@@ -23,7 +49,7 @@
 
 .filterPrice h2 {
     font-family: 'Jost', sans-serif;
-    font-size: 30px;
+    font-size: 28px;
     font-weight: normal;
     margin-top: 0;
     margin-bottom: 20px;
@@ -50,7 +76,7 @@
 .layout-recent-reviews>h2 {
     padding: 0px 20px;
     font-family: 'Jost', sans-serif;
-    font-size: 30px;
+    font-size: 28px;
     font-weight: normal;
     padding-bottom: 20px;
     margin-top: 20px;

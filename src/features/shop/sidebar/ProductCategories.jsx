@@ -10,15 +10,14 @@ function ProductCategories(props) {
   };
   return (
     <Box className="layout-product-categories">
-      <Box className="sectionOne__Layout">
-        {data.map((item, idx) => (
-          <div className="sectionOne__Item style__general" key={idx}>
-            <Link to="/gifymo-shop/shop" onClick={() => handleTypeProduct(item)}>
-              {item}
-            </Link>
-          </div>
-        ))}
-      </Box>
+      <h2 className="style__general">Product categories</h2>
+      {data.map((item, idx) => (
+        <div className="product-categories__Item style__general" key={idx}>
+          <Link to="/gifymo-shop/shop" onClick={() => handleTypeProduct(item)}>
+            <li>{item}</li>
+          </Link>
+        </div>
+      ))}
     </Box>
   );
 }

@@ -26,7 +26,7 @@ function Item(props) {
               <h5>${discounts}&nbsp;</h5>
               <h5 className="item__price">${price}</h5>
             </div>
-            <Rating name="half-rating-read" defaultValue={star} precision={0.5} readOnly />
+            <Rating name="read-only" value={star} readOnly precision={0.5} />
             <h4>{nameItem}</h4>
           </div>
         </div>

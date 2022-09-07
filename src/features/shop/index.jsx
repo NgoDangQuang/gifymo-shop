@@ -5,6 +5,7 @@ import { CONTAINER } from 'constants/styles';
 import { useState } from 'react';
 import { FilterProductByType } from 'utils/FilterProductbyType';
 import { MinMaxPrice } from 'utils/HandlePrice';
+import { handleChooseFunction } from 'utils/Sort';
 import bgBody from './../../asset/img/bg-body.jpg';
 import ShowListProductByType from './content/ShowListProductByType';
 import { SidebarShop } from './sidebar';
@@ -38,6 +39,7 @@ const useStyles = makeStyles((theme) => ({
 export function Shop(props) {
   const classes = useStyles();
   const [typeProduct, setTypeProduct] = useState('');
+  const [sortItems, setSortItems] = useState('');
   const [minPrice, maxPrice] = MinMaxPrice(listFeatureItems);
   const [filterMinPrice, setFilterMinPrice] = useState(minPrice);
   const [filterMaxPrice, setFilterMaxPrice] = useState(maxPrice);
@@ -49,6 +51,8 @@ export function Shop(props) {
   );
   const dataRecentReviews = ReviewProducts;
 
+  const dataSort = handleChooseFunction(sortItems, ListFeatureByType);
+  
   return (
     <div className={classes.root}>
       <div className={classes.container}>
@@ -69,7 +73,19 @@ export function Shop(props) {
             />
           </div>
           <div className={classes.content}>
-            <ShowListProductByType data={ListFeatureByType} />
+            <ShowListProductByType
+              data={dataSort}
+              sortItems={sortItems}
+              setSortItems={setSortItems}
+              typeProduct={typeProduct}
+              setTypeProduct={setTypeProduct}
+              filterMinPrice={filterMinPrice}
+              setFilterMinPrice={setFilterMinPrice}
+              filterMaxPrice={filterMaxPrice}
+              setFilterMaxPrice={setFilterMaxPrice}
+              minPrice={minPrice}
+              maxPrice={maxPrice}
+            />
           </div>
         </div>
       </div>

@@ -42,21 +42,21 @@
 
 .sectionOne__Layout {
     padding: 40px;
-    background: var(--BG_WHITE);
+    background: var(--BG_COLOR);
     border-radius: 10px;
     box-shadow: var(--shadow);
 }
 
 .sectionOne__Item>a {
     text-decoration: none;
-    color: black;
+    color: var(--MAIN_COLOR);
     font-size: 17px;
     line-height: 24px;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .sectionOne__Item>a:hover {
-    color: var(--MAIN_COLOR);
+    color: var(--MAIN_COLOR_HOVER);
 }
 
 
