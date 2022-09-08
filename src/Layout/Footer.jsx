@@ -2,10 +2,10 @@ import { makeStyles } from '@material-ui/core';
 import CopyrightIcon from '@mui/icons-material/Copyright';
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import PinterestIcon from '@mui/icons-material/Pinterest';
+import TwitterIcon from '@mui/icons-material/Twitter';
 import { Box, Button, TextField } from '@mui/material';
-import { CONTAINER, GRAY, MAINCOLOR } from 'constants/styles';
+import { CONTAINER, MAINCOLOR } from 'constants/styles';
 import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
@@ -14,7 +14,11 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     padding: '40px 0px',
-    borderBottom: `4px dotted ${GRAY}`,
+    backgroundImage:
+      'radial-gradient(circle at 1.5px, rgba(0, 0, 0, 0.349) .75px, rgba(255, 255, 255, 0.11) 1.5px)',
+    backgroundSize: '8px 2px',
+    backgroundRepeat: 'repeat-x',
+    backgroundPosition: 'top center',
   },
   container: {
     width: CONTAINER,
@@ -55,7 +59,12 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    color:'gray'
+    color: 'gray',
+    backgroundImage:
+      'radial-gradient(circle at 1.5px, rgba(0, 0, 0, 0.349) .75px, rgba(255, 255, 255, 0.11) 1.5px)',
+    backgroundSize: '8px 2px',
+    backgroundRepeat: 'repeat-x',
+    backgroundPosition: 'top center',
   },
 }));
 export function Footer(props) {
@@ -105,13 +114,13 @@ export function Footer(props) {
       </div>
       <div className={classes.copyRight}>
         {/* <div> */}
-          Copyright
-          <CopyrightIcon size="small" />
-          2022 Gifymo. All Rights Reserved
-          <FacebookOutlinedIcon sx={{ color: '#0B7FEB', margin: '0px 8px' }} />
-          <TwitterIcon sx={{ color: '#1D9BF0', marginRight: '8px' }} />
-          <InstagramIcon sx={{ color: '#CF0880', marginRight: '8px' }} />
-          <PinterestIcon sx={{ color: '#E60023', marginRight: '8px' }} />
+        Copyright
+        <CopyrightIcon size="small" />
+        2022 Gifymo. All Rights Reserved
+        <FacebookOutlinedIcon sx={{ color: '#0B7FEB', margin: '0px 8px' }} />
+        <TwitterIcon sx={{ color: '#1D9BF0', marginRight: '8px' }} />
+        <InstagramIcon sx={{ color: '#CF0880', marginRight: '8px' }} />
+        <PinterestIcon sx={{ color: '#E60023', marginRight: '8px' }} />
         {/* </div> */}
       </div>
     </div>

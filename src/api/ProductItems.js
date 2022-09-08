@@ -2,6 +2,8 @@ import item1 from './../asset/img/item12.jpg'
 import item2 from './../asset/img/item9.jpg'
 import item3 from './../asset/img/item10.jpg'
 import item4 from './../asset/img/item11.jpg'
+import item5 from './../asset/img/avt.jpg'
+
 export const ProductItemsData = {
     id: 1,
     price: 132,
@@ -19,7 +21,7 @@ export const CustomerReviews = [
         productId: 1,
         productName: 'Hallmark Stuffed Snoopy',
         poster: 'admin',
-        avt: item1,
+        avt: item5,
         star: 5,
         date: 'May 10, 2022',
         content: 'The team @gift-ribbon were prompt in responding, flexible with the size I was after, shipped the artwork immediately – but most importantly we loved the piece.',
@@ -28,7 +30,7 @@ export const CustomerReviews = [
         productId: 2,
         productName: 'Throated Hummingbird Statue Figurine',
         poster: 'admin',
-        avt: item2,
+        avt: item5,
         star: 5,
         date: 'May 10, 2022',
         content: 'The team @gift-ribbon were prompt in responding, flexible with the size I was after, shipped the artwork immediately – but most importantly we loved the piece.'
@@ -37,7 +39,7 @@ export const CustomerReviews = [
         productId: 3,
         productName: 'The Golden Girls Perpetual Calendar',
         poster: 'admin',
-        avt: item3,
+        avt: item5,
         star: 5,
         date: 'May 10, 2022',
         content: 'The team @gift-ribbon were prompt in responding, flexible with the size I was after, shipped the artwork immediately – but most importantly we loved the piece.'
@@ -46,7 +48,7 @@ export const CustomerReviews = [
         productId: 1,
         productName: 'Hallmark Stuffed Snoopy',
         poster: 'sum',
-        avt: item1,
+        avt: item5,
         star: 4.5,
         date: 'May 10, 2022',
         content: 'An absolutely gorgeous print! Just a beautiful as it looks on the computer. 🙂'

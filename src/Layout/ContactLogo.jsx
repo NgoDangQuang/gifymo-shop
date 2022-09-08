@@ -1,16 +1,20 @@
 import { makeStyles } from '@material-ui/core';
-import { CONTAINER, GRAY } from 'constants/styles';
-import React from 'react';
-import logo from './../asset/img/logo.svg'
+import { CONTAINER } from 'constants/styles';
 import { Link } from 'react-router-dom';
+import logo from './../asset/img/logo.svg';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100wh',
     display: 'flex',
     justifyContent: 'center',
-    borderBottom: `4px dotted ${GRAY}`,
+    // borderBottom: `4px dotted ${GRAY}`,
     padding: '20px 0px',
+    backgroundImage:
+      'radial-gradient(circle at 1.5px, rgba(0, 0, 0, 0.349) .75px, rgba(255, 255, 255, 0.11) 1.5px)',
+    backgroundSize: '8px 2px',
+    backgroundRepeat: 'repeat-x',
+    backgroundPosition: 'bottom center',
   },
   container: {
     width: CONTAINER,
@@ -62,10 +66,7 @@ export function ContactLogo(props) {
             <div className={`${classes.item}`}>
               <div className={classes.logo}>
                 <Link to="/gifymo-shop">
-                  <img
-                    src={logo}
-                    alt="logo"
-                  />
+                  <img src={logo} alt="logo" />
                 </Link>
               </div>
             </div>

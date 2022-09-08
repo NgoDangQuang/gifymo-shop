@@ -171,10 +171,69 @@
 
 .categories-content {
     margin-right: 40px;
-    color:gray;
+    color: gray;
 }
 
 .categories-content h4:first-child {
     font-size: 18px;
     color: black;
+}
+
+/* ===== section 2 ======== */
+
+.section2-description h4 {
+    font-size: 16px;
+    color: gray;
+    line-height: 30px;
+}
+
+.section2-description h3 {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 30px 0px;
+}
+
+.section2-description-item {
+    margin: 20px 0px;
+}
+
+.icon-check {
+    color: var(--MAIN_COLOR);
+    margin-right: 10px;
+}
+
+.content-review-items {
+    padding: 40px 0px;
+}
+
+.content-review-items:last-child {
+    background-image: none;
+}
+
+.img-review {
+    width: 10%;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.img-review>img {
+    width: 100%;
+}
+
+.content-review {
+    width: 90%;
+}
+
+.content-review h4 {
+    color: gray;
+    font-size: 16px;
+}
+
+.creator-rating {
+    margin-top: 10px;
+}
+
+.content-review h3 {
+    font-weight: 500;
+    margin: 0px 10px;
 }
