@@ -1,5 +1,6 @@
 import { Box } from '@mui/material';
 import { AboutUs, Blogs, Contact, Faq, Home, OurStory, OurTeam, Shop, TrackOrders } from 'features';
+import Product from 'features/product';
 import { ContactLogo, Footer, Header, Navigation, ScrollToTop } from 'Layout';
 import { Route, Routes } from 'react-router-dom';
 
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route path='/gifymo-shop' element={<Home />} />
           <Route path='/gifymo-shop/shop' element={<Shop />} />
+          <Route path='/gifymo-shop/product' element={<Product />} />
           <Route path='/gifymo-shop/our-team' element={<OurTeam />} />
           <Route path='/gifymo-shop/our-story' element={<OurStory />} />
           <Route path='/gifymo-shop/blogs' element={<Blogs />} />

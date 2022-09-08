@@ -11,7 +11,7 @@ function Item(props) {
 
   return (
     <Box className="layout-items-main">
-      <Link to="/gifymo-shop/shop">
+      <Link to="/gifymo-shop/product">
         <div className="feature-items__item">
           <div className="image-group-actions">
             <img src={image} alt={`item${id}`} />
