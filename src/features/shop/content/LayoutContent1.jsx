@@ -6,7 +6,7 @@ function LayoutContent1(props) {
   const { data, currentPage, ItemsInPage } = props;
 
   return (
-    <Box className="">
+    <Box>
       <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
         {data.map(
           (item, index) =>

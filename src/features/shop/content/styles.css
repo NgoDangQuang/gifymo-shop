@@ -1,6 +1,3 @@
-/*  ======= Layout out ========== */
-
-
 /* ===== Sort Filter ======== */
 .layout-sort-header {
     margin-bottom: 20px;
@@ -128,21 +125,17 @@
     color: var(--MAIN_COLOR);
 }
 
-#style-scrollbar::-webkit-scrollbar {
+.layout-content-2-fix-height::-webkit-scrollbar {
     width: 10px;
     background-color: #F5F5F5;
 }
 
-#style-scrollbar::-webkit-scrollbar-thumb {
+.layout-content-2-fix-height::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background: linear-gradient(left, #fff, #e4e4e4);
+    background: linear-gradient(to right, #fff, #e4e4e4);
     border: 1px solid #aaa;
 }
 
-#style-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #fff;
-}
-
-#style-scrollbar::-webkit-scrollbar-thumb:active {
-    background: linear-gradient(left, #22ADD4, #1E98BA);
+.layout-content-2-fix-height::-webkit-scrollbar-thumb:hover {
+    background: var(--BG_WHITE);
 }

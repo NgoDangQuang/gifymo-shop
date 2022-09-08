@@ -30,7 +30,6 @@ function ShowListProductByType(props) {
 
   const ItemsInPage = 16;
   const countPage = Math.ceil(data.length / ItemsInPage);
-  console.log(layoutShowItems);
   return (
     <Box className="layout-show-feature-items-shop-page">
       <Box className="layout-feature-items__sort">

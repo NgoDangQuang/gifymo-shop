@@ -4,6 +4,7 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import ZoomInIcon from '@mui/icons-material/ZoomIn';
 import { Box, Rating } from '@mui/material';
 import { Link } from 'react-router-dom';
+
 function Item(props) {
   const { data } = props;
   const { price, discounts, nameItem, image, star, id } = data;

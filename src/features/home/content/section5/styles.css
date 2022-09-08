@@ -1,3 +1,7 @@
+.layout-feature-items__box-items{
+    padding:0px 20px;
+}
+
 .item-sub-content {
     text-align: center;
     transition: all 0.2s ease-in-out;
