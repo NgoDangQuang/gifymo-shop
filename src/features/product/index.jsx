@@ -2,7 +2,7 @@ import { Box } from '@mui/material';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Typography from '@mui/material/Typography';
 import { listFeatureItems } from 'api';
-import { CustomerReviews, ProductItemsData } from 'api/ProductItems';
+import { CustomerReviews, ProductInformation, ProductItemsData } from 'api/ProductItems';
 import { Link } from 'react-router-dom';
 import ProductItems from './ProductItems';
 import RelatedProducts from './RelatedProducts';
@@ -11,6 +11,7 @@ import './styles.css';
 
 export default function Product() {
   const data = ProductItemsData;
+  const productInformation = ProductInformation;
   const { nameItem } = data;
 
   const dataReview = CustomerReviews;
@@ -33,7 +34,11 @@ export default function Product() {
         </Box>
 
         <Box mb={2}>
-          <ProductItems data={data} dataReview={dataReview} />
+          <ProductItems
+            data={data}
+            dataReview={dataReview}
+            productInformation={productInformation}
+          />
         </Box>
 
         <Box
@@ -51,7 +56,7 @@ export default function Product() {
           </Box>
         </Box>
 
-        <Box mb={5}>
+        <Box mb={5} pb={10} sx={{ borderBottom: '1px solid gray' }}>
           <RelatedProducts data={dataRelatedProduct} />
         </Box>
       </div>

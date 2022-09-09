@@ -54,3 +54,18 @@ export const CustomerReviews = [
         content: 'An absolutely gorgeous print! Just a beautiful as it looks on the computer. 🙂'
     },
 ]
+
+export const ProductInformation = [
+    '35″L x 24″W x 37-45″H(front to back wheel)',
+    '32.5″L x 18.5″W x 16.5″H',
+    '32.5″L x 24″W x 18.5″H',
+    '24',
+    'Aluminum',
+    '20 LBS',
+    '60 LBS',
+    '24″',
+    '37 - 45″',
+    '12″ air / wide track slick tread',
+    '21.5″',
+    '25″',
+]

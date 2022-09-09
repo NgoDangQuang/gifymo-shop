@@ -1,0 +1,197 @@
+.root-our-team {
+    display: flex;
+    justify-content: center;
+}
+
+.container-our-team {
+    width: var(--CONTAINER);
+}
+
+.layout-our-team-page {
+    padding-bottom: 80px;
+}
+
+.title-our-team {
+    margin: 40px;
+}
+
+.title-our-team>h4 {
+    font-size: 60px;
+    font-family: "Sacramento", Sans-serif;
+    font-weight: 400;
+}
+
+.our-team-items {
+    text-align: center;
+}
+
+.avt-member {
+    position: relative;
+}
+
+.avt-member:hover .icon-our-team {
+    visibility: visible;
+    opacity: 1;
+}
+
+.avt-member>img {
+    border-radius: 50%;
+}
+
+.all-icon-our-member {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon-our-team {
+    border-radius: 50%;
+    background-color: var(--MAIN_COLOR);
+    color: white;
+    padding: 8px;
+    margin: 0px 5px;
+    font-size: 14px;
+    transition: all 0.3s linear;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.icon-our-team:hover {
+    background-color: var(--BG_COLOR);
+}
+
+.our-team-items>h3 {
+    margin: 20px 0px 10px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s linear;
+}
+
+.our-team-items>h3:hover {
+    color: var(--MAIN_COLOR)
+}
+
+.our-team-items>h4 {
+    color: gray;
+    margin: 0;
+}
+
+.our-team-items-join-us {
+    text-align: center;
+}
+
+.icon-join-us {
+    font-size: 50px;
+    color: var(--BG_COLOR);
+}
+
+.our-team-items-join-us>h4 {
+    font-size: 50px;
+    font-family: "Sacramento", Sans-serif;
+}
+
+.our-team-items-join-us>h5 {
+    font-size: 14px;
+    font-family: 'jost';
+    font-weight: 500;
+    margin: 0;
+    border-bottom: 2px dashed var(--MAIN_COLOR);
+    display: inline-block;
+    cursor: pointer;
+}
+
+.our-team-items-join-us>h5:hover {
+    color: var(--MAIN_COLOR)
+}
+
+.layout-our-skills {
+    padding: 40px 20px;
+    margin-top: 30px;
+}
+
+.layout-our-skills>h4 {
+    text-align: center;
+    font-size: 60px;
+    font-family: "Sacramento", Sans-serif;
+    font-weight: 400;
+}
+
+.layout-our-skills-content {
+    width: 50%;
+    padding: 20px;
+}
+
+.layout-our-skills-content>h4 {
+    font-size: 22px;
+    font-family: 'Jost';
+    font-weight: 500;
+}
+
+.layout-our-skills-content>p {
+    line-height: 28px;
+    font-family: 'Jost';
+    font-size: 18px;
+    color: gray;
+    text-align: justify;
+}
+
+.layout-skill-loading {
+    padding: 20px;
+    width: 50%;
+}
+
+.background-line-gray {
+    width: 100%;
+    height: 10px;
+    background-color: rgba(192, 181, 181, 0.678);
+    border-radius: 10px;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.background-line-pink {
+    height: 100%;
+    background-color: var(--BG_COLOR);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.layout-skill-loading-items {
+    position: relative;
+}
+
+.layout-skill-loading-items>h4 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.layout-skill-loading-items>h5 {
+    font-size: 20px;
+    font-weight: 500;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+.circle-line {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    transform: translate(-50%, -25%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-circle-line {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--BG_COLOR);
+}

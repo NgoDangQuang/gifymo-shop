@@ -40,7 +40,7 @@ function a11yProps(index) {
   };
 }
 
-export default function Section2({ dataReview }) {
+export default function Section2({ dataReview, productInformation }) {
   const [value, setValue] = useState(0);
   const [rating, setRating] = useState(0);
 
@@ -61,8 +61,8 @@ export default function Section2({ dataReview }) {
       >
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
           <Tab label="Description" {...a11yProps(0)} />
-          <Tab label="additional information" {...a11yProps(1)} />
-          <Tab label={`review (${dataReview.length})`} {...a11yProps(2)} />
+          <Tab label={`review (${dataReview.length})`} {...a11yProps(1)} />
+          <Tab label="Your Review" {...a11yProps(2)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
@@ -107,7 +107,31 @@ export default function Section2({ dataReview }) {
           </h4>
         </div>
       </TabPanel>
+
       <TabPanel value={value} index={1}>
+        <div>
+          {dataReview.map((item, index) => (
+            <div className="flex content-review-items border-bottom-background">
+              <div className="img-review">
+                <Avatar alt="Remy Sharp" src={item.avt} sx={{ width: '70px', height: '70px' }} />
+              </div>
+              <div className="content-review">
+                <h4>{item.content}</h4>
+                <div className="creator-rating flex">
+                  <Rating name="read-only" value={item.star} readOnly precision={0.5} />
+                  <h3>{item.poster}</h3>
+                  <h4>{item.date}</h4>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </TabPanel>
+
+      <TabPanel value={value} index={2}>
+        <div style={{ padding: '20px', fontSize: '20px' }}>
+          <h2 style={{ margin: 0, fontFamily: 'Jost', fontWeight: 500 }}>Your Review</h2>
+        </div>
         <div style={{ padding: '0px 20px' }}>
           <Rating
             name="simple-controlled"
@@ -140,23 +164,6 @@ export default function Section2({ dataReview }) {
         <div style={{ padding: '20px', display: 'flex', justifyContent: 'center' }}>
           <Button variant="contained">Submit Your review</Button>
         </div>
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        {dataReview.map((item, index) => (
-          <div className="flex content-review-items border-bottom-background">
-            <div className="img-review">
-              <Avatar alt="Remy Sharp" src={item.avt} sx={{ width: '70px', height: '70px' }} />
-            </div>
-            <div className="content-review">
-              <h4>{item.content}</h4>
-              <div className="creator-rating flex">
-                <Rating name="read-only" value={item.star} readOnly precision={0.5} />
-                <h3>{item.poster}</h3>
-                <h4>{item.date}</h4>
-              </div>
-            </div>
-          </div>
-        ))}
       </TabPanel>
     </Box>
   );
