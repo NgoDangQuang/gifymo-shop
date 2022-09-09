@@ -1,8 +1,6 @@
 import { Grid } from '@mui/material';
 import { OurTeamData } from 'api/OurTeam';
-import { BG_COLOR } from 'constants/styles';
-import React from 'react';
-import { FaFacebookF, FaTwitter, FaYoutube, FaGooglePlusG, FaPlus } from 'react-icons/fa';
+import { FaFacebookF, FaGooglePlusG, FaPlus, FaTwitter, FaYoutube } from 'react-icons/fa';
 import './styles.css';
 
 export function OurTeam(props) {
