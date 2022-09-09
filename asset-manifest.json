@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/gifymo-shop/static/css/main.b9fda67d.css",
-    "main.js": "/gifymo-shop/static/js/main.aad800ac.js",
+    "main.css": "/gifymo-shop/static/css/main.2818a8f1.css",
+    "main.js": "/gifymo-shop/static/js/main.c0a670a9.js",
     "static/js/787.0837cd12.chunk.js": "/gifymo-shop/static/js/787.0837cd12.chunk.js",
     "static/media/avt.jpg": "/gifymo-shop/static/media/avt.5ec05b8f600b6fe30e71.jpg",
     "static/media/stars2.gif": "/gifymo-shop/static/media/stars2.c69b04f40f0f45652478.gif",
@@ -32,6 +32,7 @@
     "static/media/item3.jpg": "/gifymo-shop/static/media/item3.a18ccbcbdd4828c1254f.jpg",
     "static/media/item2.jpg": "/gifymo-shop/static/media/item2.a7bab6775ebd0297e9f9.jpg",
     "static/media/item18.jpg": "/gifymo-shop/static/media/item18.906cde2c621f8ce56cb5.jpg",
+    "static/media/team05.jpg": "/gifymo-shop/static/media/team05.dcd35b441ca069890ada.jpg",
     "static/media/item4.jpg": "/gifymo-shop/static/media/item4.4cea3f5a866d52e86f3d.jpg",
     "static/media/h1-banner3.jpg": "/gifymo-shop/static/media/h1-banner3.f94ba2c6b38a2dfe4b01.jpg",
     "static/media/item12.jpg": "/gifymo-shop/static/media/item12.dd49ebd57e2e0bf7c186.jpg",
@@ -39,19 +40,22 @@
     "static/media/item13.jpg": "/gifymo-shop/static/media/item13.39a45614e6b607d24a00.jpg",
     "static/media/cat04.jpg": "/gifymo-shop/static/media/cat04.fe99d744d73548f89f6d.jpg",
     "static/media/cat02.jpg": "/gifymo-shop/static/media/cat02.fbbe78ffdb415e59f92e.jpg",
+    "static/media/team03.jpg": "/gifymo-shop/static/media/team03.1945e51e180d599ff3e5.jpg",
     "static/media/item1.jpg": "/gifymo-shop/static/media/item1.d54abae6b4c5a685b6ac.jpg",
     "static/media/cat01.jpg": "/gifymo-shop/static/media/cat01.a64b0513ef91c1b5e308.jpg",
     "static/media/item10.jpg": "/gifymo-shop/static/media/item10.2698a89c7cd39b50c75d.jpg",
+    "static/media/team07.jpg": "/gifymo-shop/static/media/team07.e73c67838abec2024ae9.jpg",
+    "static/media/team02.jpg": "/gifymo-shop/static/media/team02.274b23bc339f8968b932.jpg",
     "static/media/item8.jpg": "/gifymo-shop/static/media/item8.d983e85a874741eabbd6.jpg",
     "static/media/item7.jpg": "/gifymo-shop/static/media/item7.a53975d9ba005e6c48d2.jpg",
     "static/media/logo.svg": "/gifymo-shop/static/media/logo.6d4706ea41563a8763a086c9cfb5278b.svg",
     "index.html": "/gifymo-shop/index.html",
-    "main.b9fda67d.css.map": "/gifymo-shop/static/css/main.b9fda67d.css.map",
-    "main.aad800ac.js.map": "/gifymo-shop/static/js/main.aad800ac.js.map",
+    "main.2818a8f1.css.map": "/gifymo-shop/static/css/main.2818a8f1.css.map",
+    "main.c0a670a9.js.map": "/gifymo-shop/static/js/main.c0a670a9.js.map",
     "787.0837cd12.chunk.js.map": "/gifymo-shop/static/js/787.0837cd12.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b9fda67d.css",
-    "static/js/main.aad800ac.js"
+    "static/css/main.2818a8f1.css",
+    "static/js/main.c0a670a9.js"
   ]
 }
