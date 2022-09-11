@@ -1,0 +1,61 @@
+.story-items {
+    margin-top: 50px;
+}
+
+.story-items-img {
+    width: 48%;
+}
+
+.story-items-img>img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.story-items-content {
+    width: 49%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.story-items-content__content {
+    width: 70%;
+}
+
+.story-items-content__content>h4 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.story-items-content__content>h5 {
+    font-size: 16px;
+    font-weight: 400;
+    color: gray;
+    text-align: justify;
+}
+
+/* ====== CUSTOMER SERVICES ======== */
+.layout-customer-services {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.layout-customer-services-content {
+    width: 85%;
+}
+
+.layout-customer-services-content h3 {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Jost';
+}
+
+.layout-customer-services-content h4 {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Jost';
+    color: gray;
+    text-align: left;
+}
