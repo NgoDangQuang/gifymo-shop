@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/gifymo-shop/static/css/main.2818a8f1.css",
-    "main.js": "/gifymo-shop/static/js/main.c0a670a9.js",
+    "main.css": "/gifymo-shop/static/css/main.4367ed98.css",
+    "main.js": "/gifymo-shop/static/js/main.ec64bb60.js",
     "static/js/787.0837cd12.chunk.js": "/gifymo-shop/static/js/787.0837cd12.chunk.js",
     "static/media/avt.jpg": "/gifymo-shop/static/media/avt.5ec05b8f600b6fe30e71.jpg",
     "static/media/stars2.gif": "/gifymo-shop/static/media/stars2.c69b04f40f0f45652478.gif",
@@ -14,6 +14,9 @@
     "static/media/slider1.png": "/gifymo-shop/static/media/slider1.a80ab1161a9a675eaa52.png",
     "static/media/bg-body.jpg": "/gifymo-shop/static/media/bg-body.26dbf707b10852b42a0a.jpg",
     "static/media/slider2.jpg": "/gifymo-shop/static/media/slider2.73a10c4f1fb895d60ea8.jpg",
+    "static/media/story3.jpg": "/gifymo-shop/static/media/story3.7fb9820c39256deab0b7.jpg",
+    "static/media/story1.jpg": "/gifymo-shop/static/media/story1.ae2a4c24dc51b0297f3a.jpg",
+    "static/media/story2.jpg": "/gifymo-shop/static/media/story2.cbc09631cc1f70977745.jpg",
     "static/media/flag.png": "/gifymo-shop/static/media/flag.e78840258767faaa77ac.png",
     "static/media/h1-banner4.jpg": "/gifymo-shop/static/media/h1-banner4.cb04d2a75c5cda10a45b.jpg",
     "static/media/h1-banner2.jpg": "/gifymo-shop/static/media/h1-banner2.e9f77cf29803afc25c31.jpg",
@@ -50,12 +53,12 @@
     "static/media/item7.jpg": "/gifymo-shop/static/media/item7.a53975d9ba005e6c48d2.jpg",
     "static/media/logo.svg": "/gifymo-shop/static/media/logo.6d4706ea41563a8763a086c9cfb5278b.svg",
     "index.html": "/gifymo-shop/index.html",
-    "main.2818a8f1.css.map": "/gifymo-shop/static/css/main.2818a8f1.css.map",
-    "main.c0a670a9.js.map": "/gifymo-shop/static/js/main.c0a670a9.js.map",
+    "main.4367ed98.css.map": "/gifymo-shop/static/css/main.4367ed98.css.map",
+    "main.ec64bb60.js.map": "/gifymo-shop/static/js/main.ec64bb60.js.map",
     "787.0837cd12.chunk.js.map": "/gifymo-shop/static/js/787.0837cd12.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2818a8f1.css",
-    "static/js/main.c0a670a9.js"
+    "static/css/main.4367ed98.css",
+    "static/js/main.ec64bb60.js"
   ]
 }
