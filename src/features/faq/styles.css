@@ -1,0 +1,19 @@
+.layout-faq-content {
+    background-color: rgba(223, 100, 120, 0.315);
+    border: 1px solid var(--MAIN_COLOR);
+    padding: 5px 20px;
+}
+
+.layout-faq-content h3 {
+    font-family: 'Jost';
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.layout-faq-content>h4 {
+    padding-bottom: 20px;
+    color: rgba(56, 51, 51, 0.726);
+    font-size: 16px;
+    font-family: 'Jost';
+    text-align: justify;
+}
