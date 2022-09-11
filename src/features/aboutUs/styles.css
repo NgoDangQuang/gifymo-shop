@@ -1,0 +1,142 @@
+.w-100 {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.layout-about-us-section2 {
+    font-family: 'Jost';
+}
+
+.about-us-items {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 340px;
+}
+
+.about-us-items:hover>img {
+    transform: scale(1.2);
+}
+
+.about-us-items>img {
+    transition: all 0.4s linear;
+    border-radius: 10px;
+}
+
+.about-us-items a {
+    text-decoration: none;
+    color: black;
+}
+
+.about-us-items h5 {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+}
+
+
+.about-us-items h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.about-us-items p {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s linear;
+    border-bottom: 2px dashed var(--MAIN_COLOR);
+}
+
+.about-us-items p:hover {
+    color: var(--MAIN_COLOR);
+}
+
+.about-us-items-content-one {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about-us-items-content-two {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.about-us-items-content-three {
+    position: absolute;
+    bottom: 10%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.about-us-items-content-three p {
+    padding: 8px 25px;
+    background-color: white;
+    border-radius: 50px;
+    border-bottom: none;
+}
+
+.about-us-items-content-three p:hover {
+    background-color: rgb(235, 145, 160);
+    color: white;
+}
+
+/* ===== SECTION 3 ======= */
+
+.layout-about-us-section3 a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Jost';
+}
+
+.layout-about-us-section3-content {
+    text-align: center;
+    padding: 30px 0px;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    box-shadow: var(--shadow);
+}
+
+.layout-about-us-section3-content:hover {
+    box-shadow: none;
+}
+
+.layout-about-us-section3-content:hover>h3 {
+    color: var(--MAIN_COLOR);
+}
+
+.layout-about-us-section3-content>h3 {
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    transition: all 0.3s linear;
+}
+
+.layout-about-us-section3-content p {
+    font-style: 18px;
+    color: gray;
+    margin: 0;
+}
+
+.image-about-us-section3 {
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    align-items: center;
+    padding: 10px;
+}
+
+.image-about-us-section3>img {
+    width: 100%;
+}
