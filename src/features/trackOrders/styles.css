@@ -1,0 +1,42 @@
+.layout-track-orders {
+    width: 1000px;
+}
+
+.layout-track-orders-content {
+    font-family: 'Jost';
+    margin: 50px 0px;
+}
+.layout-track-orders-content >h4{
+    width: 600px;
+    color: gray;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: justify;
+    font-family: monospace;
+}
+
+.layout-track-orders-contact {
+
+    align-items: flex-end;
+}
+
+.track-order-items-button {
+    background-color: var(--MAIN_COLOR);
+    border-radius: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    color:white;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.track-order-items-button:hover{
+    background-color:#AF5052;
+}
+.track-order-items >h3{
+    font-size: 20px;
+    font-weight: 500;
+}
