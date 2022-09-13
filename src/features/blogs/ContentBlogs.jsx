@@ -6,10 +6,10 @@ function ContentBlogs({ data }) {
     <div className="set-scroll-content">
       {data.map((item, index) => (
         <div className="blog-items" key={item.id}>
-          <Link to="/gifymo-shop/blog/detail">
+          <Link to="/gifymo-shop/blogs/detail">
             <img src={item.img} alt="" />
           </Link>
-          <Link to="/gifymo-shop/blog/detail">
+          <Link to="/gifymo-shop/blogs/detail">
             <h4>{item.title}</h4>
           </Link>
           <div className="flex">

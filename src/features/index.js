@@ -1,4 +1,5 @@
 export * from './aboutUs'
+export * from './BlogDetails'
 export * from './blogs'
 export * from './contact'
 export * from './faq'
