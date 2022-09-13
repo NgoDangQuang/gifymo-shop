@@ -1,4 +1,4 @@
-import { Avatar, Button, Rating, TextareaAutosize, TextField } from '@mui/material';
+import { Avatar, TextareaAutosize, TextField } from '@mui/material';
 import Box from '@mui/material/Box';
 import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
