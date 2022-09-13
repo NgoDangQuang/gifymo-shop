@@ -41,7 +41,6 @@ function a11yProps(index) {
 
 export default function CommentBlogDetails({ dataComment }) {
   const [value, setValue] = useState(0);
-  const [rating, setRating] = useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
