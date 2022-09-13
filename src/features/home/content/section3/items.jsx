@@ -9,8 +9,15 @@ function Item(props) {
   const { data } = props;
   const { price, discounts, nameItem, image, star, id } = data;
 
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
-    <Box className="layout-items-main">
+    <Box className="layout-items-main" onClick={handleScrollToTop}>
       <Link to="/gifymo-shop/product">
         <div className="feature-items__item">
           <div className="image-group-actions">

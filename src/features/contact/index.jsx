@@ -3,8 +3,14 @@ import { InputAdornment, TextareaAutosize, TextField } from '@mui/material';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import PersonIcon from '@mui/icons-material/Person';
 import './styles.css';
+import { useEffect } from 'react';
 
 export function Contact(props) {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  });
   return (
     <div className="root-our-team">
       <div className="container-our-team">

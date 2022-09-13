@@ -1,5 +1,6 @@
 import { Box, Grid } from '@mui/material';
 import { introduction } from 'api/OurStory';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import confetti from './../../asset/icons/confetti2.gif';
 import gift from './../../asset/icons/gift2.gif';
@@ -11,6 +12,11 @@ import './styles.css';
 
 export function AboutUs(props) {
   const intro = introduction;
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  });
   return (
     <div className="root-our-team">
       <div className="container-our-team">

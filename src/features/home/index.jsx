@@ -1,6 +1,7 @@
 import { makeStyles } from '@material-ui/core';
 import { TypeProduct } from 'api';
 import { CONTAINER } from 'constants/styles';
+import { useEffect } from 'react';
 import bgBody from './../../asset/img/bg-body.jpg';
 import ContentHomePage from './content';
 
@@ -36,6 +37,11 @@ const ListTypeProduct = TypeProduct;
 
 export function Home(props) {
   const classes = useStyles();
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  });
   return (
     <div className={classes.root}>
       <div className={classes.container}>

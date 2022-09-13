@@ -1,12 +1,17 @@
 import { Grid } from '@mui/material';
 import { FAQ } from 'api/FAQ';
+import { useEffect } from 'react';
 import { ItemsFaq } from './itemFAQ';
 import './styles.css';
 
 export function Faq(props) {
   const data = FAQ;
   const lengthData = data.length / 2;
-
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  });
   return (
     <div className="root-our-team">
       <div className="container-our-team">

@@ -1,7 +1,13 @@
 import { TextField } from '@mui/material';
+import { useEffect } from 'react';
 import './styles.css';
 
 export function TrackOrders(props) {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  });
   return (
     <div className="root-our-team">
       <div className="container-our-team">
@@ -26,8 +32,8 @@ export function TrackOrders(props) {
                   <TextField
                     variant="outlined"
                     placeholder="Found in yout order confirmation email."
-                    style={{ width: '390px', marginRight:'20px' }}
-                    size='small'
+                    style={{ width: '390px', marginRight: '20px' }}
+                    size="small"
                   />
                 </div>
 
@@ -36,8 +42,8 @@ export function TrackOrders(props) {
                   <TextField
                     variant="outlined"
                     placeholder="Email you used during checkout."
-                    style={{ width: '390px', marginRight:'20px' }}
-                    size='small'
+                    style={{ width: '390px', marginRight: '20px' }}
+                    size="small"
                   />
                 </div>
 

@@ -1,11 +1,16 @@
 import { Grid } from '@mui/material';
 import { OurTeamData } from 'api/OurTeam';
+import { useEffect } from 'react';
 import { FaFacebookF, FaGooglePlusG, FaPlus, FaTwitter, FaYoutube } from 'react-icons/fa';
 import './styles.css';
 
 export function OurTeam(props) {
   const data = OurTeamData;
-
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  });
   return (
     <div className="root-our-team">
       <div className="container-our-team">

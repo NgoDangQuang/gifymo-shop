@@ -161,8 +161,12 @@ export default function Section2({ dataReview, productInformation }) {
           <TextField label="Name" variant="outlined" fullWidth="true" />
           <TextField label="Email" variant="outlined" fullWidth="true" />
         </div>
-        <div style={{ padding: '20px', display: 'flex', justifyContent: 'center' }}>
-          <Button variant="contained">Submit Your review</Button>
+        <div className="checkbox-blog-details flex">
+          <input type="checkbox" />
+          <h4>Save my name, email, and website in this browser for the next time I comment.</h4>
+        </div>
+        <div style={{ padding: '20px' }}>
+          <h4 className="button-post-comment">SUBMIT YOUR REVIEW</h4>
         </div>
       </TabPanel>
     </Box>

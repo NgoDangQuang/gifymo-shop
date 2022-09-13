@@ -2,6 +2,7 @@ import { makeStyles } from '@material-ui/core';
 import { listFeatureItems } from 'api';
 import { ReviewProducts } from 'api/ReviewProducts';
 import { CONTAINER } from 'constants/styles';
+import { useEffect } from 'react';
 import { useState } from 'react';
 import { FilterProductByType } from 'utils/FilterProductbyType';
 import { MinMaxPrice } from 'utils/HandlePrice';
@@ -52,7 +53,11 @@ export function Shop(props) {
   const dataRecentReviews = ReviewProducts;
 
   const dataSort = handleChooseFunction(sortItems, ListFeatureByType);
-  
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  });
   return (
     <div className={classes.root}>
       <div className={classes.container}>

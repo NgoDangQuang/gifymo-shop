@@ -1,10 +1,16 @@
 import { Grid } from '@mui/material';
 import { customService, introduction } from 'api/OurStory';
+import { useEffect } from 'react';
 import './styles.css';
 
 export function OurStory(props) {
   const intro = introduction;
   const customServiceData = customService;
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  });
   return (
     <div className="root-our-team">
       <div className="container-our-team">
@@ -13,7 +19,7 @@ export function OurStory(props) {
             <h4 className="border-bottom-background">Our Story</h4>
           </div>
 
-          <div style={{ fontFamily: 'Jost', marginBottom:'80px' }}>
+          <div style={{ fontFamily: 'Jost', marginBottom: '80px' }}>
             <div className="j-between flex story-items">
               <div className="story-items-img">
                 <img src={intro[0].image} alt="" />

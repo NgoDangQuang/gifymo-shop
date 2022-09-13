@@ -3,6 +3,7 @@ import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Typography from '@mui/material/Typography';
 import { listFeatureItems } from 'api';
 import { CustomerReviews, ProductInformation, ProductItemsData } from 'api/ProductItems';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ProductItems from './ProductItems';
 import RelatedProducts from './RelatedProducts';
@@ -22,6 +23,11 @@ export default function Product() {
     listFeatureItems[Math.ceil(Math.random() * 20)],
     listFeatureItems[Math.ceil(Math.random() * 20)],
   ];
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  });
   return (
     <div className="layout-product-items">
       <div className="container">

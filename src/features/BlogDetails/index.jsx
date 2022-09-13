@@ -7,6 +7,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import PinterestIcon from '@mui/icons-material/Pinterest';
 import { Breadcrumbs, Typography } from '@mui/material';
 import { BlogDetail, commentBlogDetail } from 'api/BlogDetails';
+import { useEffect } from 'react';
 import { RiDoubleQuotesL } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import CommentBlogDetails from './commentBlogDetails';
@@ -16,6 +17,11 @@ function BlogDetails(props) {
   const data = BlogDetail;
   const dataComment = commentBlogDetail;
 
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  });
   return (
     <div className="layout-blog-details border-bottom-background">
       <div className="container-blog-details ">

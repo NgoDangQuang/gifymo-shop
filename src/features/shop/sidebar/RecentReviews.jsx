@@ -19,7 +19,7 @@ function RecentReviews(props) {
                 </Link>
               </div>
               <div className="content-review-product">
-                <Link to={`/gifymo-shop/shop/${item.productId}`}>
+                <Link to='/gifymo-shop/product'>
                   <h3>{item.productName}</h3>
                 </Link>
                 <Rating name="half-rating-read" defaultValue={item.star} precision={0.5} readOnly />

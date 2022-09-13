@@ -2,6 +2,7 @@ import { makeStyles } from '@material-ui/core';
 import { Breadcrumbs, Typography } from '@mui/material';
 import { BlogList, CategoriesBlog, TagBlogs } from 'api/Blogs';
 import { CONTAINER } from 'constants/styles';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ContentBlogs from './ContentBlogs';
 import SideBarBlog from './SideBarBlog';
@@ -41,6 +42,11 @@ export function Blogs(props) {
   const dataBlogs = BlogList;
   const categories = CategoriesBlog;
   const tag = TagBlogs;
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  });
   return (
     <div className={classes.root}>
       <div className={classes.container}>
