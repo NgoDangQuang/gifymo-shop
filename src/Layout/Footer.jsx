@@ -14,11 +14,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     padding: '40px 0px',
-    // backgroundImage:
-    //   'radial-gradient(circle at 1.5px, rgba(0, 0, 0, 0.349) .75px, rgba(255, 255, 255, 0.11) 1.5px)',
-    // backgroundSize: '8px 2px',
-    // backgroundRepeat: 'repeat-x',
-    // backgroundPosition: 'top center',
   },
   container: {
     width: CONTAINER,
@@ -121,7 +116,6 @@ export function Footer(props) {
         <TwitterIcon sx={{ color: '#1D9BF0', marginRight: '8px' }} />
         <InstagramIcon sx={{ color: '#CF0880', marginRight: '8px' }} />
         <PinterestIcon sx={{ color: '#E60023', marginRight: '8px' }} />
-        {/* </div> */}
       </div>
     </div>
   );
