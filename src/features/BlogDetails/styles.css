@@ -1,125 +1,126 @@
 .layout-blog-details {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
 }
 
 .container-blog-details {
-    width: 1200px;
-    font-family: 'Jost';
+  width: 1200px;
+  font-family: 'Jost';
 }
 
 .breadcrums-blog-details {
-    margin: 40px 0px 0px;
+  margin: 40px 0px 0px;
 }
 
 .blog-details-title {
-    text-align: center;
-    border-bottom: 1px solid rgba(177, 167, 167, 0.692);
+  text-align: center;
+  border-bottom: 1px solid rgba(177, 167, 167, 0.692);
 }
 
-.blog-details-title>h3 {
-    font-size: 34px;
-    font-weight: 500;
-    margin: 30px 0px;
+.blog-details-title > h3 {
+  font-size: 34px;
+  font-weight: 500;
+  margin: 30px 0px;
 }
 
 .blog-details-post-on {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 0px;
-    border-bottom: 1px solid rgba(177, 167, 167, 0.692);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0px;
+  border-bottom: 1px solid rgba(177, 167, 167, 0.692);
 }
 
-.blog-details-post-on>h5 {
-    color: gray;
-    margin-right: 10px;
-    font-weight: 500;
-    font-size: 14px;
+.blog-details-post-on > h5 {
+  color: gray;
+  margin-right: 10px;
+  font-weight: 500;
+  font-size: 14px;
 }
 
-.blog-details-post-on>h4 {
-    margin-right: 30px;
-    font-size: 14px;
+.blog-details-post-on > h4 {
+  margin-right: 30px;
+  font-size: 14px;
 }
 
 .blog-details-content {
-    position: relative;
-    padding: 50px 0px;
+  position: relative;
+  padding: 50px 0px;
 }
 
 .blog-details-content h4 {
-    color: #8a94a7;
-    text-align: justify;
+  color: #8a94a7;
+  text-align: justify;
 }
 
 .blog-detail-img {
-    float: right;
-    padding-left: 30px;
-    padding-bottom: 30px;
+  float: right;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  width: 50%;
+}
+.blog-detail-img > img {
+  width: 100%;
 }
 
-
 .blog-details-quote {
-    align-items: flex-start;
-    display: flex;
-    padding: 20px 0px;
+  align-items: flex-start;
+  display: flex;
+  padding: 20px 0px;
 }
 
 .icon-quote {
-    padding: 10px;
-    background-color: #B9C2D3;
-    border-radius: 50%;
-    margin-right: 40px;
-    margin-top: 20px;
+  padding: 10px;
+  background-color: #b9c2d3;
+  border-radius: 50%;
+  margin-right: 40px;
+  margin-top: 20px;
 }
 
 .text-quote {
-    width: 400px;
-
+  width: 400px;
 }
 
-.text-quote>h3 {
-    font-size: 20px;
-    font-weight: 400;
-    font-style: italic;
-    margin: 0;
-    margin-bottom: 10px;
+.text-quote > h3 {
+  font-size: 20px;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+  margin-bottom: 10px;
 }
 
-.blog-detail-text-content>h4 {
-    margin-bottom: 20px;
-    font-size: 16px;
-    line-height: 26px;
+.blog-detail-text-content > h4 {
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 26px;
 }
 
 .layout-comment-blog-detail {
-    width: 950px;
-    margin-top: 50px;
+  width: 950px;
+  margin-top: 50px;
 }
 
 .button-post-comment {
-    padding: 12px 30px;
-    background-color: #BE7374;
-    display: inline-block;
-    border-radius: 30px;
-    font-size: 14px;
-    color: white;
-    cursor: pointer;
-    transition: all 0.3s linear;
+  padding: 12px 30px;
+  background-color: #be7374;
+  display: inline-block;
+  border-radius: 30px;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s linear;
 }
 
 .button-post-comment:hover {
-    background-color: #AF5052;
+  background-color: #af5052;
 }
 
 .checkbox-blog-details {
-    padding: 10px 0px;
-    padding-left: 20px;
+  padding: 10px 0px;
+  padding-left: 20px;
 }
-.checkbox-blog-details >h4{
-    margin-left: 10px;
-    color:gray;
-
+.checkbox-blog-details > h4 {
+  margin-left: 10px;
+  color: gray;
 }

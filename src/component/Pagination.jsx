@@ -1,5 +1,4 @@
 import { Pagination } from '@mui/material';
-import React from 'react';
 
 function PaginationLayout(props) {
   const { countPage, currentPage, setCurrentPage } = props;
@@ -12,7 +11,7 @@ function PaginationLayout(props) {
   };
   return (
     <Pagination
-      count={countPage}
+      count={countPage || 0}
       page={currentPage}
       variant="outlined"
       onChange={handleChangePage}

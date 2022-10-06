@@ -1,29 +1,35 @@
 import { Box } from '@mui/material';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Typography from '@mui/material/Typography';
-import { listFeatureItems } from 'api';
-import { CustomerReviews, ProductInformation, ProductItemsData } from 'api/ProductItems';
+import { CustomerReviews } from 'api/ProductItems';
 import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { getCommentById, getDescriptionById } from 'redux/getData';
+import { useGetAllDataQuery } from 'service/getFullData';
 import ProductItems from './ProductItems';
 import RelatedProducts from './RelatedProducts';
 import Section2 from './Section2';
 import './styles.css';
 
-export default function Product() {
-  const data = ProductItemsData;
-  const productInformation = ProductInformation;
-  const { nameItem } = data;
+export default function Product({ data, id }) {
+  const { products } = useSelector((state) => state.getData);
 
   const dataReview = CustomerReviews;
-
   const dataRelatedProduct = [
-    listFeatureItems[Math.ceil(Math.random() * 20)],
-    listFeatureItems[Math.ceil(Math.random() * 20)],
-    listFeatureItems[Math.ceil(Math.random() * 20)],
-    listFeatureItems[Math.ceil(Math.random() * 20)],
+    products[Math.ceil(Math.random() * 20)],
+    products[Math.ceil(Math.random() * 20)],
+    products[Math.ceil(Math.random() * 20)],
+    products[Math.ceil(Math.random() * 20)],
   ];
+
+  const dispatch = useDispatch();
+  const dataCommentById = useGetAllDataQuery(`comments?productId=${data.id}`);
+  const dataDescriptionById = useGetAllDataQuery(`descriptions?productId=${data.id}`);
+
   useEffect(() => {
+    dispatch(getCommentById(dataCommentById.data));
+    dispatch(getDescriptionById(dataDescriptionById.data));
     window.scrollTo({
       top: 0,
     });
@@ -35,16 +41,12 @@ export default function Product() {
           <Breadcrumbs aria-label="breadcrumb" className="breadcrums">
             <Link to="/gifymo-shop">Gifymo</Link>
             <Link to="/gifymo-shop/shop">Product</Link>
-            <Typography color="text.primary">{nameItem}</Typography>
+            <Typography color="text.primary">{data.name}</Typography>
           </Breadcrumbs>
         </Box>
 
         <Box mb={2}>
-          <ProductItems
-            data={data}
-            dataReview={dataReview}
-            productInformation={productInformation}
-          />
+          <ProductItems data={data} dataReview={dataReview} />
         </Box>
 
         <Box
@@ -58,7 +60,7 @@ export default function Product() {
           mb={2}
         >
           <Box sx={{ width: '950px' }}>
-            <Section2 dataReview={dataReview} />
+            <Section2 />
           </Box>
         </Box>
 

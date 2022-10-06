@@ -1,0 +1,1 @@
+export const baseUrl = 'https://gifymo-shop-api.herokuapp.com/api'

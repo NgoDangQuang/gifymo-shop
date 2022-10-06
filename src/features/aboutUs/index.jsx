@@ -1,7 +1,9 @@
 import { Box, Grid } from '@mui/material';
-import { introduction } from 'api/OurStory';
 import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { getOurStories } from 'redux/getData';
+import { useGetAllDataQuery } from 'service/getFullData';
 import confetti from './../../asset/icons/confetti2.gif';
 import gift from './../../asset/icons/gift2.gif';
 import stars from './../../asset/icons/stars2.gif';
@@ -10,13 +12,18 @@ import aboutUs2 from './../../asset/img/aboutUs2.jpg';
 import aboutUs3 from './../../asset/img/aboutUs3.jpg';
 import './styles.css';
 
-export function AboutUs(props) {
-  const intro = introduction;
+export function AboutUs() {
+  const getOurStoryData = useGetAllDataQuery('ourStories');
+  const dispatch = useDispatch();
+
   useEffect(() => {
+    dispatch(getOurStories(getOurStoryData.data));
     window.scrollTo({
       top: 0,
     });
   });
+  const { ourStories } = useSelector((state) => state.getData);
+
   return (
     <div className="root-our-team">
       <div className="container-our-team">
@@ -25,34 +32,35 @@ export function AboutUs(props) {
             <h4 className="border-bottom-background">About Us</h4>
           </div>
 
-          <div
-            style={{ fontFamily: 'Jost', marginBottom: '80px', paddingBottom: '80px' }}
-            className="border-bottom-background"
-          >
-            <div className="j-between flex story-items">
-              <div className="story-items-img">
-                <img src={intro[0].image} alt="" />
+          {ourStories && (
+            <div
+              style={{ fontFamily: 'Jost', marginBottom: '80px', paddingBottom: '80px' }}
+              className="border-bottom-background"
+            >
+              <div className="j-between flex story-items">
+                <div className="story-items-img">
+                  <img src={ourStories[0]?.image} alt="" />
+                </div>
+                <div className="story-items-content">
+                  <div className="story-items-content__content">
+                    <h4>{ourStories[0]?.title}</h4>
+                    <h5>{ourStories[0]?.des}</h5>
+                  </div>
+                </div>
               </div>
-              <div className="story-items-content">
-                <div className="story-items-content__content">
-                  <h4>{intro[0].title}</h4>
-                  <h5>{intro[0].des}</h5>
+              <div className="j-between flex story-items">
+                <div className="story-items-content">
+                  <div className="story-items-content__content">
+                    <h4>{ourStories[1]?.title}</h4>
+                    <h5>{ourStories[1]?.des}</h5>
+                  </div>
+                </div>
+                <div className="story-items-img">
+                  <img src={ourStories[1]?.image} alt="" />
                 </div>
               </div>
             </div>
-
-            <div className="j-between flex story-items">
-              <div className="story-items-content">
-                <div className="story-items-content__content">
-                  <h4>{intro[1].title}</h4>
-                  <h5>{intro[1].des}</h5>
-                </div>
-              </div>
-              <div className="story-items-img">
-                <img src={intro[1].image} alt="" />
-              </div>
-            </div>
-          </div>
+          )}
 
           <Box
             sx={{ flexGrow: 1 }}

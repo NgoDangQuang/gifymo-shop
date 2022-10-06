@@ -7,8 +7,7 @@ import { Link } from 'react-router-dom';
 
 function Item(props) {
   const { data } = props;
-  const { price, discounts, nameItem, image, star, id } = data;
-
+  const { price, discounts, name, image, star, id } = data;
   const handleScrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -18,10 +17,10 @@ function Item(props) {
 
   return (
     <Box className="layout-items-main" onClick={handleScrollToTop}>
-      <Link to="/gifymo-shop/product">
+      <Link to={`/gifymo-shop/product/${id}`}>
         <div className="feature-items__item">
           <div className="image-group-actions">
-            <img src={image} alt={`item${id}`} />
+            <img src={image[0]} alt={`item${id}`} />
             <Box className="group-actions flex j-center">
               <ShoppingCartOutlinedIcon className="action__icon" />
               <ZoomInIcon className="action__icon" />
@@ -35,7 +34,7 @@ function Item(props) {
               <h5 className="item__price">${price}</h5>
             </div>
             <Rating name="read-only" value={star} readOnly precision={0.5} />
-            <h4>{nameItem}</h4>
+            <h4>{name}</h4>
           </div>
         </div>
       </Link>

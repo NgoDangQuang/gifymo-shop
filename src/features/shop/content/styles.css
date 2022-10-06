@@ -62,7 +62,7 @@
 /* ====== Layout 2 ======= */
 
 .layout-content-2-fix-height {
-    height: 193vh;
+    max-height: 193vh;
     overflow-y: scroll;
 }
 

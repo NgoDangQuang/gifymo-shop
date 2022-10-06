@@ -1,12 +1,10 @@
 import { makeStyles } from '@material-ui/core';
-import { listFeatureItems } from 'api';
-import { ReviewProducts } from 'api/ReviewProducts';
+// import { listFeatureItems } from 'api';
 import { CONTAINER } from 'constants/styles';
 import { useEffect } from 'react';
-import { useState } from 'react';
-import { FilterProductByType } from 'utils/FilterProductbyType';
-import { MinMaxPrice } from 'utils/HandlePrice';
-import { handleChooseFunction } from 'utils/Sort';
+import { useDispatch } from 'react-redux';
+import { getCategoriesData, getCommentsData, getProductsData } from '../../redux/getData';
+import { useGetAllDataQuery } from '../../service/getFullData';
 import bgBody from './../../asset/img/bg-body.jpg';
 import ShowListProductByType from './content/ShowListProductByType';
 import { SidebarShop } from './sidebar';
@@ -39,24 +37,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 export function Shop(props) {
   const classes = useStyles();
-  const [typeProduct, setTypeProduct] = useState('');
-  const [sortItems, setSortItems] = useState('');
-  const [minPrice, maxPrice] = MinMaxPrice(listFeatureItems);
-  const [filterMinPrice, setFilterMinPrice] = useState(minPrice);
-  const [filterMaxPrice, setFilterMaxPrice] = useState(maxPrice);
-  const ListFeatureByType = FilterProductByType(
-    listFeatureItems,
-    typeProduct,
-    filterMinPrice,
-    filterMaxPrice
-  );
-  const dataRecentReviews = ReviewProducts;
-
-  const dataSort = handleChooseFunction(sortItems, ListFeatureByType);
+  const dataCategories = useGetAllDataQuery('categories');
+  const dataProducts = useGetAllDataQuery('products');
+  const dataComments = useGetAllDataQuery('comments');
+  const dispatch = useDispatch();
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-    });
+    dispatch(getCategoriesData(dataCategories.data));
+    dispatch(getProductsData(dataProducts.data));
+    dispatch(getCommentsData(dataComments.data));
   });
   return (
     <div className={classes.root}>
@@ -66,31 +54,10 @@ export function Shop(props) {
         </div>
         <div className={classes.layout}>
           <div className={classes.sidebar}>
-            <SidebarShop
-              setTypeProduct={setTypeProduct}
-              minPrice={minPrice}
-              maxPrice={maxPrice}
-              filterMinPrice={filterMinPrice}
-              setFilterMinPrice={setFilterMinPrice}
-              filterMaxPrice={filterMaxPrice}
-              setFilterMaxPrice={setFilterMaxPrice}
-              dataRecentReviews={dataRecentReviews}
-            />
+            <SidebarShop />
           </div>
           <div className={classes.content}>
-            <ShowListProductByType
-              data={dataSort}
-              sortItems={sortItems}
-              setSortItems={setSortItems}
-              typeProduct={typeProduct}
-              setTypeProduct={setTypeProduct}
-              filterMinPrice={filterMinPrice}
-              setFilterMinPrice={setFilterMinPrice}
-              filterMaxPrice={filterMaxPrice}
-              setFilterMaxPrice={setFilterMaxPrice}
-              minPrice={minPrice}
-              maxPrice={maxPrice}
-            />
+            <ShowListProductByType />
           </div>
         </div>
       </div>

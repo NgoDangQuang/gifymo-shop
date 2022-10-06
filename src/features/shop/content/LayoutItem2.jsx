@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 import './styles.css';
 
 function LayoutItem2({ data }) {
-  const { price, discounts, nameItem, star, description, image } = data;
+  const { price, discounts, name, star, description, image, id } = data;
   return (
     <div className="layout-item-2 flex j-between">
       <div className="layout-item-2__image">
-        <img src={image} alt={nameItem} />
+        <img src={image[0]} alt={name} />
       </div>
 
       <div className="layout-item-2__content">
@@ -20,7 +20,7 @@ function LayoutItem2({ data }) {
             <h4 style={{ textDecoration: 'line-through', color: 'gray' }}>${price}</h4>
           </div>
           <h2>
-            <Link to={`/gifymo-shop/product`}>{nameItem}</Link>
+            <Link to={`/gifymo-shop/product/${id}`}>{name}</Link>
           </h2>
           <Rating name="read-only" value={star} readOnly precision={0.5} />
           <p>{description}</p>

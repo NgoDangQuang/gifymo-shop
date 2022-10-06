@@ -11,9 +11,14 @@ import PinterestIcon from '@mui/icons-material/Pinterest';
 import RemoveIcon from '@mui/icons-material/Remove';
 import { Rating } from '@mui/material';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { changeCategoriesToName } from 'utils/ChangeTypeCategories';
 
 function ProductItems({ data, dataReview }) {
-  const { nameItem, price, discounts, image, type, description, tag, star } = data;
+  const { name, price, discounts, image, categoryId, description, tags, star } = data;
+
+  const { categories } = useSelector((state) => state.getData);
+  const typeCategory = changeCategoriesToName(categories, categoryId);
 
   const [buyCount, setBuyCount] = useState(1);
   const [like, setLike] = useState(false);
@@ -29,7 +34,7 @@ function ProductItems({ data, dataReview }) {
 
         <div className="list-imgae__preview flex j-center">
           {image.map((item, index) => (
-            <div className="image-preview-item" onClick={() => setImageShow(index)}>
+            <div className="image-preview-item" onClick={() => setImageShow(index)} key={index}>
               <img src={image[index]} alt=" preview" />
             </div>
           ))}
@@ -37,7 +42,7 @@ function ProductItems({ data, dataReview }) {
       </div>
 
       <div className="product-items__info">
-        <h2>{nameItem}</h2>
+        <h2>{name}</h2>
 
         <div className="product-items__price flex">
           <h3>${discounts} &nbsp;</h3>
@@ -89,11 +94,11 @@ function ProductItems({ data, dataReview }) {
         <div className="product-items-categories-tag flex">
           <div className="categories-content flex">
             <h4>Categories:&nbsp;</h4>
-            <h4>{type}</h4>
+            <h4>{typeCategory}</h4>
           </div>
           <div className="categories-content flex">
             <h4>Tags:&nbsp;</h4>
-            <h4>{tag}</h4>
+            <h4>{tags.join(', ')}</h4>
           </div>
         </div>
       </div>

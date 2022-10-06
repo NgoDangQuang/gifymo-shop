@@ -8,11 +8,10 @@ import SectionTwo from './SectionTwo';
 
 
 export function Sidebar(props) {
-    const { typeOfProduct } = props
     return (
         <Box>
             <Box mb={GAP}>
-                <SectionOne typeOfProduct={typeOfProduct} />
+                <SectionOne/>
             </Box>
             <Box mb={GAP}>
                 <SectionTwo />

@@ -1,15 +1,16 @@
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
-import { Avatar, Rating, TextareaAutosize, TextField } from '@mui/material';
+import { Rating, TextareaAutosize, TextField } from '@mui/material';
 import Box from '@mui/material/Box';
 import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
+import { FaUser } from 'react-icons/fa';
+import { useSelector } from 'react-redux';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
-
   return (
     <div
       role="tabpanel"
@@ -40,9 +41,10 @@ function a11yProps(index) {
   };
 }
 
-export default function Section2({ dataReview, productInformation }) {
+export default function Section2() {
   const [value, setValue] = useState(0);
   const [rating, setRating] = useState(0);
+  const { commentById, descriptionById } = useSelector((state) => state.getData);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -61,66 +63,39 @@ export default function Section2({ dataReview, productInformation }) {
       >
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
           <Tab label="Description" {...a11yProps(0)} />
-          <Tab label={`review (${dataReview.length})`} {...a11yProps(1)} />
+          <Tab label={`review (${commentById?.length})`} {...a11yProps(1)} />
           <Tab label="Your Review" {...a11yProps(2)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <div className="section2-description">
-          <h4>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-            mollit anim id est laborum.
-          </h4>
-          <h3>Product Features</h3>
-          <div className="section2-description-item flex">
-            <CheckCircleOutlineIcon className="icon-check" />
-            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+        {descriptionById && (
+          <div className="section2-description">
+            <h4>{descriptionById[0]?.content1}</h4>
+            <h3>Product Features</h3>
+            {descriptionById[0]?.productFeature?.map((item, index) => (
+              <div className="section2-description-item flex" key={index}>
+                <CheckCircleOutlineIcon className="icon-check" />
+                <h4>{item}</h4>
+              </div>
+            ))}
+            <h4>{descriptionById[0]?.content2}</h4>
           </div>
-          <div className="section2-description-item flex">
-            <CheckCircleOutlineIcon className="icon-check" />
-            <h4>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h4>
-          </div>
-          <div className="section2-description-item flex">
-            <CheckCircleOutlineIcon className="icon-check" />
-            <h4>
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat.
-            </h4>
-          </div>
-          <div className="section2-description-item flex">
-            <CheckCircleOutlineIcon className="icon-check" />
-            <h4>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
-            </h4>
-          </div>
-          <h4>
-            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-            consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
-            quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
-            quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-            voluptatem.
-          </h4>
-        </div>
+        )}
       </TabPanel>
 
       <TabPanel value={value} index={1}>
         <div>
-          {dataReview.map((item, index) => (
-            <div className="flex content-review-items border-bottom-background">
-              <div className="img-review">
-                <Avatar alt="Remy Sharp" src={item.avt} sx={{ width: '70px', height: '70px' }} />
+          {commentById?.map((item, index) => (
+            <div className="flex content-review-items border-bottom-background" key={index}>
+              <div>
+                <FaUser style={{ fontSize: '50px', color: 'gray', marginRight: '20px' }} />
               </div>
               <div className="content-review">
-                <h4>{item.content}</h4>
+                <h4>{item?.content}</h4>
                 <div className="creator-rating flex">
-                  <Rating name="read-only" value={item.star} readOnly precision={0.5} />
-                  <h3>{item.poster}</h3>
-                  <h4>{item.date}</h4>
+                  <Rating name="read-only" value={item?.star} readOnly precision={0.5} />
+                  <h3>{item?.userName}</h3>
+                  <h4>{item?.updatedAt}</h4>
                 </div>
               </div>
             </div>

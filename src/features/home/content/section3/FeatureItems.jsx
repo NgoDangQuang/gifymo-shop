@@ -1,9 +1,10 @@
 import { Box, Grid } from '@mui/material';
-import { listFeatureItems } from 'api';
+import { useSelector } from 'react-redux';
 import Item from './items';
 import './styles.css';
 
 function FeatureItems(props) {
+  const { products } = useSelector((state) => state.getData);
   return (
     <Box className="layout-feature-items">
       <Box mb={5} mt={3}>
@@ -13,7 +14,7 @@ function FeatureItems(props) {
       </Box>
       <Box className="layout-feature-items__box-items">
         <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-          {listFeatureItems.map(
+          {products?.map(
             (item, index) =>
               index + 1 <= 8 && (
                 <Grid item xs={6} sm={4} md={3} key={index}>

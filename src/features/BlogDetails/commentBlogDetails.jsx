@@ -66,7 +66,7 @@ export default function CommentBlogDetails({ dataComment }) {
       <TabPanel value={value} index={0}>
         <div>
           {dataComment.map((item, index) => (
-            <div className="flex content-review-items border-bottom-background">
+            <div className="flex content-review-items border-bottom-background" key={index}>
               <div className="img-review">
                 <Avatar alt="Remy Sharp" src={item.avt} sx={{ width: '70px', height: '70px' }} />
               </div>

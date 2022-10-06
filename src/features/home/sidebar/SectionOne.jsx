@@ -1,15 +1,16 @@
 import { Box } from '@mui/material';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import './styles.css';
 
 function SectionOne(props) {
-    const {typeOfProduct} =props;
+    const { categories } = useSelector((state) => state.getData);
 
     return (
         <Box className='sectionOne__Layout'>
-            {typeOfProduct.map((item, idx)=>(
-                <div className='sectionOne__Item style__general' key={idx}>
-                    <Link to='/gifymo-shop/shop'>{item}</Link>
+            {categories?.map((item)=>(
+                <div className='sectionOne__Item style__general' key={item.id}>
+                    <Link to='/gifymo-shop/shop'>{item.name}</Link>
                 </div>
             ))}
         </Box>

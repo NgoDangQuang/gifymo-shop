@@ -1,9 +1,12 @@
 import { makeStyles } from '@material-ui/core';
 import { Breadcrumbs, Typography } from '@mui/material';
-import { BlogList, CategoriesBlog, TagBlogs } from 'api/Blogs';
 import { CONTAINER } from 'constants/styles';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { getBlogCategories, getBlogList, getBlogTags } from 'redux/getData';
+import { useGetAllDataQuery } from 'service/getFullData';
+import { filterBlogs } from 'utils/FilterBlogs';
 import ContentBlogs from './ContentBlogs';
 import SideBarBlog from './SideBarBlog';
 import './styles.css';
@@ -39,14 +42,25 @@ const useStyles = makeStyles((theme) => ({
 }));
 export function Blogs(props) {
   const classes = useStyles();
-  const dataBlogs = BlogList;
-  const categories = CategoriesBlog;
-  const tag = TagBlogs;
+
+  const getBlogCategoriesData = useGetAllDataQuery('blogCategories');
+  const getBlogListData = useGetAllDataQuery('blogList');
+  const getBlogTagsData = useGetAllDataQuery('tagBlogs');
+
+  const dispatch = useDispatch();
   useEffect(() => {
+    dispatch(getBlogCategories(getBlogCategoriesData.data));
+    dispatch(getBlogList(getBlogListData.data));
+    dispatch(getBlogTags(getBlogTagsData.data));
     window.scrollTo({
       top: 0,
     });
   });
+
+  const { blogCategories, blogList, blogTags } = useSelector((state) => state.getData);
+  const [categoryBlog, setCategoryBlog] = useState();
+
+  const blogListById = filterBlogs(blogList, categoryBlog);
   return (
     <div className={classes.root}>
       <div className={classes.container}>
@@ -58,10 +72,15 @@ export function Blogs(props) {
         </div>
         <div className={classes.layout}>
           <div className={classes.content}>
-            <ContentBlogs data={dataBlogs} />
+            <ContentBlogs data={blogListById} />
           </div>
           <div className={classes.sidebar}>
-            <SideBarBlog categories={categories} tag={tag} blogItems={dataBlogs} />
+            <SideBarBlog
+              categories={blogCategories}
+              tag={blogTags}
+              blogList={blogList}
+              setCategoryBlog={setCategoryBlog}
+            />
           </div>
         </div>
       </div>

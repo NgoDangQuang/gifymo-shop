@@ -1,46 +1,44 @@
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import { MAINCOLOR } from 'constants/styles';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { setPriceDefault, setPriceRange } from 'redux/getData';
+import { MinMaxPrice } from 'utils/HandlePrice';
 import './styles.css';
 
 export default function FilterByPrice(props) {
-  const {
-    minPrice,
-    maxPrice,
-    filterMinPrice,
-    filterMaxPrice,
-    setFilterMinPrice,
-    setFilterMaxPrice,
-  } = props;
-  const [value, setValue] = useState([filterMinPrice, filterMaxPrice]);
+  const { products, setPrice, minPriceDefault, maxPriceDefault } = useSelector(
+    (state) => state.getData
+  );
+  const dispatch = useDispatch();
+  useEffect(() => {
+    const [minPrice, maxPrice] = MinMaxPrice(products);
+    dispatch(setPriceRange([minPrice, maxPrice]));
+    dispatch(setPriceDefault([minPrice, maxPrice]));
+  }, [dispatch, products]);
+
+  const [minPrice, maxPrice] = setPrice;
 
   const handleChange = (event, newValue) => {
-    setValue(newValue);
-    setFilterMinPrice(newValue[0]);
-    setFilterMaxPrice(newValue[1]);
+    dispatch(setPriceRange([newValue[0], newValue[1]]));
   };
-
-  useEffect(() => {
-    setValue([filterMinPrice, filterMaxPrice]);
-  }, [filterMinPrice, filterMaxPrice]);
-
   return (
     <Box className="filterPrice">
       <h2>Filter by Price</h2>
       <Box sx={{ width: '100%' }}>
         <Slider
           getAriaLabel={() => 'Temperature range'}
-          value={value}
+          value={[minPrice, maxPrice]}
           onChange={handleChange}
           valueLabelDisplay="auto"
-          min={minPrice}
-          max={maxPrice}
+          min={minPriceDefault}
+          max={maxPriceDefault}
           sx={{ color: MAINCOLOR }}
         />
       </Box>
       <h5>
-        Price: ${value[0]} --- ${value[1]}
+        Price: ${minPrice} --- ${maxPrice}
       </h5>
     </Box>
   );

@@ -6,48 +6,41 @@ import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
+import { useDispatch, useSelector } from 'react-redux';
+import { setLayoutShowItems, setPriceRange, setTypeCategory } from 'redux/getData';
 import './styles.css';
 
-export default function SortSelect({
-  setSortItems,
-  sortItems,
-  length,
-  typeProduct,
-  setTypeProduct,
-  filterMinPrice,
-  setFilterMinPrice,
-  filterMaxPrice,
-  setFilterMaxPrice,
-  minPrice,
-  maxPrice,
-  setLayoutShowItems,
-  layoutShowItems,
-}) {
+export default function SortSelect({ sort, setSort, data }) {
+  const dispatch = useDispatch();
+  const { setPrice, minPriceDefault, maxPriceDefault, typeCategory, layoutShowItems } = useSelector(
+    (state) => state.getData
+  );
+
   const handleChange = (event) => {
-    setSortItems(event.target.value);
+    setSort(event.target.value);
   };
   const DeleteTypeProduct = () => {
-    setTypeProduct('');
+    dispatch(setTypeCategory(''));
   };
   const DeleteFilterPrice = () => {
-    setFilterMinPrice(minPrice);
-    setFilterMaxPrice(maxPrice);
+    dispatch(setPriceRange([minPriceDefault, maxPriceDefault]));
   };
+
   return (
     <Box className="layout-sort-header flex j-between">
       <div className="layout-filter flex">
-        <h4>Found {length} result</h4>
-        {(filterMinPrice !== minPrice || filterMaxPrice !== maxPrice) && (
+        <h4>Found {data?.length} result</h4>
+        {(setPrice[0] !== minPriceDefault || setPrice[1] !== maxPriceDefault) && (
           <div className="filter-item">
             <h4>
-              ${filterMinPrice} --- ${filterMaxPrice}
+              ${setPrice[0]} --- ${setPrice[1]}
             </h4>
             <HighlightOffIcon onClick={DeleteFilterPrice} className="icon-delete" />
           </div>
         )}
-        {typeProduct && (
+        {typeCategory !== '' && (
           <div className="filter-item">
-            <h4>{typeProduct}</h4>
+            <h4>{typeCategory}</h4>
             <HighlightOffIcon onClick={DeleteTypeProduct} className="icon-delete" />
           </div>
         )}
@@ -56,17 +49,17 @@ export default function SortSelect({
         <GridViewSharpIcon
           sx={{ fontSize: '30px', cursor: 'pointer' }}
           className={(layoutShowItems === 1 && 'active-icon') || 'icon-disabled'}
-          onClick={() => setLayoutShowItems(1)}
+          onClick={() => dispatch(setLayoutShowItems(1))}
         />
         <ViewListIcon
           sx={{ fontSize: '38px', margin: '0px 10px', cursor: 'pointer' }}
           className={(layoutShowItems === 2 && 'active-icon') || 'icon-disabled'}
-          onClick={() => setLayoutShowItems(2)}
+          onClick={() => dispatch(setLayoutShowItems(2))}
         />
 
         <FormControl sx={{ m: 1, minWidth: 200 }} size="small">
           <InputLabel id="sort">Sort</InputLabel>
-          <Select labelId="sort" id="sort" value={sortItems} label="Sort" onChange={handleChange}>
+          <Select labelId="sort" id="sort" value={sort} label="Sort" onChange={handleChange}>
             <MenuItem value="">
               <em>None</em>
             </MenuItem>
