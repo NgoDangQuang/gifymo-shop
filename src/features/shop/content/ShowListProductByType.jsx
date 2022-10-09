@@ -1,6 +1,7 @@
 import { Box } from '@mui/material';
+import Loading from 'component/Loading';
 import PaginationLayout from 'component/Pagination';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { FilterProductByType } from 'utils/FilterProductbyType';
 import { handleChooseFunction } from 'utils/Sort';
@@ -10,6 +11,7 @@ import SortSelect from './SortSelect';
 
 function ShowListProductByType(props) {
   const [currentPage, setCurrentPage] = useState(1);
+  const [valueInput, setValueInput] = useState('');
   const ItemsInPage = 16;
   const { layoutShowItems, products, sortBy, typeCategory, setPrice, categories } = useSelector(
     (state) => state.getData
@@ -21,23 +23,37 @@ function ShowListProductByType(props) {
     categories,
     typeCategory,
     setPrice[0],
-    setPrice[1]
+    setPrice[1],
+    valueInput
   );
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [typeCategory, setPrice]);
+
   const data = handleChooseFunction(sort, dataFilterByType);
   const pages = Math.ceil(data.length / ItemsInPage);
 
   return (
     <Box className="layout-show-feature-items-shop-page">
       <Box className="layout-feature-items__sort">
-        <SortSelect data={data} sort={sort} setSort={setSort} />
+        <SortSelect
+          data={data}
+          sort={sort}
+          setSort={setSort}
+          setValueInput={setValueInput}
+          valueInput={valueInput}
+        />
       </Box>
       <Box>
-        {(layoutShowItems === 1 && (
-          <LayoutContent1 data={data} currentPage={currentPage} ItemsInPage={ItemsInPage} />
-        )) ||
-          (layoutShowItems === 2 && (
-            <LayoutContent2 data={data} currentPage={currentPage} ItemsInPage={ItemsInPage} />
-          ))}
+        {!products && <Loading />}
+        {products &&
+          ((layoutShowItems === 1 && (
+            <LayoutContent1 data={data} currentPage={currentPage} ItemsInPage={ItemsInPage} />
+          )) ||
+            (layoutShowItems === 2 && (
+              <LayoutContent2 data={data} currentPage={currentPage} ItemsInPage={ItemsInPage} />
+            )))}
       </Box>
       <PaginationLayout
         countPage={pages}

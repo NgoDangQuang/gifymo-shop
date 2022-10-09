@@ -5,6 +5,7 @@ export const getDataSlice = createSlice({
   initialState: {
     categories: [],
     products: [],
+    productDetail: [],
     comments: [],
     typeCategory: '',
     setPrice: [],
@@ -31,6 +32,9 @@ export const getDataSlice = createSlice({
     },
     getProductsData: (state, action) => {
       state.products = action.payload;
+    },
+    getProductDetail: (state, action) => {
+      state.productDetail = action.payload;
     },
     getCommentsData: (state, action) => {
       state.comments = action.payload;
@@ -95,6 +99,7 @@ export const getDataSlice = createSlice({
 export const {
   getCategoriesData,
   getProductsData,
+  getProductDetail,
   getCommentsData,
   setTypeCategory,
   setPriceRange,

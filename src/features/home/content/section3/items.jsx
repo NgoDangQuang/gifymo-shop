@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 
 function Item(props) {
   const { data } = props;
-  const { price, discounts, name, image, star, id } = data;
   const handleScrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -17,27 +16,29 @@ function Item(props) {
 
   return (
     <Box className="layout-items-main" onClick={handleScrollToTop}>
-      <Link to={`/gifymo-shop/product/${id}`}>
-        <div className="feature-items__item">
-          <div className="image-group-actions">
-            <img src={image[0]} alt={`item${id}`} />
-            <Box className="group-actions flex j-center">
-              <ShoppingCartOutlinedIcon className="action__icon" />
-              <ZoomInIcon className="action__icon" />
-              <FavoriteBorderIcon className="action__icon" />
-              <ShareRoundedIcon className="action__icon" />
-            </Box>
-          </div>
-          <div className="info-item">
-            <div className="flex j-center">
-              <h5>${discounts}&nbsp;</h5>
-              <h5 className="item__price">${price}</h5>
+      {data && (
+        <Link to={`/gifymo-shop/product/${data?.id}`}>
+          <div className="feature-items__item">
+            <div className="image-group-actions">
+              <img src={data?.image[0]} alt={`item${data?.id}`} />
+              <Box className="group-actions flex j-center">
+                <ShoppingCartOutlinedIcon className="action__icon" />
+                <ZoomInIcon className="action__icon" />
+                <FavoriteBorderIcon className="action__icon" />
+                <ShareRoundedIcon className="action__icon" />
+              </Box>
             </div>
-            <Rating name="read-only" value={star} readOnly precision={0.5} />
-            <h4>{name}</h4>
+            <div className="info-item">
+              <div className="flex j-center">
+                <h5>${data?.discounts}&nbsp;</h5>
+                <h5 className="item__price">${data?.price}</h5>
+              </div>
+              <Rating name="read-only" value={data?.star} readOnly precision={0.5} />
+              <h4>{data?.name}</h4>
+            </div>
           </div>
-        </div>
-      </Link>
+        </Link>
+      )}
     </Box>
   );
 }

@@ -1,4 +1,5 @@
 import { Box } from '@mui/material';
+import Loading from 'component/Loading';
 import { Link } from 'react-router-dom';
 
 function SideBarBlog({ categories, tag, blogList, setCategoryBlog }) {
@@ -11,6 +12,7 @@ function SideBarBlog({ categories, tag, blogList, setCategoryBlog }) {
         <h2 className="style__general" style={{ margin: 0, fontWeight: 500 }}>
           Categories
         </h2>
+        {!categories && <Loading />}
         {categories?.map((item) => (
           <div
             className="product-categories__Item style__general item-categories-blog"
@@ -30,6 +32,7 @@ function SideBarBlog({ categories, tag, blogList, setCategoryBlog }) {
           Tags
         </h2>
         <Box pt={3}>
+          {!tag && <Loading />}
           {tag?.map((items, index) => (
             <Link
               to={`/gifymo-shop/blogs/${Math.floor(Math.random() * blogList?.length + 1)}`}
@@ -50,6 +53,7 @@ function SideBarBlog({ categories, tag, blogList, setCategoryBlog }) {
         </h2>
 
         <Box pt={3}>
+          {!blogList && <Loading />}
           {blogList?.map(
             (item, index) =>
               index <= 4 && (

@@ -2,17 +2,18 @@ import { Box } from '@mui/material';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Typography from '@mui/material/Typography';
 import { CustomerReviews } from 'api/ProductItems';
+import Loading from 'component/Loading';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { getCommentById, getDescriptionById } from 'redux/getData';
+import { getCommentById, getDescriptionById, getProductDetail } from 'redux/getData';
 import { useGetAllDataQuery } from 'service/getFullData';
 import ProductItems from './ProductItems';
 import RelatedProducts from './RelatedProducts';
 import Section2 from './Section2';
 import './styles.css';
 
-export default function Product({ data, id }) {
+export default function Product({ id }) {
   const { products } = useSelector((state) => state.getData);
 
   const dataReview = CustomerReviews;
@@ -24,16 +25,19 @@ export default function Product({ data, id }) {
   ];
 
   const dispatch = useDispatch();
-  const dataCommentById = useGetAllDataQuery(`comments?productId=${data.id}`);
-  const dataDescriptionById = useGetAllDataQuery(`descriptions?productId=${data.id}`);
+  const getProductDetailsData = useGetAllDataQuery(`products/${id}`);
+  const dataCommentById = useGetAllDataQuery(`comments?productId=${id}`);
+  const dataDescriptionById = useGetAllDataQuery(`descriptions?productId=${id}`);
 
   useEffect(() => {
     dispatch(getCommentById(dataCommentById.data));
     dispatch(getDescriptionById(dataDescriptionById.data));
+    dispatch(getProductDetail(getProductDetailsData.data));
     window.scrollTo({
       top: 0,
     });
   });
+  const { productDetail } = useSelector((state) => state.getData);
   return (
     <div className="layout-product-items">
       <div className="container">
@@ -41,12 +45,12 @@ export default function Product({ data, id }) {
           <Breadcrumbs aria-label="breadcrumb" className="breadcrums">
             <Link to="/gifymo-shop">Gifymo</Link>
             <Link to="/gifymo-shop/shop">Product</Link>
-            <Typography color="text.primary">{data.name}</Typography>
+            <Typography color="text.primary">{productDetail?.name}</Typography>
           </Breadcrumbs>
         </Box>
 
         <Box mb={2}>
-          <ProductItems data={data} dataReview={dataReview} />
+          <ProductItems dataReview={dataReview} />
         </Box>
 
         <Box

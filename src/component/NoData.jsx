@@ -1,7 +1,6 @@
 import { makeStyles } from '@material-ui/core';
 import WorkOffOutlinedIcon from '@mui/icons-material/WorkOffOutlined';
 import { Box } from '@mui/material';
-import { MAINCOLOR } from 'constants/styles';
 const useStyles = makeStyles((theme) => ({
   layoutNoData: {
     display: 'flex',
@@ -11,9 +10,9 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
   },
 
-  h2: {
-    fontSize: '30px',
-    color: MAINCOLOR,
+  h3: {
+    fontSize: '24px',
+    color: 'gray',
   },
 }));
 function NoData(props) {
@@ -23,9 +22,9 @@ function NoData(props) {
       <Box>
         <WorkOffOutlinedIcon
           className={classes.iconNoData}
-          sx={{ fontSize: '50px', color: MAINCOLOR }}
+          sx={{ fontSize: '30px', color: 'gray' }}
         />
-        <h2 className={classes.h2}>No Data</h2>
+        <h3 className={classes.h3}>No Data</h3>
       </Box>
     </Box>
   );

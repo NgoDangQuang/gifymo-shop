@@ -6,6 +6,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MailIcon from '@mui/icons-material/Mail';
 import PinterestIcon from '@mui/icons-material/Pinterest';
 import { Breadcrumbs, Typography } from '@mui/material';
+import Loading from 'component/Loading';
 import { useEffect } from 'react';
 import { RiDoubleQuotesL } from 'react-icons/ri';
 import { useDispatch, useSelector } from 'react-redux';
@@ -29,7 +30,7 @@ function BlogDetails({ blogId }) {
 
   return (
     <div>
-      {!blogDetails && <h4>Loading...</h4>}
+      {!blogDetails && <Loading />}
       {blogDetails && (
         <div className="layout-blog-details border-bottom-background">
           <div className="container-blog-details ">
@@ -50,7 +51,7 @@ function BlogDetails({ blogId }) {
                 <h5>Post on: </h5>
                 <h4>{blogDetails?.updatedAt}</h4>
                 <h5>Comment: </h5>
-                <h4>{blogDetails.comments?.length}</h4>
+                <h4>{blogDetails?.comments?.length}</h4>
                 <h5>Categories</h5>
                 <h4>{blogDetails?.categories}</h4>
               </div>
@@ -59,19 +60,22 @@ function BlogDetails({ blogId }) {
                 <div className="blog-detail-img">
                   <img src={blogDetails?.img} alt="" />
                 </div>
-                <div className="blog-detail-text-content">
-                  <h4>{blogDetails?.content[0]}</h4>
-                  <div className="blog-details-quote j-center">
-                    <RiDoubleQuotesL className="icon-quote" />
-                    <div className="text-quote">
-                      <h3>{blogDetails?.quote}</h3>
-                      <h4>{blogDetails?.author}</h4>
+                {blogDetails.content && (
+                  <div className="blog-detail-text-content">
+                    <h4>{blogDetails?.content[0]}</h4>
+                    <div className="blog-details-quote j-center">
+                      <RiDoubleQuotesL className="icon-quote" />
+                      <div className="text-quote">
+                        <h3>{blogDetails?.quote}</h3>
+                        <h4>{blogDetails?.author}</h4>
+                      </div>
                     </div>
+                    {blogDetails?.content.map(
+                      (item, index) =>
+                        index !== 0 && <h4 key={index}>{blogDetails?.content[index]}</h4>
+                    )}
                   </div>
-                  {blogDetails?.content.map(
-                    (item, index) => index !== 0 && <h4 key={index}>{blogDetails?.content[index]}</h4>
-                  )}
-                </div>
+                )}
               </div>
 
               <div className="product-items-share border-bottom-background flex j-center">

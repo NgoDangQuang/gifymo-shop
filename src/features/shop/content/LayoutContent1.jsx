@@ -5,10 +5,9 @@ import './styles.css';
 
 function LayoutContent1(props) {
   const { currentPage, ItemsInPage, data } = props;
-
   return (
     <Box>
-      {!data && <NoData />}
+      {data.length === 0 && <NoData />}
       <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
         {data?.map(
           (item, index) =>

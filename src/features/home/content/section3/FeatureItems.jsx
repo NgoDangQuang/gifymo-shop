@@ -1,4 +1,5 @@
 import { Box, Grid } from '@mui/material';
+import Loading from 'component/Loading';
 import { useSelector } from 'react-redux';
 import Item from './items';
 import './styles.css';
@@ -14,6 +15,7 @@ function FeatureItems(props) {
       </Box>
       <Box className="layout-feature-items__box-items">
         <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+          {!products && <Loading />}
           {products?.map(
             (item, index) =>
               index + 1 <= 8 && (

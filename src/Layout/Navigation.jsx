@@ -1,6 +1,4 @@
 import { makeStyles } from '@material-ui/core';
-import { SearchOutlined } from '@mui/icons-material';
-import { Box, TextField } from '@mui/material';
 import { BG_COLOR, CONTAINER, MAINCOLOR } from 'constants/styles';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -166,11 +164,6 @@ export function Navigation(props) {
             </div>
           </Link>
         </div>
-
-        <Box sx={{ display: 'flex', alignItems: 'flex-end', marginRight: '50px' }}>
-          <SearchOutlined sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
-          <TextField placeholder="search" variant="standard" sx={{ width: '220px' }} />
-        </Box>
       </div>
     </div>
   );

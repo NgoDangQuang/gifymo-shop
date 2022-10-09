@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import { changeCategoriesToId } from './ChangeTypeCategories';
 
 function FilterByPrice(data, minPrice, maxPrice) {
@@ -11,13 +12,22 @@ function FilterByPrice(data, minPrice, maxPrice) {
   return dataFilter;
 }
 
-export function FilterProductByType(products, categories, typeProduct, minPrice, maxPrice) {
+export function FilterProductByType(
+  products,
+  categories,
+  typeProduct,
+  minPrice,
+  maxPrice,
+  valueInput
+) {
   if (!products) return [];
   let listFeature = [];
+  let listItemBySearch = [];
 
   if (typeProduct === '') {
     listFeature = products;
   }
+
   const categoryId = changeCategoriesToId(categories, typeProduct);
 
   // eslint-disable-next-line array-callback-return
@@ -27,5 +37,15 @@ export function FilterProductByType(products, categories, typeProduct, minPrice,
     }
   });
   const dataFilter = FilterByPrice(listFeature, minPrice, maxPrice);
-  return dataFilter;
+
+  if (valueInput === '') {
+    listItemBySearch = dataFilter;
+  } else {
+    dataFilter?.map((item) => {
+      if (item?.name.toLowerCase().includes(valueInput)) {
+        listItemBySearch.push(item);
+      }
+    });
+  }
+  return listItemBySearch;
 }

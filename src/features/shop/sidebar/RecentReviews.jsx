@@ -1,4 +1,5 @@
 import { Box, Rating } from '@mui/material';
+import Loading from 'component/Loading';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -18,7 +19,7 @@ function RecentReviews(props) {
   return (
     <Box className="layout-recent-reviews">
       <h2 className="style__general">Recent reviews</h2>
-      {!recentReviews && <h4>Loading...</h4>}
+      {!recentReviews && <Loading />}
       {recentReviews?.map(
         (item, idx) =>
           idx + 1 <= 5 && (

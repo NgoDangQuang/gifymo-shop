@@ -1,7 +1,8 @@
+import { SearchOutlined } from '@mui/icons-material';
 import GridViewSharpIcon from '@mui/icons-material/GridViewSharp';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import ViewListIcon from '@mui/icons-material/ViewList';
-import { Box } from '@mui/material';
+import { Box, TextField } from '@mui/material';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -10,7 +11,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setLayoutShowItems, setPriceRange, setTypeCategory } from 'redux/getData';
 import './styles.css';
 
-export default function SortSelect({ sort, setSort, data }) {
+export default function SortSelect({ sort, setSort, data, setValueInput, valueInput }) {
   const dispatch = useDispatch();
   const { setPrice, minPriceDefault, maxPriceDefault, typeCategory, layoutShowItems } = useSelector(
     (state) => state.getData
@@ -26,10 +27,28 @@ export default function SortSelect({ sort, setSort, data }) {
     dispatch(setPriceRange([minPriceDefault, maxPriceDefault]));
   };
 
+  const handleChangeInput = (e) => {
+    setValueInput(e.target.value);
+  };
+
+  const handleDeleteSearch = () => {
+    setValueInput('');
+  };
+
   return (
     <Box className="layout-sort-header flex j-between">
+      <Box sx={{ display: 'flex', alignItems: 'flex-end', marginRight: '20px' }}>
+        <SearchOutlined />
+        <TextField
+          placeholder="search"
+          variant="standard"
+          sx={{ width: '220px' }}
+          value={valueInput}
+          onChange={handleChangeInput}
+        />
+        {valueInput && <HighlightOffIcon onClick={handleDeleteSearch} className="icon-delete" />}
+      </Box>
       <div className="layout-filter flex">
-        <h4>Found {data?.length} result</h4>
         {(setPrice[0] !== minPriceDefault || setPrice[1] !== maxPriceDefault) && (
           <div className="filter-item">
             <h4>
@@ -45,6 +64,7 @@ export default function SortSelect({ sort, setSort, data }) {
           </div>
         )}
       </div>
+
       <div className="layout-groups-sort">
         <GridViewSharpIcon
           sx={{ fontSize: '30px', cursor: 'pointer' }}

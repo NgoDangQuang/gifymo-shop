@@ -1,5 +1,6 @@
 import { makeStyles } from '@material-ui/core';
 import { Breadcrumbs, Typography } from '@mui/material';
+import Loading from 'component/Loading';
 import { CONTAINER } from 'constants/styles';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -72,6 +73,7 @@ export function Blogs(props) {
         </div>
         <div className={classes.layout}>
           <div className={classes.content}>
+            {!blogList && <Loading />}
             <ContentBlogs data={blogListById} />
           </div>
           <div className={classes.sidebar}>

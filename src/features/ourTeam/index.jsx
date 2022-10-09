@@ -1,4 +1,5 @@
 import { Grid } from '@mui/material';
+import Loading from 'component/Loading';
 import { useEffect } from 'react';
 import { FaFacebookF, FaGooglePlusG, FaPlus, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
@@ -24,7 +25,7 @@ export function OurTeam() {
           <div className="title-our-team flex j-center ">
             <h4 className="border-bottom-background">Our Team</h4>
           </div>
-          {!ourTeams && <h4>Loading...</h4>}
+          {!ourTeams && <Loading />}
           {ourTeams && (
             <Grid container columns={{ xs: 4, sm: 8, md: 12 }} spacing={{ xs: 3, md: 3 }}>
               {ourTeams?.map((item, index) => (

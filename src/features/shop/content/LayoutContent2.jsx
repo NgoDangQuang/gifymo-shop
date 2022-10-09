@@ -8,7 +8,7 @@ function LayoutContent2(props) {
 
   return (
     <Box className="layout-content-2-fix-height">
-      {!data && <NoData />}
+      {data.length === 0 && <NoData />}
       {data?.map(
         (item, index) =>
           index + 1 > (currentPage - 1) * ItemsInPage &&

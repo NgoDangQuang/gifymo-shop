@@ -58,28 +58,30 @@ export default function CommentBlogDetails({ dataComment }) {
         }}
       >
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label={`COMMENT (${dataComment.length})`} {...a11yProps(0)} />
+          <Tab label={`COMMENT (${dataComment?.length})`} {...a11yProps(0)} />
           <Tab label="LEAVE A COMMENT" {...a11yProps(1)} />
         </Tabs>
       </Box>
 
       <TabPanel value={value} index={0}>
-        <div>
-          {dataComment.map((item, index) => (
-            <div className="flex content-review-items border-bottom-background" key={index}>
-              <div className="img-review">
-                <Avatar alt="Remy Sharp" src={item.avt} sx={{ width: '70px', height: '70px' }} />
-              </div>
-              <div className="content-review">
-                <div className="creator-rating flex">
-                  <h3>{item.name}</h3>
-                  <h4>{item.update}</h4>
+        {dataComment && (
+          <div>
+            {dataComment?.map((item, index) => (
+              <div className="flex content-review-items border-bottom-background" key={index}>
+                <div className="img-review">
+                  <Avatar alt="Remy Sharp" src={item.avt} sx={{ width: '70px', height: '70px' }} />
                 </div>
-                <h4>{item.content}</h4>
+                <div className="content-review">
+                  <div className="creator-rating flex">
+                    <h3>{item.name}</h3>
+                    <h4>{item.update}</h4>
+                  </div>
+                  <h4>{item.content}</h4>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </TabPanel>
 
       <TabPanel value={value} index={1}>

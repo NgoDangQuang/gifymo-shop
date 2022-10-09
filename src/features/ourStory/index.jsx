@@ -1,4 +1,5 @@
 import { Grid } from '@mui/material';
+import Loading from 'component/Loading';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCustomerServices, getOurStories } from 'redux/getData';
@@ -26,6 +27,7 @@ export function OurStory() {
             <h4 className="border-bottom-background">Our Story</h4>
           </div>
 
+          {!ourStories && <Loading />}
           {ourStories?.map((item, index) => (
             <div style={{ fontFamily: 'Jost', marginBottom: '80px' }} key={index}>
               {index % 2 === 0 && (
@@ -61,6 +63,7 @@ export function OurStory() {
             <h4 className="border-bottom-background">Customer services</h4>
           </div>
 
+          {!customerServices && <Loading />}
           <div className="layout-customer-services">
             <div className="layout-customer-services-content">
               <Grid container spacing={{ xs: 4, md: 6 }} columns={{ xs: 4, sm: 8, md: 12 }}>

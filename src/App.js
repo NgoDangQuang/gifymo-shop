@@ -34,7 +34,7 @@ function App() {
           {products?.map((item) => (
             <Route
               path={`/gifymo-shop/product/${item?.id}`}
-              element={<Product data={item} id={item.id} />}
+              element={<Product id={item.id} />}
               key={item.id}
             />
           ))}
