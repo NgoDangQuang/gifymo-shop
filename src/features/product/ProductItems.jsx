@@ -10,6 +10,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import PinterestIcon from '@mui/icons-material/Pinterest';
 import RemoveIcon from '@mui/icons-material/Remove';
 import { Rating } from '@mui/material';
+import AddProductsEffect from 'component/AddProductsEffect';
 import Loading from 'component/Loading';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
@@ -22,6 +23,33 @@ function ProductItems({ dataReview }) {
   const [buyCount, setBuyCount] = useState(1);
   const [like, setLike] = useState(false);
   const [imageShow, setImageShow] = useState(0);
+  const [openToastMessage, setOpenToastMessage] = useState(false);
+
+  const handleAddProduct = () => {
+    let newData = { ...productDetail, count: buyCount };
+    setOpenToastMessage(true);
+    if (!localStorage.getItem('ListItems')) {
+      localStorage.setItem('ListItems', JSON.stringify([newData]));
+    } else {
+      const oldData = localStorage.getItem('ListItems');
+      let Obj = JSON.parse(oldData);
+
+      let num = 0;
+      for (let i = 0; i < Obj.length; i++) {
+        if (Obj[i].id === newData.id) {
+          if (Obj[i].count !== newData.count) {
+            Obj[i].count = newData.count;
+            localStorage.setItem('ListItems', JSON.stringify(Obj));
+          }
+          return num++;
+        }
+      }
+      if (num === 0) {
+        Obj.push(newData);
+        localStorage.setItem('ListItems', JSON.stringify(Obj));
+      }
+    }
+  };
   return (
     <>
       {!productDetail && <Loading />}
@@ -61,7 +89,7 @@ function ProductItems({ dataReview }) {
 
             <div className="product-items__rating flex">
               <Rating name="read-only" value={productDetail?.star} readOnly precision={0.5} />
-              <h5> &nbsp; ({dataReview.length} customer reviews)</h5>
+              <h5> &nbsp; ({dataReview?.length} customer reviews)</h5>
             </div>
             <div className="product-items__description border-bottom-background">
               <p>{productDetail?.description}</p>
@@ -70,11 +98,13 @@ function ProductItems({ dataReview }) {
             <div className="product-items__quantity border-bottom-background flex">
               <p>Quantity:</p>
               <div className="buyCount flex">
-                <RemoveIcon
-                  fontSize="small"
-                  className="icon-hover"
-                  onClick={() => setBuyCount(buyCount - 1)}
-                />
+                {(buyCount === 1 && <RemoveIcon fontSize="small" color="disabled" />) || (
+                  <RemoveIcon
+                    fontSize="small"
+                    className="icon-hover"
+                    onClick={() => setBuyCount(buyCount - 1)}
+                  />
+                )}
                 <h4>{buyCount}</h4>
                 <AddIcon
                   fontSize="small"
@@ -82,7 +112,7 @@ function ProductItems({ dataReview }) {
                   onClick={() => setBuyCount(buyCount + 1)}
                 />
               </div>
-              <h3>ADD TO CART</h3>
+              <h3 onClick={handleAddProduct}>ADD TO CART</h3>
               <div onClick={() => setLike(!like)}>
                 {(like && <FavoriteIcon className="icon-favorite" />) || (
                   <FavoriteBorderIcon className="icon-favorite" />
@@ -113,6 +143,13 @@ function ProductItems({ dataReview }) {
             </div>
           </div>
         </div>
+      )}
+      {openToastMessage && (
+        <AddProductsEffect
+          data={productDetail}
+          openToastMessage={openToastMessage}
+          setOpenToastMessage={setOpenToastMessage}
+        />
       )}
     </>
   );

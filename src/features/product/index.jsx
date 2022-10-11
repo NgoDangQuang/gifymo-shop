@@ -1,12 +1,15 @@
 import { Box } from '@mui/material';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Typography from '@mui/material/Typography';
-import { CustomerReviews } from 'api/ProductItems';
-import Loading from 'component/Loading';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { getCommentById, getDescriptionById, getProductDetail } from 'redux/getData';
+import {
+  getCommentById,
+  getDescriptionById,
+  getProductDetail,
+  getProductsData,
+} from 'redux/getData';
 import { useGetAllDataQuery } from 'service/getFullData';
 import ProductItems from './ProductItems';
 import RelatedProducts from './RelatedProducts';
@@ -14,22 +17,14 @@ import Section2 from './Section2';
 import './styles.css';
 
 export default function Product({ id }) {
-  const { products } = useSelector((state) => state.getData);
-
-  const dataReview = CustomerReviews;
-  const dataRelatedProduct = [
-    products[Math.ceil(Math.random() * 20)],
-    products[Math.ceil(Math.random() * 20)],
-    products[Math.ceil(Math.random() * 20)],
-    products[Math.ceil(Math.random() * 20)],
-  ];
-
   const dispatch = useDispatch();
+  const getProductsList = useGetAllDataQuery('products');
   const getProductDetailsData = useGetAllDataQuery(`products/${id}`);
   const dataCommentById = useGetAllDataQuery(`comments?productId=${id}`);
   const dataDescriptionById = useGetAllDataQuery(`descriptions?productId=${id}`);
 
   useEffect(() => {
+    dispatch(getProductsData(getProductsList.data));
     dispatch(getCommentById(dataCommentById.data));
     dispatch(getDescriptionById(dataDescriptionById.data));
     dispatch(getProductDetail(getProductDetailsData.data));
@@ -37,7 +32,19 @@ export default function Product({ id }) {
       top: 0,
     });
   });
-  const { productDetail } = useSelector((state) => state.getData);
+
+  const { productDetail, products, commentById } = useSelector((state) => state.getData);
+
+  let dataRelatedProduct = [];
+  if (products) {
+    const numProducts = products?.length;
+    dataRelatedProduct = [
+      products[Math.floor(Math.random() * numProducts)],
+      products[Math.floor(Math.random() * numProducts)],
+      products[Math.floor(Math.random() * numProducts)],
+      products[Math.floor(Math.random() * numProducts)],
+    ];
+  }
   return (
     <div className="layout-product-items">
       <div className="container">
@@ -50,7 +57,7 @@ export default function Product({ id }) {
         </Box>
 
         <Box mb={2}>
-          <ProductItems dataReview={dataReview} />
+          <ProductItems dataReview={commentById} />
         </Box>
 
         <Box
@@ -69,7 +76,7 @@ export default function Product({ id }) {
         </Box>
 
         <Box mb={5} pb={10} sx={{ borderBottom: '1px solid gray' }}>
-          <RelatedProducts data={dataRelatedProduct} />
+          {dataRelatedProduct !== [] && <RelatedProducts data={dataRelatedProduct} />}
         </Box>
       </div>
     </div>

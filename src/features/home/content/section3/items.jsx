@@ -3,26 +3,47 @@ import ShareRoundedIcon from '@mui/icons-material/ShareRounded';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import ZoomInIcon from '@mui/icons-material/ZoomIn';
 import { Box, Rating } from '@mui/material';
+import AddProductsEffect from 'component/AddProductsEffect';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function Item(props) {
   const { data } = props;
-  const handleScrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
+  const [openToastMessage, setOpenToastMessage] = useState(false);
+
+  const handleAddProduct = () => {
+    let newData = { ...data, count: 1 };
+    if (!localStorage.getItem('ListItems')) {
+      localStorage.setItem('ListItems', JSON.stringify([newData]));
+    } else {
+      const oldData = localStorage.getItem('ListItems');
+      let Obj = JSON.parse(oldData);
+
+      let num = 0;
+      for (let i = 0; i < Obj.length; i++) {
+        if (Obj[i].id === newData.id) {
+          num++;
+        }
+      }
+      if (num === 0) {
+        Obj.push(newData);
+        localStorage.setItem('ListItems', JSON.stringify(Obj));
+      }
+    }
+    setOpenToastMessage(true);
   };
 
   return (
-    <Box className="layout-items-main" onClick={handleScrollToTop}>
-      {data && (
-        <Link to={`/gifymo-shop/product/${data?.id}`}>
+    <>
+      <Box className="layout-items-main">
+        {data && (
           <div className="feature-items__item">
             <div className="image-group-actions">
-              <img src={data?.image[0]} alt={`item${data?.id}`} />
+              <Link to={`/gifymo-shop/product/${data?.id}`}>
+                <img src={data?.image[0]} alt={`item${data?.id}`} />
+              </Link>
               <Box className="group-actions flex j-center">
-                <ShoppingCartOutlinedIcon className="action__icon" />
+                <ShoppingCartOutlinedIcon className="action__icon" onClick={handleAddProduct} />
                 <ZoomInIcon className="action__icon" />
                 <FavoriteBorderIcon className="action__icon" />
                 <ShareRoundedIcon className="action__icon" />
@@ -34,12 +55,21 @@ function Item(props) {
                 <h5 className="item__price">${data?.price}</h5>
               </div>
               <Rating name="read-only" value={data?.star} readOnly precision={0.5} />
-              <h4>{data?.name}</h4>
+              <Link to={`/gifymo-shop/product/${data?.id}`}>
+                <h4>{data?.name}</h4>
+              </Link>
             </div>
           </div>
-        </Link>
+        )}
+      </Box>
+      {openToastMessage && (
+        <AddProductsEffect
+          data={data}
+          openToastMessage={openToastMessage}
+          setOpenToastMessage={setOpenToastMessage}
+        />
       )}
-    </Box>
+    </>
   );
 }
 

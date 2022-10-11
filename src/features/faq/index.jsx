@@ -1,5 +1,5 @@
 import { Grid } from '@mui/material';
-import { FAQ } from 'api/FAQ';
+import Loading from 'component/Loading';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getFaq } from 'redux/getData';
@@ -25,6 +25,7 @@ export function Faq(props) {
           <div className="title-our-team flex j-center ">
             <h4 className="border-bottom-background">Most Popular Questions</h4>
           </div>
+          {!faq && <Loading />}
           <div className="layout-faq">
             <Grid container spacing={{ xs: 4, md: 4 }} columns={{ xs: 4, sm: 8, md: 12 }}>
               <Grid item md={6}>
