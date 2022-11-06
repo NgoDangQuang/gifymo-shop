@@ -1,9 +1,11 @@
 import { makeStyles } from '@material-ui/core';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
-import { BiTrash } from 'react-icons/bi';
-import { useState } from 'react';
 import { MAINCOLOR } from 'constants/styles';
+import { BiTrash } from 'react-icons/bi';
+import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { getCartItems } from 'redux/getData';
 
 const useStyles = makeStyles((theme) => ({
   layoutItem: {
@@ -26,17 +28,27 @@ const useStyles = makeStyles((theme) => ({
   image: {
     width: '25%',
     marginRight: '10px',
-    '& >img': {
-      width: '80px',
+    '& > a': {
+      '& > img': {
+        width: '80px',
+      },
     },
   },
   name: {
     width: '85%',
-    '& > h3': {
-      margin: 0,
-      fontSize: '16px',
-      fontWeight: '500',
-      marginBottom: '10px',
+    '& > a': {
+      textDecoration: 'none',
+      '&>h3': {
+        margin: 0,
+        fontSize: '16px',
+        fontWeight: '500',
+        marginBottom: '10px',
+        color: 'black',
+        transition: 'all 0.4s linear',
+        '&:hover': {
+          color: MAINCOLOR,
+        },
+      },
     },
   },
   price: {
@@ -83,9 +95,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const CartItem = ({ data }) => {
+const CartItem = ({ data, setShowCart }) => {
   const classes = useStyles();
-  const [buyCount, setBuyCount] = useState(data?.count);
+  const dispatch = useDispatch();
 
   const handleDeleteItem = () => {
     const cartData = JSON.parse(localStorage.getItem('ListItems'));
@@ -96,10 +108,10 @@ const CartItem = ({ data }) => {
       }
     }
     localStorage.setItem('ListItems', JSON.stringify(newData));
+    dispatch(getCartItems(newData));
   };
 
   const handleMinus = () => {
-    setBuyCount(buyCount - 1);
     const cartData = JSON.parse(localStorage.getItem('ListItems'));
     let newData = [];
     for (let i = 0; i < cartData?.length; i++) {
@@ -111,10 +123,10 @@ const CartItem = ({ data }) => {
       }
     }
     localStorage.setItem('ListItems', JSON.stringify(newData));
+    dispatch(getCartItems(newData));
   };
 
   const handlePlus = () => {
-    setBuyCount(buyCount + 1);
     const cartData = JSON.parse(localStorage.getItem('ListItems'));
     let newData = [];
     for (let i = 0; i < cartData?.length; i++) {
@@ -124,16 +136,21 @@ const CartItem = ({ data }) => {
       newData.push(cartData[i]);
     }
     localStorage.setItem('ListItems', JSON.stringify(newData));
+    dispatch(getCartItems(newData));
   };
 
   return (
     <div className={classes.layoutItem}>
       <div className={classes.image}>
-        <img src={data?.image[0]} alt={data.id} />
+        <Link to={`/gifymo-shop/product/${data?.id}`} onClick={() => setShowCart(false)}>
+          <img src={data?.image[0]} alt={data.id} />
+        </Link>
       </div>
       <div className={classes.content}>
         <div className={classes.name}>
-          <h3>{data?.name}</h3>
+          <Link to={`/gifymo-shop/product/${data?.id}`} onClick={() => setShowCart(false)}>
+            <h3>{data?.name}</h3>
+          </Link>
           <div className={classes.price}>
             <div className={classes.boxCount}>
               <RemoveIcon
@@ -141,10 +158,10 @@ const CartItem = ({ data }) => {
                 className={classes.iconPlusRemove}
                 onClick={handleMinus}
               />
-              <h4>{buyCount}</h4>
+              <h4>{data?.count}</h4>
               <AddIcon fontSize="small" className={classes.iconPlusRemove} onClick={handlePlus} />
             </div>
-            <h3>$ {data.discounts}</h3>
+            <h3>${data.discounts}</h3>
           </div>
         </div>
         <div className={classes.deleteItem}>

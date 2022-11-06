@@ -1,8 +1,10 @@
 import { makeStyles } from '@material-ui/core';
 import { BG_COLOR, GRAY, MAINCOLOR } from 'constants/styles';
+import { useState } from 'react';
 import { RiCloseFill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
-import CartItem from './CartIem';
+import AddProductsEffect from 'component/AddProductsEffect';
+import WishListItem from './WishListItem';
 
 const useStyles = makeStyles((theme) => ({
   layout: {
@@ -13,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '20px',
     position: 'relative',
   },
-  cartLayout: {
+  wishListLayout: {
     display: 'flex',
     justifyContent: 'center',
     '&>h5': {
@@ -45,12 +47,12 @@ const useStyles = makeStyles((theme) => ({
       background: 'var(--BG_WHITE)',
     },
   },
-  layoutOrder: {
+  layoutContinue: {
     '&>a': {
       textDecoration: 'none',
     },
   },
-  order: {
+  shopping: {
     background: MAINCOLOR,
     padding: '10px',
     textAlign: 'center',
@@ -60,7 +62,8 @@ const useStyles = makeStyles((theme) => ({
     '&>h4': {
       fontWeight: '500',
       fontSize: '16px',
-      letterSpacing: '3px',
+      color: 'white',
+      letterSpacing: '2px',
     },
     '&:hover': {
       background: BG_COLOR,
@@ -111,34 +114,52 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
-const Cart = ({ setShowCart }) => {
+
+const WishList = ({ setShowWishList }) => {
   const classes = useStyles();
-  const cartData = JSON.parse(localStorage.getItem('ListItems'));
+  const wishListData = JSON.parse(localStorage.getItem('WishList'));
+  const [openToastMessage, setOpenToastMessage] = useState(false);
+  const [dataItem, setDataItem] = useState();
 
   return (
     <div className={classes.layout}>
-      <div className={classes.closeModal} onClick={() => setShowCart(false)}>
+      <div className={classes.closeModal} onClick={() => setShowWishList(false)}>
         <RiCloseFill />
       </div>
       <div className={classes.tamgiac}>
         <div className={classes.subTamgiac}></div>
       </div>
-      <div className={classes.cartLayout}>
-        <h5>Cart</h5>
+      <div className={classes.wishListLayout}>
+        <h5>Wish List</h5>
       </div>
       <div className={classes.noItem}>
-        {(cartData?.length === 0 || !cartData) && <h3>No Items in Cart</h3>}
+        {(wishListData?.length === 0 || !wishListData) && <h3>No Items in Wish List</h3>}
       </div>
       <div className={classes.layoutListItem}>
-        {cartData?.map((item, index) => (
-          <CartItem data={item} key={index} setShowCart={setShowCart} />
+        {wishListData?.map((item, index) => (
+          <>
+            <WishListItem
+              data={item}
+              key={index}
+              setShowWishList={setShowWishList}
+              setOpenToastMessage={setOpenToastMessage}
+              setDataItem={setDataItem}
+            />
+            {openToastMessage && (
+              <AddProductsEffect
+                data={dataItem}
+                openToastMessage={openToastMessage}
+                setOpenToastMessage={setOpenToastMessage}
+                message={'has been add to your cart'}
+              />
+            )}
+          </>
         ))}
       </div>
-
-      <div className={classes.layoutOrder}>
-        <Link to={'/gifymo-shop/pay'} onClick={() => setShowCart(false)}>
-          <div className={classes.order}>
-            <h4>PAY NOW</h4>
+      <div className={classes.layoutContinue}>
+        <Link to={'/gifymo-shop/shop'} onClick={() => setShowWishList(false)}>
+          <div className={classes.shopping}>
+            <h4>Continue Shopping</h4>
           </div>
         </Link>
       </div>
@@ -146,4 +167,4 @@ const Cart = ({ setShowCart }) => {
   );
 };
 
-export default Cart;
+export default WishList;

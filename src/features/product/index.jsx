@@ -28,9 +28,6 @@ export default function Product({ id }) {
     dispatch(getCommentById(dataCommentById.data));
     dispatch(getDescriptionById(dataDescriptionById.data));
     dispatch(getProductDetail(getProductDetailsData.data));
-    window.scrollTo({
-      top: 0,
-    });
   });
 
   const { productDetail, products, commentById } = useSelector((state) => state.getData);

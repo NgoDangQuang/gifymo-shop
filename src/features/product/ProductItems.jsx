@@ -13,7 +13,10 @@ import { Rating } from '@mui/material';
 import AddProductsEffect from 'component/AddProductsEffect';
 import Loading from 'component/Loading';
 import { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { getCartItems, getWishList } from 'redux/getData';
+import { AddProduct } from 'utils/AddProduct';
+import { AddWishListItem } from 'utils/AddWishListItem';
 import { changeCategoriesToName } from 'utils/ChangeTypeCategories';
 
 function ProductItems({ dataReview }) {
@@ -23,32 +26,23 @@ function ProductItems({ dataReview }) {
   const [buyCount, setBuyCount] = useState(1);
   const [like, setLike] = useState(false);
   const [imageShow, setImageShow] = useState(0);
-  const [openToastMessage, setOpenToastMessage] = useState(false);
 
+  const [openToastMessageAddProduct, setOpenToastMessageAddProduct] = useState(false);
+  const [openToastMessageAddWishList, setOpenToastMessageAddWishList] = useState(false);
+
+  const dispatch = useDispatch();
   const handleAddProduct = () => {
-    let newData = { ...productDetail, count: buyCount };
-    setOpenToastMessage(true);
-    if (!localStorage.getItem('ListItems')) {
-      localStorage.setItem('ListItems', JSON.stringify([newData]));
-    } else {
-      const oldData = localStorage.getItem('ListItems');
-      let Obj = JSON.parse(oldData);
+    setOpenToastMessageAddProduct(true);
+    AddProduct(productDetail, buyCount);
+    const cartData = JSON.parse(localStorage.getItem('ListItems'));
+    dispatch(getCartItems(cartData));
+  };
 
-      let num = 0;
-      for (let i = 0; i < Obj.length; i++) {
-        if (Obj[i].id === newData.id) {
-          if (Obj[i].count !== newData.count) {
-            Obj[i].count = newData.count;
-            localStorage.setItem('ListItems', JSON.stringify(Obj));
-          }
-          return num++;
-        }
-      }
-      if (num === 0) {
-        Obj.push(newData);
-        localStorage.setItem('ListItems', JSON.stringify(Obj));
-      }
-    }
+  const handleWishList = () => {
+    setOpenToastMessageAddWishList(true);
+    AddWishListItem(productDetail);
+    const wishList = JSON.parse(localStorage.getItem('WishList'));
+    dispatch(getWishList(wishList));
   };
   return (
     <>
@@ -115,7 +109,7 @@ function ProductItems({ dataReview }) {
               <h3 onClick={handleAddProduct}>ADD TO CART</h3>
               <div onClick={() => setLike(!like)}>
                 {(like && <FavoriteIcon className="icon-favorite" />) || (
-                  <FavoriteBorderIcon className="icon-favorite" />
+                  <FavoriteBorderIcon className="icon-favorite" onClick={handleWishList} />
                 )}
               </div>
             </div>
@@ -144,11 +138,20 @@ function ProductItems({ dataReview }) {
           </div>
         </div>
       )}
-      {openToastMessage && (
+      {openToastMessageAddProduct && (
         <AddProductsEffect
           data={productDetail}
-          openToastMessage={openToastMessage}
-          setOpenToastMessage={setOpenToastMessage}
+          openToastMessage={openToastMessageAddProduct}
+          setOpenToastMessage={setOpenToastMessageAddProduct}
+          message={'has been add to your cart'}
+        />
+      )}
+      {openToastMessageAddWishList && (
+        <AddProductsEffect
+          data={productDetail}
+          openToastMessage={openToastMessageAddWishList}
+          setOpenToastMessage={setOpenToastMessageAddWishList}
+          message={'has been add Wish List'}
         />
       )}
     </>

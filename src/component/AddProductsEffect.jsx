@@ -20,18 +20,22 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Jost',
   },
 }));
-export default function AddProductsEffect({ data, openToastMessage, setOpenToastMessage }) {
+export default function AddProductsEffect({
+  data,
+  openToastMessage,
+  setOpenToastMessage,
+  message,
+}) {
   const classes = useStyles();
 
   const handleClose = () => {
     setOpenToastMessage(false);
   };
-
   return (
     <div>
       <Snackbar
         open={openToastMessage}
-        autoHideDuration={5000}
+        autoHideDuration={3000}
         onClose={handleClose}
         anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
       >
@@ -42,7 +46,9 @@ export default function AddProductsEffect({ data, openToastMessage, setOpenToast
                 <img src={data?.image[0]} alt={data?.id} />
               </div>
               <div className={classes.content}>
-                <h4>{data?.name} has been add to your cart</h4>
+                <h4>
+                  {data?.name} {message}
+                </h4>
               </div>
             </div>
           )}

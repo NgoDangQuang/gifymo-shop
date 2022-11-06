@@ -43,9 +43,6 @@ export function Home(props) {
   useEffect(() => {
     dispatch(getCategoriesData(dataCategories.data));
     dispatch(getProductsData(dataProducts.data));
-    window.scrollTo({
-      top: 0,
-    });
   });
   return (
     <div className={classes.root}>

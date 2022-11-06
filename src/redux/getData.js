@@ -25,6 +25,8 @@ export const getDataSlice = createSlice({
     blogList: [],
     blogDetails: [],
     blogTags: [],
+    cartItems: [],
+    wishList: [],
   },
   reducers: {
     getCategoriesData: (state, action) => {
@@ -92,6 +94,12 @@ export const getDataSlice = createSlice({
     getBlogTags: (state, action) => {
       state.blogTags = action.payload;
     },
+    getCartItems: (state, action) => {
+      state.cartItems = action.payload;
+    },
+    getWishList: (state, action) => {
+      state.wishList = action.payload;
+    },
   },
 });
 
@@ -118,6 +126,8 @@ export const {
   getBlogList,
   getBlogDetails,
   getBlogTags,
+  getCartItems,
+  getWishList,
 } = getDataSlice.actions;
 
 export default getDataSlice.reducer;

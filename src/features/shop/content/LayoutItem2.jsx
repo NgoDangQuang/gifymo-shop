@@ -4,34 +4,32 @@ import ZoomInIcon from '@mui/icons-material/ZoomIn';
 import { Rating } from '@mui/material';
 import AddProductsEffect from 'component/AddProductsEffect';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { getCartItems, getWishList } from 'redux/getData';
+import { AddProduct } from 'utils/AddProduct';
+import { AddWishListItem } from 'utils/AddWishListItem';
 import './styles.css';
 
 function LayoutItem2({ data }) {
   const { price, discounts, name, star, description, image, id } = data;
 
-  const [openToastMessage, setOpenToastMessage] = useState(false);
+  const [openToastMessageAddProduct, setOpenToastMessageAddProduct] = useState(false);
+  const [openToastMessageAddWishList, setOpenToastMessageAddWishList] = useState(false);
 
+  const dispatch = useDispatch();
   const handleAddProduct = () => {
-    let newData = { ...data, count: 1 };
-    if (!localStorage.getItem('ListItems')) {
-      localStorage.setItem('ListItems', JSON.stringify([newData]));
-    } else {
-      const oldData = localStorage.getItem('ListItems');
-      let Obj = JSON.parse(oldData);
+    setOpenToastMessageAddProduct(true);
+    AddProduct(data, 1);
+    const cartData = JSON.parse(localStorage.getItem('ListItems'));
+    dispatch(getCartItems(cartData));
+  };
 
-      let num = 0;
-      for (let i = 0; i < Obj.length; i++) {
-        if (Obj[i].id === newData.id) {
-          num++;
-        }
-      }
-      if (num === 0) {
-        Obj.push(newData);
-        localStorage.setItem('ListItems', JSON.stringify(Obj));
-      }
-    }
-    setOpenToastMessage(true);
+  const handleWishList = () => {
+    setOpenToastMessageAddWishList(true);
+    AddWishListItem(data);
+    const wishList = JSON.parse(localStorage.getItem('WishList'));
+    dispatch(getWishList(wishList));
   };
   return (
     <>
@@ -58,16 +56,25 @@ function LayoutItem2({ data }) {
               ADD TO CART
             </div>
             <ZoomInIcon className="action__icon" />
-            <FavoriteBorderIcon className="action__icon" />
+            <FavoriteBorderIcon className="action__icon" onClick={handleWishList} />
             <ShareRoundedIcon className="action__icon" />
           </div>
         </div>
       </div>
-      {openToastMessage && (
+      {openToastMessageAddProduct && (
         <AddProductsEffect
           data={data}
-          openToastMessage={openToastMessage}
-          setOpenToastMessage={setOpenToastMessage}
+          openToastMessage={openToastMessageAddProduct}
+          setOpenToastMessage={setOpenToastMessageAddProduct}
+          message={'has been add to your cart'}
+        />
+      )}
+      {openToastMessageAddWishList && (
+        <AddProductsEffect
+          data={data}
+          openToastMessage={openToastMessageAddWishList}
+          setOpenToastMessage={setOpenToastMessageAddWishList}
+          message={'has been add Wish List'}
         />
       )}
     </>

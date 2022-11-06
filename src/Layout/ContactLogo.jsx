@@ -1,9 +1,12 @@
 import { makeStyles } from '@material-ui/core';
 import { CONTAINER, MAINCOLOR } from 'constants/styles';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { getCartItems, getWishList } from 'redux/getData';
 import logo from './../asset/img/logo.svg';
 import Cart from './Cart';
+import WishList from './WishList';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -74,23 +77,51 @@ const useStyles = makeStyles((theme) => ({
     top: '100%',
     zIndex: 100000,
   },
+  wishList: {
+    position: 'relative',
+  },
+  countWishListNoti: {
+    position: 'absolute',
+    right: 0,
+    top: 0,
+    width: '18px',
+    height: '18px',
+    borderRadius: '50%',
+    background: 'red',
+    textAlign: 'center',
+    border: '2px solid white',
+    '&>h5': {
+      margin: 0,
+      color: 'white',
+      fontWeight: '400',
+    },
+  },
 }));
 export function ContactLogo(props) {
   const classes = useStyles();
   const [showCart, setShowCart] = useState(false);
+  const [showWishList, setShowWishList] = useState(false);
+
+  const { cartItems, wishList } = useSelector((state) => state.getData);
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    const cartData = JSON.parse(localStorage.getItem('ListItems'));
+    const wishListData = JSON.parse(localStorage.getItem('WishList'));
+    dispatch(getCartItems(cartData));
+    dispatch(getWishList(wishListData));
+  },[dispatch]);
+
   const handleShowCart = () => {
     setShowCart(!showCart);
+    setShowWishList(false);
   };
-  const [data, setData] = useState();
-
+  const handleShowWishList = () => {
+    setShowWishList(!showWishList);
+    setShowCart(false);
+  };
   let sumMoney = 0;
-  setInterval(() => {
-    const cartData = JSON.parse(localStorage.getItem('ListItems'));
-    if (cartData !== data) {
-      setData(cartData);
-    }
-  }, 5000);
-  data?.map((item) => (sumMoney += item.discounts * item.count));
+  cartItems?.map((item) => (sumMoney += item.discounts * item.count));
 
   return (
     <div className={classes.root}>
@@ -131,8 +162,16 @@ export function ContactLogo(props) {
           </div>
 
           <div className={`${classes.layoutItem} ${classes.flex}`}>
-            <div className={classes.image}>
+            <div
+              className={`${classes.image} ${classes.wishList} ${classes.cursor}`}
+              onClick={handleShowWishList}
+            >
               <img src={require('./../asset/icons/heart.gif')} alt="likeList" />
+              {wishList && wishList.length !== 0 && (
+                <div className={classes.countWishListNoti}>
+                  <h5>{wishList?.length}</h5>
+                </div>
+              )}
             </div>
             <div
               className={`${classes.item} ${classes.flex} ${classes.cursor}`}
@@ -142,13 +181,16 @@ export function ContactLogo(props) {
                 <img src={require('./../asset/icons/card.gif')} alt="card" />
               </div>
               <div className={classes.content}>
-                <h4 className={classes.cartName}>Cart: {data?.length || 0} items</h4>
+                <h4 className={classes.cartName}>Cart: {cartItems?.length || 0} items</h4>
                 <h5>${sumMoney || 0}</h5>
               </div>
             </div>
           </div>
           <div className={classes.cartProducts}>
             {showCart && <Cart setShowCart={setShowCart} />}
+          </div>
+          <div className={classes.cartProducts}>
+            {showWishList && <WishList setShowWishList={setShowWishList} />}
           </div>
         </div>
       </div>
