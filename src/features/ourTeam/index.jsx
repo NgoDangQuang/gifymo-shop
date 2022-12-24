@@ -1,4 +1,5 @@
 import { Grid } from '@mui/material';
+import { rootData } from 'api/rootData';
 import Loading from 'component/Loading';
 import { useEffect } from 'react';
 import { FaFacebookF, FaGooglePlusG, FaPlus, FaTwitter, FaYoutube } from 'react-icons/fa';
@@ -8,10 +9,12 @@ import { useGetAllDataQuery } from 'service/getFullData';
 import './styles.css';
 
 export function OurTeam() {
-  const getOurTeamsData = useGetAllDataQuery('ourTeams');
+  // const getOurTeamsData = useGetAllDataQuery('ourTeams');
+  const getOurTeamsData = rootData.ourTeams
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getOurTeams(getOurTeamsData.data));
+    dispatch(getOurTeams(getOurTeamsData));
+    // dispatch(getOurTeams(getOurTeamsData.data));
     window.scrollTo({
       top: 0,
     });

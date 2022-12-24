@@ -6,6 +6,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MailIcon from '@mui/icons-material/Mail';
 import PinterestIcon from '@mui/icons-material/Pinterest';
 import { Breadcrumbs, Typography } from '@mui/material';
+import { rootData } from 'api/rootData';
 import Loading from 'component/Loading';
 import { useEffect } from 'react';
 import { RiDoubleQuotesL } from 'react-icons/ri';
@@ -17,12 +18,15 @@ import CommentBlogDetails from './commentBlogDetails';
 import './styles.css';
 
 function BlogDetails({ blogId }) {
-  const getBlogDetailsData = useGetAllDataQuery(`blogDetails/${blogId}`);
+  // const getBlogDetailsData = useGetAllDataQuery(`blogDetails/${blogId}`);
+  const getBlogDetailsData = rootData.blogDetails.filter(blog=>blog.id===blogId)
   const dispatch = useDispatch();
   const { blogDetails } = useSelector((state) => state.getData);
 
   useEffect(() => {
-    dispatch(getBlogDetails(getBlogDetailsData.data));
+    // dispatch(getBlogDetails(getBlogDetailsData.data));
+    dispatch(getBlogDetails(getBlogDetailsData[0]));
+
     window.scrollTo({
       top: 0,
     });

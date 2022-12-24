@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core';
+import { rootData } from 'api/rootData';
 // import { listFeatureItems } from 'api';
 import { CONTAINER } from 'constants/styles';
 import { useEffect } from 'react';
@@ -37,14 +38,21 @@ const useStyles = makeStyles((theme) => ({
 }));
 export function Shop(props) {
   const classes = useStyles();
-  const dataCategories = useGetAllDataQuery('categories');
-  const dataProducts = useGetAllDataQuery('products');
-  const dataComments = useGetAllDataQuery('comments');
+  // const dataCategories = useGetAllDataQuery('categories');
+  // const dataProducts = useGetAllDataQuery('products');
+  // const dataComments = useGetAllDataQuery('comments');
+
+  const dataCategories = rootData.categories
+  const dataProducts =rootData.products
+  const dataComments =rootData.comments
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getCategoriesData(dataCategories.data));
-    dispatch(getProductsData(dataProducts.data));
-    dispatch(getCommentsData(dataComments.data));
+    dispatch(getCategoriesData(dataCategories));
+    dispatch(getProductsData(dataProducts));
+    dispatch(getCommentsData(dataComments));
+    // dispatch(getCategoriesData(dataCategories.data));
+    // dispatch(getProductsData(dataProducts.data));
+    // dispatch(getCommentsData(dataComments.data));
   });
   return (
     <div className={classes.root}>

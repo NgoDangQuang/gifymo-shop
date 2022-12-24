@@ -1,4 +1,5 @@
 import { Grid } from '@mui/material';
+import { rootData } from 'api/rootData';
 import Loading from 'component/Loading';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -7,12 +8,16 @@ import { useGetAllDataQuery } from 'service/getFullData';
 import './styles.css';
 
 export function OurStory() {
-  const getOurStoryData = useGetAllDataQuery('ourStories');
-  const getCustomerServicesData = useGetAllDataQuery('customerServices');
+  // const getOurStoryData = useGetAllDataQuery('ourStories');
+  // const getCustomerServicesData = useGetAllDataQuery('customerServices');
+  const getOurStoryData = rootData.ourStories
+  const getCustomerServicesData = rootData.customerServices
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getOurStories(getOurStoryData.data));
-    dispatch(getCustomerServices(getCustomerServicesData.data));
+    dispatch(getOurStories(getOurStoryData));
+    dispatch(getCustomerServices(getCustomerServicesData));
+    // dispatch(getOurStories(getOurStoryData.data));
+    // dispatch(getCustomerServices(getCustomerServicesData.data));
     window.scrollTo({
       top: 0,
     });

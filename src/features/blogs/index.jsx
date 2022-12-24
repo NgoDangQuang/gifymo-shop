@@ -1,5 +1,6 @@
 import { makeStyles } from '@material-ui/core';
 import { Breadcrumbs, Typography } from '@mui/material';
+import { rootData } from 'api/rootData';
 import Loading from 'component/Loading';
 import { CONTAINER } from 'constants/styles';
 import { useEffect, useState } from 'react';
@@ -44,19 +45,26 @@ const useStyles = makeStyles((theme) => ({
 export function Blogs(props) {
   const classes = useStyles();
 
-  const getBlogCategoriesData = useGetAllDataQuery('blogCategories');
-  const getBlogListData = useGetAllDataQuery('blogList');
-  const getBlogTagsData = useGetAllDataQuery('tagBlogs');
+  // const getBlogCategoriesData = useGetAllDataQuery('blogCategories');
+  // const getBlogListData = useGetAllDataQuery('blogList');
+  // const getBlogTagsData = useGetAllDataQuery('tagBlogs');
+
+  const getBlogCategoriesData = rootData.blogCategories;
+  const getBlogListData = rootData.blogList;
+  const getBlogTagsData = rootData.tagBlogs;
 
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getBlogCategories(getBlogCategoriesData.data));
-    dispatch(getBlogList(getBlogListData.data));
-    dispatch(getBlogTags(getBlogTagsData.data));
+    // dispatch(getBlogCategories(getBlogCategoriesData.data));
+    // dispatch(getBlogList(getBlogListData.data));
+    // dispatch(getBlogTags(getBlogTagsData.data));
+    dispatch(getBlogCategories(getBlogCategoriesData));
+    dispatch(getBlogList(getBlogListData));
+    dispatch(getBlogTags(getBlogTagsData));
     window.scrollTo({
       top: 0,
     });
-  });
+  },[]);
 
   const { blogCategories, blogList, blogTags } = useSelector((state) => state.getData);
   const [categoryBlog, setCategoryBlog] = useState();

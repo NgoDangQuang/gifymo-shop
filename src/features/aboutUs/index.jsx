@@ -1,4 +1,5 @@
 import { Box, Grid } from '@mui/material';
+import { rootData } from 'api/rootData';
 import Loading from 'component/Loading';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -14,11 +15,13 @@ import aboutUs3 from './../../asset/img/aboutUs3.jpg';
 import './styles.css';
 
 export function AboutUs() {
-  const getOurStoryData = useGetAllDataQuery('ourStories');
+  // const getOurStoryData = useGetAllDataQuery('ourStories');
+  const getOurStoryData = rootData.ourStories
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getOurStories(getOurStoryData.data));
+    // dispatch(getOurStories(getOurStoryData.data));
+    dispatch(getOurStories(getOurStoryData));
     window.scrollTo({
       top: 0,
     });

@@ -1,4 +1,5 @@
 import { Grid } from '@mui/material';
+import { rootData } from 'api/rootData';
 import Loading from 'component/Loading';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -8,10 +9,12 @@ import { ItemsFaq } from './itemFAQ';
 import './styles.css';
 
 export function Faq(props) {
-  const getFaqData = useGetAllDataQuery('faq');
+  // const getFaqData = useGetAllDataQuery('faq');
+  const getFaqData = rootData.faq
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getFaq(getFaqData.data));
+    // dispatch(getFaq(getFaqData.data));
+    dispatch(getFaq(getFaqData));
     window.scrollTo({
       top: 0,
     });

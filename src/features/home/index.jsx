@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core';
+import { rootData } from 'api/rootData';
 import { CONTAINER } from 'constants/styles';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
@@ -36,13 +37,17 @@ const useStyles = makeStyles((theme) => ({
 
 export function Home(props) {
   const classes = useStyles();
-  const dataCategories = useGetAllDataQuery('categories');
-  const dataProducts = useGetAllDataQuery('products');
+  // const dataCategories = useGetAllDataQuery('categories');
+  // const dataProducts = useGetAllDataQuery('products');
+  const dataCategories =rootData.categories
+  const dataProducts = rootData.products
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getCategoriesData(dataCategories.data));
-    dispatch(getProductsData(dataProducts.data));
+    // dispatch(getCategoriesData(dataCategories.data));
+    // dispatch(getProductsData(dataProducts.data));
+    dispatch(getCategoriesData(dataCategories));
+    dispatch(getProductsData(dataProducts));
   });
   return (
     <div className={classes.root}>
